@@ -1,0 +1,16 @@
+{
+  "id": "a87d64c7-c89d-4449-b25c-49ae633e24bf",
+  "name": "info.irufushi@sunsiyam.com",
+  "form": "487b7c36-88e1-4271-ae2e-1a1d1c8d6bb3",
+  "active": true,
+  "workflowTypeId": "17c61629-d984-4e86-b43b-a8407b3efea9",
+  "executesOn": "Submitted",
+  "settings": {
+    "Email": "info.irufushi@sunsiyam.com",
+    "SenderEmail": "",
+    "Subject": "The Form '{form_name}' was submitted",
+    "RazorViewFilePath": "Forms/Emails/Default-Template.cshtml",
+    "Attachment": ""
+  },
+  "sortOrder": 0
+}

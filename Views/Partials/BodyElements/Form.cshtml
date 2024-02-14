@@ -1,0 +1,21 @@
+@inherits UmbracoViewPage<Form>
+
+@{
+    // When creating a new form follow these steps:
+
+    // 1. Pick a form name. This name should be used on all the files bellow.
+    // 2. Create a new Controller under /Core/Controllers similar to ContactFormController.cs.
+    // 3. Create a new ViewModel under /Core/ViewModels similar to ContactFormViewModel.cs.
+
+    // 4. Create a new view under /Web/Views/Partials/StandardForms similar to ContactForm.cshtml.
+    // 5. Create a new component under Documents Types / Components similar to ContactFormComponent.
+    // 6. Allow the new component to be added under Documents Types / Components / Forms Folder.
+
+    // 7. Create a new instance of this component under Website Components / Forms in the content tree view.
+    // 8. Add a Form element to a page and pick the component you just created.
+
+    // Finds a controller based on the Form Component name.
+    // Controller must have a Render method
+    var controllerName = Model.FormPicker.GetType().Name.Replace("Component", "");
+    @Html.Action("Render", controllerName);
+}

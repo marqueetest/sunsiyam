@@ -1,0 +1,16 @@
+@inherits UmbracoViewPage<PopUpStandard>
+
+<button class="button reveal-popup" data-open="popup" style="display:none;">Click me for a modal</button>
+
+<div id="popup" class="popup reveal columns" data-reveal style="display:none;">
+    <button class="close-button" data-close aria-label="Close reveal" type="button"></button>
+
+    <div class="popup__top-container row small-12 text-center">
+        @Html.Wrap("h2", Model.Heading)
+    </div>
+
+    <div class="popup__bottom-container row small-12 text-center">
+        @Model.Text
+    </div>
+
+</div>

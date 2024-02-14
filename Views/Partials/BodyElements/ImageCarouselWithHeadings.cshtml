@@ -1,0 +1,34 @@
+@inherits UmbracoViewPage<ImageCarouselWithHeadings>
+
+@{
+    var carousel = Model.Carousel.ToList();
+    var isLandingPage = Umbraco.AssignedContentItem is LandingPage;
+}
+<div class="awards wrap wrap--narrow transform--will-fade-up transition--1000" data-animate-in-view="transform--completed-fade-up">
+    <div class="awards__heading">
+        @Html.Wrap("h2", Model.Heading)
+        @Html.Wrap("h3", Model.SubHeading)
+    </div>
+
+    @if (carousel.Any())
+    {
+        <div class="awards__carousel">
+
+            @foreach (var item in Model.Carousel)
+            {
+            <div class="awards__logo">
+                @if (!isLandingPage)
+                {
+                    @item.Image.GetCroppedImage("96x115").SurroundWithLink(item.Link)
+                }
+                else
+                {
+                    @item.Image.GetImage().SurroundWithLink(item.Link)
+                }
+            </div>
+            }
+
+        </div>
+    }
+
+</div>

@@ -1,0 +1,942 @@
+﻿@inherits UmbracoViewPage<PreRegistrationFormViewModel>
+@using SunSiyam.Core.ViewModels
+@using SunSiyam.Core.Controllers
+@using HappyPorch.UmbracoExtensions.Core.Recaptcha
+@{
+    var page = Umbraco.AssignedContentItem as IContentComposition;
+    var element = page.BodyElements.FirstOrDefault(e => e is Form) as Form;
+    var formComponent = element.FormPicker as PreRegistrationFormComponent;
+}
+
+@Html.reCaptchaScript()
+
+<div class="pre-register">
+
+    <div class="pre-register__container grid-x grid-margin-x">
+
+        <div class="pre-register__form cell small-12 small-order-2 medium-order-1">
+            <div class="pre-register__form-container">
+                @using (Html.BeginUmbracoForm<PreRegistrationFormController>("Submit", null, new { @class = "validate-form", autocomplete = "off" }, FormMethod.Post))
+                {
+                    var showRecaptchaValidation = Convert.ToBoolean(TempData["ShowRecaptchaValidation"]);
+                    @Html.AntiForgeryToken()
+                    @Html.HiddenFor(x => x.Guid)
+                    @Html.HiddenFor(x => x.RefundText)
+                    @Html.HiddenFor(x => x.ConsentText)
+
+                    <div class="pre-register__form-wrap grid-x grid-margin-x">
+                        <div class="pre-register__form-label cell small-12 medium-5 vertical-center">
+                            @Html.LabelFor(x => x.BookingReference, "Booking / reservation confirmation no.:")
+                        </div>
+                        <div class="pre-register__form-field cell small-12 medium-7">
+                            @Html.TextBoxFor(x => x.BookingReference, new { type = "text", required = "required", placeholder = "Booking / reservation confirmation no. *" })
+                            @Html.ValidationMessageFor(x => x.BookingReference)
+                        </div>
+                    </div>
+
+                    <div class="pre-register__form-guest-1">
+                        <h3>Guest 1</h3>
+
+                        <div class="pre-register__form-wrap grid-x grid-margin-x">
+                            <div class="pre-register__form-label cell small-12 medium-5 vertical-center">
+                                @Html.LabelFor(x => x.Guest1.LastName, "Last name:")
+                            </div>
+                            <div class="pre-register__form-field cell small-12 medium-7">
+                                @Html.TextBoxFor(x => x.Guest1.LastName, new { type = "text", required = "required", placeholder = "last name *" })
+                                @Html.ValidationMessageFor(x => x.Guest1.LastName)
+                            </div>
+                        </div>
+
+                        <div class="pre-register__form-wrap grid-x grid-margin-x">
+                            <div class="pre-register__form-label cell small-12 medium-5 vertical-center">
+                                @Html.LabelFor(x => x.Guest1.FirstName, "First name:")
+                            </div>
+                            <div class="pre-register__form-field cell small-12 medium-7">
+                                @Html.TextBoxFor(x => x.Guest1.FirstName, new { type = "text", required = "required", placeholder = "first name *" })
+                                @Html.ValidationMessageFor(x => x.Guest1.FirstName)
+                            </div>
+                        </div>
+
+                        <div class="pre-register__form-wrap grid-x grid-margin-x">
+                            <div class="pre-register__form-label cell small-12 medium-5 vertical-center">
+                                @Html.LabelFor(x => x.Guest1.Title, "Title:")
+                            </div>
+                            <div class="pre-register__form-field cell small-12 medium-7">
+                                <div class="register-custom-select">
+                                    @Html.DropDownListFor(x => x.Guest1.Title, Model.Titles, new { required = "required" })
+                                </div>
+                                @Html.ValidationMessageFor(x => x.Guest1.Title)
+                            </div>
+                        </div>
+
+                        <div class="pre-register__form-wrap grid-x grid-margin-x">
+                            <div class="pre-register__form-label cell small-12 medium-5 vertical-center">
+                                @Html.LabelFor(x => x.Guest1.CountryOfResidence, "Country of residence:")
+                            </div>
+                            <div class="pre-register__form-field cell small-12 medium-7">
+                                <div class="register-custom-select">
+                                    @Html.DropDownListFor(x => x.Guest1.CountryOfResidence, Model.Countries, new { required = "required" })
+                                </div>
+                                @Html.ValidationMessageFor(x => x.Guest1.CountryOfResidence)
+                            </div>
+                        </div>
+
+                        <div class="pre-register__form-wrap grid-x grid-margin-x">
+                            <div class="pre-register__form-label cell small-12 medium-5 vertical-center">
+                                @Html.LabelFor(x => x.Guest1.Nationality, "Nationality:")
+                            </div>
+                            <div class="pre-register__form-field cell small-12 medium-7">
+                                <div class="register-custom-select">
+                                    @Html.DropDownListFor(x => x.Guest1.Nationality, Model.Nationalities, new { required = "required" })
+                                </div>
+                                @Html.ValidationMessageFor(x => x.Guest1.Nationality)
+                            </div>
+                        </div>
+
+                        <div class="pre-register__form-wrap grid-x grid-margin-x">
+                            <div class="pre-register__form-label cell small-12 medium-5 vertical-center">
+                                @Html.LabelFor(x => x.Guest1.DateOfBirth, "Date of birth:")
+                            </div>
+                            <div class="pre-register__form-field cell small-12 medium-7">
+                                @Html.TextBoxFor(x => x.Guest1.DateOfBirth, new { type = "text", required = "required", placeholder = "date of birth *" })
+                                @Html.ValidationMessageFor(x => x.Guest1.DateOfBirth)
+                            </div>
+                        </div>
+
+                        <div class="pre-register__form-wrap grid-x grid-margin-x">
+                            <div class="pre-register__form-label cell small-12 medium-5 vertical-center">
+                                @Html.LabelFor(x => x.Guest1.PassportNumber, "Passport number:")
+                            </div>
+                            <div class="pre-register__form-field cell small-12 medium-7">
+                                @Html.TextBoxFor(x => x.Guest1.PassportNumber, new { type = "text", required = "required", placeholder = "passport number *" })
+                                @Html.ValidationMessageFor(x => x.Guest1.PassportNumber)
+                            </div>
+                        </div>
+
+                        <div class="pre-register__form-wrap grid-x grid-margin-x">
+                            <div class="pre-register__form-label cell small-12 medium-5 vertical-center">
+                                @Html.LabelFor(x => x.Guest1.EmailAddress, "Email address:")
+                            </div>
+                            <div class="pre-register__form-field cell small-12 medium-7">
+                                @Html.TextBoxFor(x => x.Guest1.EmailAddress, new { type = "email", required = "required", placeholder = "email address *" })
+                                @Html.ValidationMessageFor(x => x.Guest1.EmailAddress)
+                            </div>
+                        </div>
+
+                        <div class="pre-register__form-wrap grid-x grid-margin-x">
+                            <div class="pre-register__form-label cell small-12 medium-5 vertical-center">
+                                @Html.LabelFor(x => x.Guest1.MobileNumber, "Mobile:")
+                            </div>
+                            <div class="pre-register__form-field cell small-12 medium-7">
+                                @Html.TextBoxFor(x => x.Guest1.MobileNumber, new { type = "text", required = "required", placeholder = "mobile telephone *" })
+                                @Html.ValidationMessageFor(x => x.Guest1.MobileNumber)
+                            </div>
+                        </div>
+
+                        <div class="pre-register__form-wrap grid-x grid-margin-x">
+                            <div class="pre-register__form-label cell small-12 medium-5 vertical-center">
+                                <h4>Dietary requirements:</h4>
+                            </div>
+                            <div class="pre-register__form-field cell small-12 medium-7">
+                                <div>
+                                    <p>Yes</p>
+                                    @Html.RadioButtonFor(x => x.Guest1.DietaryRequirements, "Yes", new { required = "required" })
+                                </div>
+                                <div>
+                                    <p>No</p>
+                                    @Html.RadioButtonFor(x => x.Guest1.DietaryRequirements, "No", new { required = "required" })
+                                </div>
+                                @Html.ValidationMessageFor(x => x.Guest1.DietaryRequirements)
+                            </div>
+                        </div>
+
+                        <div class="pre-register__form-wrap grid-x grid-margin-x">
+                            <div class="pre-register__form-label cell small-12 medium-5 vertical-center">
+                                @Html.LabelFor(x => x.Guest1.DietaryNotes, "Dietary Notes:")
+                            </div>
+                            <div class="pre-register__form-field cell small-12 medium-7">
+                                @Html.TextAreaFor(x => x.Guest1.DietaryNotes, new { placeholder = "if yes please detail here" })
+                                @Html.ValidationMessageFor(x => x.Guest1.DietaryNotes)
+                            </div>
+                        </div>
+
+                        <div class="pre-register__form-wrap grid-x grid-margin-x">
+                            <div class="pre-register__form-label cell small-12 medium-5 vertical-center">
+                                <h4>Have you visited us before:</h4>
+                            </div>
+                            <div class="pre-register__form-field cell small-12 medium-7">
+                                <div>
+                                    <p>Yes</p>
+                                    @Html.RadioButtonFor(x => x.Guest1.VisitedBefore, "Yes", new { required = "required" })
+                                </div>
+                                <div>
+                                    <p>No</p>
+                                    @Html.RadioButtonFor(x => x.Guest1.VisitedBefore, "No", new { required = "required" })
+                                </div>
+                                @Html.ValidationMessageFor(x => x.Guest1.VisitedBefore)
+                            </div>
+                        </div>
+
+                        <div class="pre-register__form-wrap grid-x grid-margin-x">
+                            <div class="pre-register__form-label cell small-12 medium-5 vertical-center">
+                                @Html.LabelFor(x => x.Guest1.PreviousVisits, "If yes, how many previous visits?:")
+                            </div>
+                            <div class="pre-register__form-field cell small-12 medium-7">
+                                @Html.TextBoxFor(x => x.Guest1.PreviousVisits, new { type = "text", placeholder = "number of previous visits" })
+                                @Html.ValidationMessageFor(x => x.Guest1.PreviousVisits)
+                            </div>
+                        </div>
+
+                        <div class="pre-register__form-wrap grid-x grid-margin-x">
+                            <div class="pre-register__form-label cell small-12 medium-5 vertical-center">
+                                <h4>Please choose the social communication tool to stay connected while at the resort:</h4>
+                            </div>
+                            <div class="pre-register__form-field cell small-12 medium-7">
+                                <div>
+                                    <p>WhatsApp</p>
+                                    @Html.RadioButtonFor(x => x.Guest1.SocialCommunicationTool, "WhatsApp", new { required = "required" })
+                                </div>
+                                <div>
+                                    <p>Viber</p>
+                                    @Html.RadioButtonFor(x => x.Guest1.SocialCommunicationTool, "Viber", new { required = "required" })
+                                </div>
+                                <div>
+                                    <p>WeChat</p>
+                                    @Html.RadioButtonFor(x => x.Guest1.SocialCommunicationTool, "WeChat", new { required = "required" })
+                                </div>
+                                <div>
+                                    <p>Line</p>
+                                    @Html.RadioButtonFor(x => x.Guest1.SocialCommunicationTool, "Line", new { required = "required" })
+                                </div>
+                                <div>
+                                    <p>Telegram</p>
+                                    @Html.RadioButtonFor(x => x.Guest1.SocialCommunicationTool, "Telegram", new { required = "required" })
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pre-register__form-add-remove text-center">
+                            <button class="cta orange-solid" id="add-guest-2">add guest 2</button>
+                            <button class="cta secondary-solid" id="remove-guest-2" style="display: none;">remove guest 2</button>
+                        </div>
+
+                    </div>
+
+                    <div class="pre-register__form-guest-2" style="display: none;">
+                        <h3>Guest 2</h3>
+
+                        <div class="pre-register__form-wrap grid-x grid-margin-x">
+                            <div class="pre-register__form-label cell small-12 medium-5 vertical-center">
+                                @Html.LabelFor(x => x.Guest2.LastName, "Last name:")
+                            </div>
+                            <div class="pre-register__form-field cell small-12 medium-7">
+                                @Html.TextBoxFor(x => x.Guest2.LastName, new { type = "text", required = "required", placeholder = "last name *" })
+                                @Html.ValidationMessageFor(x => x.Guest2.LastName)
+                            </div>
+                        </div>
+
+                        <div class="pre-register__form-wrap grid-x grid-margin-x">
+                            <div class="pre-register__form-label cell small-12 medium-5 vertical-center">
+                                @Html.LabelFor(x => x.Guest2.FirstName, "First name:")
+                            </div>
+                            <div class="pre-register__form-field cell small-12 medium-7">
+                                @Html.TextBoxFor(x => x.Guest2.FirstName, new { type = "text", required = "required", placeholder = "first name *" })
+                                @Html.ValidationMessageFor(x => x.Guest2.FirstName)
+                            </div>
+                        </div>
+
+                        <div class="pre-register__form-wrap grid-x grid-margin-x">
+                            <div class="pre-register__form-label cell small-12 medium-5 vertical-center">
+                                @Html.LabelFor(x => x.Guest2.Title, "Title:")
+                            </div>
+                            <div class="pre-register__form-field cell small-12 medium-7">
+                                <div class="register-custom-select">
+                                    @Html.DropDownListFor(x => x.Guest2.Title, Model.Titles, new { required = "required" })
+                                </div>
+                                @Html.ValidationMessageFor(x => x.Guest2.Title)
+                            </div>
+                        </div>
+
+                        <div class="pre-register__form-wrap grid-x grid-margin-x">
+                            <div class="pre-register__form-label cell small-12 medium-5 vertical-center">
+                                @Html.LabelFor(x => x.Guest2.CountryOfResidence, "Country of residence:")
+                            </div>
+                            <div class="pre-register__form-field cell small-12 medium-7">
+                                <div class="register-custom-select">
+                                    @Html.DropDownListFor(x => x.Guest2.CountryOfResidence, Model.Countries, new { required = "required" })
+                                </div>
+                                @Html.ValidationMessageFor(x => x.Guest2.CountryOfResidence)
+                            </div>
+                        </div>
+
+                        <div class="pre-register__form-wrap grid-x grid-margin-x">
+                            <div class="pre-register__form-label cell small-12 medium-5 vertical-center">
+                                @Html.LabelFor(x => x.Guest2.Nationality, "Nationality:")
+                            </div>
+                            <div class="pre-register__form-field cell small-12 medium-7">
+                                <div class="register-custom-select">
+                                    @Html.DropDownListFor(x => x.Guest2.Nationality, Model.Nationalities, new { required = "required" })
+                                </div>
+                                @Html.ValidationMessageFor(x => x.Guest2.Nationality)
+                            </div>
+                        </div>
+
+                        <div class="pre-register__form-wrap grid-x grid-margin-x">
+                            <div class="pre-register__form-label cell small-12 medium-5 vertical-center">
+                                @Html.LabelFor(x => x.Guest2.DateOfBirth, "Date of birth:")
+                            </div>
+                            <div class="pre-register__form-field cell small-12 medium-7">
+                                @Html.TextBoxFor(x => x.Guest2.DateOfBirth, new { type = "text", required = "required", placeholder = "date of birth *" })
+                                @Html.ValidationMessageFor(x => x.Guest2.DateOfBirth)
+                            </div>
+                        </div>
+
+                        <div class="pre-register__form-wrap grid-x grid-margin-x">
+                            <div class="pre-register__form-label cell small-12 medium-5 vertical-center">
+                                @Html.LabelFor(x => x.Guest2.PassportNumber, "Passport number:")
+                            </div>
+                            <div class="pre-register__form-field cell small-12 medium-7">
+                                @Html.TextBoxFor(x => x.Guest2.PassportNumber, new { type = "text", required = "required", placeholder = "passport number *" })
+                                @Html.ValidationMessageFor(x => x.Guest2.PassportNumber)
+                            </div>
+                        </div>
+
+                        <div class="pre-register__form-wrap grid-x grid-margin-x">
+                            <div class="pre-register__form-label cell small-12 medium-5 vertical-center">
+                                @Html.LabelFor(x => x.Guest2.EmailAddress, "Email address:")
+                            </div>
+                            <div class="pre-register__form-field cell small-12 medium-7">
+                                @Html.TextBoxFor(x => x.Guest2.EmailAddress, new { type = "email", required = "required", placeholder = "email address *" })
+                                @Html.ValidationMessageFor(x => x.Guest2.EmailAddress)
+                            </div>
+                        </div>
+
+                        <div class="pre-register__form-wrap grid-x grid-margin-x">
+                            <div class="pre-register__form-label cell small-12 medium-5 vertical-center">
+                                @Html.LabelFor(x => x.Guest2.MobileNumber, "Mobile:")
+                            </div>
+                            <div class="pre-register__form-field cell small-12 medium-7">
+                                @Html.TextBoxFor(x => x.Guest2.MobileNumber, new { type = "text", required = "required", placeholder = "mobile telephone *" })
+                                @Html.ValidationMessageFor(x => x.Guest2.MobileNumber)
+                            </div>
+                        </div>
+
+                        <div class="pre-register__form-wrap grid-x grid-margin-x">
+                            <div class="pre-register__form-label cell small-12 medium-5 vertical-center">
+                                <h4>Dietary requirements:</h4>
+                            </div>
+                            <div class="pre-register__form-field cell small-12 medium-7">
+                                <div>
+                                    <p>Yes</p>
+                                    @Html.RadioButtonFor(x => x.Guest2.DietaryRequirements, "Yes", new { required = "required" })
+                                </div>
+                                <div>
+                                    <p>No</p>
+                                    @Html.RadioButtonFor(x => x.Guest2.DietaryRequirements, "No", new { required = "required" })
+                                </div>
+                                @Html.ValidationMessageFor(x => x.Guest2.DietaryRequirements)
+                            </div>
+                        </div>
+
+                        <div class="pre-register__form-wrap grid-x grid-margin-x">
+                            <div class="pre-register__form-label cell small-12 medium-5 vertical-center">
+                                @Html.LabelFor(x => x.Guest2.DietaryNotes, "Dietary Notes:")
+                            </div>
+                            <div class="pre-register__form-field cell small-12 medium-7">
+                                @Html.TextAreaFor(x => x.Guest2.DietaryNotes, new { placeholder = "if yes please detail here" })
+                                @Html.ValidationMessageFor(x => x.Guest2.DietaryNotes)
+                            </div>
+                        </div>
+
+                        <div class="pre-register__form-wrap grid-x grid-margin-x">
+                            <div class="pre-register__form-label cell small-12 medium-5 vertical-center">
+                                <h4>Have you visited us before:</h4>
+                            </div>
+                            <div class="pre-register__form-field cell small-12 medium-7">
+                                <div>
+                                    <p>Yes</p>
+                                    @Html.RadioButtonFor(x => x.Guest2.VisitedBefore, "Yes", new { required = "required" })
+                                </div>
+                                <div>
+                                    <p>No</p>
+                                    @Html.RadioButtonFor(x => x.Guest2.VisitedBefore, "No", new { required = "required" })
+                                </div>
+                                @Html.ValidationMessageFor(x => x.Guest2.VisitedBefore)
+                            </div>
+                        </div>
+
+                        <div class="pre-register__form-wrap grid-x grid-margin-x">
+                            <div class="pre-register__form-label cell small-12 medium-5 vertical-center">
+                                @Html.LabelFor(x => x.Guest2.PreviousVisits, "If yes, how many previous visits?:")
+                            </div>
+                            <div class="pre-register__form-field cell small-12 medium-7">
+                                @Html.TextBoxFor(x => x.Guest2.PreviousVisits, new { type = "text", placeholder = "number of previous visits" })
+                                @Html.ValidationMessageFor(x => x.Guest2.PreviousVisits)
+                            </div>
+                        </div>
+
+                        <div class="pre-register__form-wrap grid-x grid-margin-x">
+                            <div class="pre-register__form-label cell small-12 medium-5 vertical-center">
+                                <h4>Please choose the social communication tool to stay connected while at the resort:</h4>
+                            </div>
+                            <div class="pre-register__form-field cell small-12 medium-7">
+                                <div>
+                                    <p>WhatsApp</p>
+                                    @Html.RadioButtonFor(x => x.Guest2.SocialCommunicationTool, "WhatsApp", new { required = "required" })
+                                </div>
+                                <div>
+                                    <p>Viber</p>
+                                    @Html.RadioButtonFor(x => x.Guest2.SocialCommunicationTool, "Viber", new { required = "required" })
+                                </div>
+                                <div>
+                                    <p>WeChat</p>
+                                    @Html.RadioButtonFor(x => x.Guest2.SocialCommunicationTool, "WeChat", new { required = "required" })
+                                </div>
+                                <div>
+                                    <p>Line</p>
+                                    @Html.RadioButtonFor(x => x.Guest2.SocialCommunicationTool, "Line", new { required = "required" })
+                                </div>
+                                <div>
+                                    <p>Telegram</p>
+                                    @Html.RadioButtonFor(x => x.Guest2.SocialCommunicationTool, "Telegram", new { required = "required" })
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pre-register__form-add-remove text-center">
+                            <button class="cta orange-solid" id="add-guest-3">add guest 3</button>
+                            <button class="cta secondary-solid" id="remove-guest-3" style="display: none;">remove guest 3</button>
+                        </div>
+
+                    </div>
+
+                    <div class="pre-register__form-guest-3" style="display: none;">
+                        <h3>Guest 3</h3>
+
+                        <div class="pre-register__form-wrap grid-x grid-margin-x">
+                            <div class="pre-register__form-label cell small-12 medium-5 vertical-center">
+                                @Html.LabelFor(x => x.Guest3.LastName, "Last name:")
+                            </div>
+                            <div class="pre-register__form-field cell small-12 medium-7">
+                                @Html.TextBoxFor(x => x.Guest3.LastName, new { type = "text", required = "required", placeholder = "last name *" })
+                                @Html.ValidationMessageFor(x => x.Guest3.LastName)
+                            </div>
+                        </div>
+
+                        <div class="pre-register__form-wrap grid-x grid-margin-x">
+                            <div class="pre-register__form-label cell small-12 medium-5 vertical-center">
+                                @Html.LabelFor(x => x.Guest3.FirstName, "First name:")
+                            </div>
+                            <div class="pre-register__form-field cell small-12 medium-7">
+                                @Html.TextBoxFor(x => x.Guest3.FirstName, new { type = "text", required = "required", placeholder = "first name *" })
+                                @Html.ValidationMessageFor(x => x.Guest3.FirstName)
+                            </div>
+                        </div>
+
+                        <div class="pre-register__form-wrap grid-x grid-margin-x">
+                            <div class="pre-register__form-label cell small-12 medium-5 vertical-center">
+                                @Html.LabelFor(x => x.Guest3.Title, "Title:")
+                            </div>
+                            <div class="pre-register__form-field cell small-12 medium-7">
+                                <div class="register-custom-select">
+                                    @Html.DropDownListFor(x => x.Guest3.Title, Model.Titles, new { required = "required" })
+                                </div>
+                                @Html.ValidationMessageFor(x => x.Guest3.Title)
+                            </div>
+                        </div>
+
+                        <div class="pre-register__form-wrap grid-x grid-margin-x">
+                            <div class="pre-register__form-label cell small-12 medium-5 vertical-center">
+                                @Html.LabelFor(x => x.Guest3.CountryOfResidence, "Country of residence:")
+                            </div>
+                            <div class="pre-register__form-field cell small-12 medium-7">
+                                <div class="register-custom-select">
+                                    @Html.DropDownListFor(x => x.Guest3.CountryOfResidence, Model.Countries, new { required = "required" })
+                                </div>
+                                @Html.ValidationMessageFor(x => x.Guest3.CountryOfResidence)
+                            </div>
+                        </div>
+
+                        <div class="pre-register__form-wrap grid-x grid-margin-x">
+                            <div class="pre-register__form-label cell small-12 medium-5 vertical-center">
+                                @Html.LabelFor(x => x.Guest3.Nationality, "Nationality:")
+                            </div>
+                            <div class="pre-register__form-field cell small-12 medium-7">
+                                <div class="register-custom-select">
+                                    @Html.DropDownListFor(x => x.Guest3.Nationality, Model.Nationalities, new { required = "required" })
+                                </div>
+                                @Html.ValidationMessageFor(x => x.Guest3.Nationality)
+                            </div>
+                        </div>
+
+                        <div class="pre-register__form-wrap grid-x grid-margin-x">
+                            <div class="pre-register__form-label cell small-12 medium-5 vertical-center">
+                                @Html.LabelFor(x => x.Guest3.DateOfBirth, "Date of birth:")
+                            </div>
+                            <div class="pre-register__form-field cell small-12 medium-7">
+                                @Html.TextBoxFor(x => x.Guest3.DateOfBirth, new { type = "text", required = "required", placeholder = "date of birth *" })
+                                @Html.ValidationMessageFor(x => x.Guest3.DateOfBirth)
+                            </div>
+                        </div>
+
+                        <div class="pre-register__form-wrap grid-x grid-margin-x">
+                            <div class="pre-register__form-label cell small-12 medium-5 vertical-center">
+                                @Html.LabelFor(x => x.Guest3.PassportNumber, "Passport number:")
+                            </div>
+                            <div class="pre-register__form-field cell small-12 medium-7">
+                                @Html.TextBoxFor(x => x.Guest3.PassportNumber, new { type = "text", required = "required", placeholder = "passport number *" })
+                                @Html.ValidationMessageFor(x => x.Guest3.PassportNumber)
+                            </div>
+                        </div>
+
+                        <div class="pre-register__form-wrap grid-x grid-margin-x">
+                            <div class="pre-register__form-label cell small-12 medium-5 vertical-center">
+                                @Html.LabelFor(x => x.Guest3.EmailAddress, "Email address:")
+                            </div>
+                            <div class="pre-register__form-field cell small-12 medium-7">
+                                @Html.TextBoxFor(x => x.Guest3.EmailAddress, new { type = "email", required = "required", placeholder = "email address *" })
+                                @Html.ValidationMessageFor(x => x.Guest3.EmailAddress)
+                            </div>
+                        </div>
+
+                        <div class="pre-register__form-wrap grid-x grid-margin-x">
+                            <div class="pre-register__form-label cell small-12 medium-5 vertical-center">
+                                @Html.LabelFor(x => x.Guest3.MobileNumber, "Mobile:")
+                            </div>
+                            <div class="pre-register__form-field cell small-12 medium-7">
+                                @Html.TextBoxFor(x => x.Guest3.MobileNumber, new { type = "text", required = "required", placeholder = "mobile telephone *" })
+                                @Html.ValidationMessageFor(x => x.Guest3.MobileNumber)
+                            </div>
+                        </div>
+
+                        <div class="pre-register__form-wrap grid-x grid-margin-x">
+                            <div class="pre-register__form-label cell small-12 medium-5 vertical-center">
+                                <h4>Dietary requirements:</h4>
+                            </div>
+                            <div class="pre-register__form-field cell small-12 medium-7">
+                                <div>
+                                    <p>Yes</p>
+                                    @Html.RadioButtonFor(x => x.Guest3.DietaryRequirements, "Yes", new { required = "required" })
+                                </div>
+                                <div>
+                                    <p>No</p>
+                                    @Html.RadioButtonFor(x => x.Guest3.DietaryRequirements, "No", new { required = "required" })
+                                </div>
+                                @Html.ValidationMessageFor(x => x.Guest3.DietaryRequirements)
+                            </div>
+                        </div>
+
+                        <div class="pre-register__form-wrap grid-x grid-margin-x">
+                            <div class="pre-register__form-label cell small-12 medium-5 vertical-center">
+                                @Html.LabelFor(x => x.Guest3.DietaryNotes, "Dietary Notes:")
+                            </div>
+                            <div class="pre-register__form-field cell small-12 medium-7">
+                                @Html.TextAreaFor(x => x.Guest3.DietaryNotes, new { placeholder = "if yes please detail here" })
+                                @Html.ValidationMessageFor(x => x.Guest3.DietaryNotes)
+                            </div>
+                        </div>
+
+                        <div class="pre-register__form-wrap grid-x grid-margin-x">
+                            <div class="pre-register__form-label cell small-12 medium-5 vertical-center">
+                                <h4>Have you visited us before:</h4>
+                            </div>
+                            <div class="pre-register__form-field cell small-12 medium-7">
+                                <div>
+                                    <p>Yes</p>
+                                    @Html.RadioButtonFor(x => x.Guest3.VisitedBefore, "Yes", new { required = "required" })
+                                </div>
+                                <div>
+                                    <p>No</p>
+                                    @Html.RadioButtonFor(x => x.Guest3.VisitedBefore, "No", new { required = "required" })
+                                </div>
+                                @Html.ValidationMessageFor(x => x.Guest3.VisitedBefore)
+                            </div>
+                        </div>
+
+                        <div class="pre-register__form-wrap grid-x grid-margin-x">
+                            <div class="pre-register__form-label cell small-12 medium-5 vertical-center">
+                                @Html.LabelFor(x => x.Guest3.PreviousVisits, "If yes, how many previous visits?:")
+                            </div>
+                            <div class="pre-register__form-field cell small-12 medium-7">
+                                @Html.TextBoxFor(x => x.Guest3.PreviousVisits, new { type = "text", placeholder = "number of previous visits" })
+                                @Html.ValidationMessageFor(x => x.Guest3.PreviousVisits)
+                            </div>
+                        </div>
+
+                        <div class="pre-register__form-wrap grid-x grid-margin-x">
+                            <div class="pre-register__form-label cell small-12 medium-5 vertical-center">
+                                <h4>Please choose the social communication tool to stay connected while at the resort:</h4>
+                            </div>
+                            <div class="pre-register__form-field cell small-12 medium-7">
+                                <div>
+                                    <p>WhatsApp</p>
+                                    @Html.RadioButtonFor(x => x.Guest3.SocialCommunicationTool, "WhatsApp", new { required = "required" })
+                                </div>
+                                <div>
+                                    <p>Viber</p>
+                                    @Html.RadioButtonFor(x => x.Guest3.SocialCommunicationTool, "Viber", new { required = "required" })
+                                </div>
+                                <div>
+                                    <p>WeChat</p>
+                                    @Html.RadioButtonFor(x => x.Guest3.SocialCommunicationTool, "WeChat", new { required = "required" })
+                                </div>
+                                <div>
+                                    <p>Line</p>
+                                    @Html.RadioButtonFor(x => x.Guest3.SocialCommunicationTool, "Line", new { required = "required" })
+                                </div>
+                                <div>
+                                    <p>Telegram</p>
+                                    @Html.RadioButtonFor(x => x.Guest3.SocialCommunicationTool, "Telegram", new { required = "required" })
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pre-register__form-add-remove text-center">
+                            <button class="cta orange-solid" id="add-guest-4">add guest 4</button>
+                            <button class="cta secondary-solid" id="remove-guest-4" style="display: none;">remove guest 4</button>
+                        </div>
+
+                    </div>
+
+                    <div class="pre-register__form-guest-4" style="display: none;">
+                        <h3>Guest 4</h3>
+
+                        <div class="pre-register__form-wrap grid-x grid-margin-x">
+                            <div class="pre-register__form-label cell small-12 medium-5 vertical-center">
+                                @Html.LabelFor(x => x.Guest4.LastName, "Last name:")
+                            </div>
+                            <div class="pre-register__form-field cell small-12 medium-7">
+                                @Html.TextBoxFor(x => x.Guest4.LastName, new { type = "text", required = "required", placeholder = "last name *" })
+                                @Html.ValidationMessageFor(x => x.Guest4.LastName)
+                            </div>
+                        </div>
+
+                        <div class="pre-register__form-wrap grid-x grid-margin-x">
+                            <div class="pre-register__form-label cell small-12 medium-5 vertical-center">
+                                @Html.LabelFor(x => x.Guest4.FirstName, "First name:")
+                            </div>
+                            <div class="pre-register__form-field cell small-12 medium-7">
+                                @Html.TextBoxFor(x => x.Guest4.FirstName, new { type = "text", required = "required", placeholder = "first name *" })
+                                @Html.ValidationMessageFor(x => x.Guest4.FirstName)
+                            </div>
+                        </div>
+
+                        <div class="pre-register__form-wrap grid-x grid-margin-x">
+                            <div class="pre-register__form-label cell small-12 medium-5 vertical-center">
+                                @Html.LabelFor(x => x.Guest4.Title, "Title:")
+                            </div>
+                            <div class="pre-register__form-field cell small-12 medium-7">
+                                <div class="register-custom-select">
+                                    @Html.DropDownListFor(x => x.Guest4.Title, Model.Titles, new { required = "required" })
+                                </div>
+                                @Html.ValidationMessageFor(x => x.Guest4.Title)
+                            </div>
+                        </div>
+
+                        <div class="pre-register__form-wrap grid-x grid-margin-x">
+                            <div class="pre-register__form-label cell small-12 medium-5 vertical-center">
+                                @Html.LabelFor(x => x.Guest4.CountryOfResidence, "Country of residence:")
+                            </div>
+                            <div class="pre-register__form-field cell small-12 medium-7">
+                                <div class="register-custom-select">
+                                    @Html.DropDownListFor(x => x.Guest4.CountryOfResidence, Model.Countries, new { required = "required" })
+                                </div>
+                                @Html.ValidationMessageFor(x => x.Guest4.CountryOfResidence)
+                            </div>
+                        </div>
+
+                        <div class="pre-register__form-wrap grid-x grid-margin-x">
+                            <div class="pre-register__form-label cell small-12 medium-5 vertical-center">
+                                @Html.LabelFor(x => x.Guest4.Nationality, "Nationality:")
+                            </div>
+                            <div class="pre-register__form-field cell small-12 medium-7">
+                                <div class="register-custom-select">
+                                    @Html.DropDownListFor(x => x.Guest4.Nationality, Model.Nationalities, new { required = "required" })
+                                </div>
+                                @Html.ValidationMessageFor(x => x.Guest4.Nationality)
+                            </div>
+                        </div>
+
+                        <div class="pre-register__form-wrap grid-x grid-margin-x">
+                            <div class="pre-register__form-label cell small-12 medium-5 vertical-center">
+                                @Html.LabelFor(x => x.Guest4.DateOfBirth, "Date of birth:")
+                            </div>
+                            <div class="pre-register__form-field cell small-12 medium-7">
+                                @Html.TextBoxFor(x => x.Guest4.DateOfBirth, new { type = "text", required = "required", placeholder = "date of birth *" })
+                                @Html.ValidationMessageFor(x => x.Guest4.DateOfBirth)
+                            </div>
+                        </div>
+
+                        <div class="pre-register__form-wrap grid-x grid-margin-x">
+                            <div class="pre-register__form-label cell small-12 medium-5 vertical-center">
+                                @Html.LabelFor(x => x.Guest4.PassportNumber, "Passport number:")
+                            </div>
+                            <div class="pre-register__form-field cell small-12 medium-7">
+                                @Html.TextBoxFor(x => x.Guest4.PassportNumber, new { type = "text", required = "required", placeholder = "passport number *" })
+                                @Html.ValidationMessageFor(x => x.Guest4.PassportNumber)
+                            </div>
+                        </div>
+
+                        <div class="pre-register__form-wrap grid-x grid-margin-x">
+                            <div class="pre-register__form-label cell small-12 medium-5 vertical-center">
+                                @Html.LabelFor(x => x.Guest4.EmailAddress, "Email address:")
+                            </div>
+                            <div class="pre-register__form-field cell small-12 medium-7">
+                                @Html.TextBoxFor(x => x.Guest4.EmailAddress, new { type = "email", required = "required", placeholder = "email address *" })
+                                @Html.ValidationMessageFor(x => x.Guest4.EmailAddress)
+                            </div>
+                        </div>
+
+                        <div class="pre-register__form-wrap grid-x grid-margin-x">
+                            <div class="pre-register__form-label cell small-12 medium-5 vertical-center">
+                                @Html.LabelFor(x => x.Guest4.MobileNumber, "Mobile:")
+                            </div>
+                            <div class="pre-register__form-field cell small-12 medium-7">
+                                @Html.TextBoxFor(x => x.Guest4.MobileNumber, new { type = "text", required = "required", placeholder = "mobile telephone *" })
+                                @Html.ValidationMessageFor(x => x.Guest4.MobileNumber)
+                            </div>
+                        </div>
+
+                        <div class="pre-register__form-wrap grid-x grid-margin-x">
+                            <div class="pre-register__form-label cell small-12 medium-5 vertical-center">
+                                <h4>Dietary requirements:</h4>
+                            </div>
+                            <div class="pre-register__form-field cell small-12 medium-7">
+                                <div>
+                                    <p>Yes</p>
+                                    @Html.RadioButtonFor(x => x.Guest4.DietaryRequirements, "Yes", new { required = "required" })
+                                </div>
+                                <div>
+                                    <p>No</p>
+                                    @Html.RadioButtonFor(x => x.Guest4.DietaryRequirements, "No", new { required = "required" })
+                                </div>
+                                @Html.ValidationMessageFor(x => x.Guest4.DietaryRequirements)
+                            </div>
+                        </div>
+
+                        <div class="pre-register__form-wrap grid-x grid-margin-x">
+                            <div class="pre-register__form-label cell small-12 medium-5 vertical-center">
+                                @Html.LabelFor(x => x.Guest4.DietaryNotes, "Dietary Notes:")
+                            </div>
+                            <div class="pre-register__form-field cell small-12 medium-7">
+                                @Html.TextAreaFor(x => x.Guest4.DietaryNotes, new { placeholder = "if yes please detail here" })
+                                @Html.ValidationMessageFor(x => x.Guest4.DietaryNotes)
+                            </div>
+                        </div>
+
+                        <div class="pre-register__form-wrap grid-x grid-margin-x">
+                            <div class="pre-register__form-label cell small-12 medium-5 vertical-center">
+                                <h4>Have you visited us before:</h4>
+                            </div>
+                            <div class="pre-register__form-field cell small-12 medium-7">
+                                <div>
+                                    <p>Yes</p>
+                                    @Html.RadioButtonFor(x => x.Guest4.VisitedBefore, "Yes", new { required = "required" })
+                                </div>
+                                <div>
+                                    <p>No</p>
+                                    @Html.RadioButtonFor(x => x.Guest4.VisitedBefore, "No", new { required = "required" })
+                                </div>
+                                @Html.ValidationMessageFor(x => x.Guest4.VisitedBefore)
+                            </div>
+                        </div>
+
+                        <div class="pre-register__form-wrap grid-x grid-margin-x">
+                            <div class="pre-register__form-label cell small-12 medium-5 vertical-center">
+                                @Html.LabelFor(x => x.Guest4.PreviousVisits, "If yes, how many previous visits?:")
+                            </div>
+                            <div class="pre-register__form-field cell small-12 medium-7">
+                                @Html.TextBoxFor(x => x.Guest4.PreviousVisits, new { type = "text", placeholder = "number of previous visits" })
+                                @Html.ValidationMessageFor(x => x.Guest4.PreviousVisits)
+                            </div>
+                        </div>
+
+                        <div class="pre-register__form-wrap grid-x grid-margin-x">
+                            <div class="pre-register__form-label cell small-12 medium-5 vertical-center">
+                                <h4>Please choose the social communication tool to stay connected while at the resort:</h4>
+                            </div>
+                            <div class="pre-register__form-field cell small-12 medium-7">
+                                <div>
+                                    <p>WhatsApp</p>
+                                    @Html.RadioButtonFor(x => x.Guest4.SocialCommunicationTool, "WhatsApp", new { required = "required" })
+                                </div>
+                                <div>
+                                    <p>Viber</p>
+                                    @Html.RadioButtonFor(x => x.Guest4.SocialCommunicationTool, "Viber", new { required = "required" })
+                                </div>
+                                <div>
+                                    <p>WeChat</p>
+                                    @Html.RadioButtonFor(x => x.Guest4.SocialCommunicationTool, "WeChat", new { required = "required" })
+                                </div>
+                                <div>
+                                    <p>Line</p>
+                                    @Html.RadioButtonFor(x => x.Guest4.SocialCommunicationTool, "Line", new { required = "required" })
+                                </div>
+                                <div>
+                                    <p>Telegram</p>
+                                    @Html.RadioButtonFor(x => x.Guest4.SocialCommunicationTool, "Telegram", new { required = "required" })
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pre-register__form-stay">
+
+                        <div class="pre-register__form-wrap grid-x grid-margin-x">
+                            <div class="pre-register__form-label cell small-12 medium-5 vertical-center">
+                                <h4>Arrival date:</h4>
+                            </div>
+                            <div class="pre-register__form-field cell small-12 medium-7">
+                                <div class="date-wrap">
+                                    @Html.HiddenFor(x => x.DateIn)
+                                    <input type="text" id="arrival" readonly autocomplete="off">
+                                    <label id="arrival-month" class="booking__month"></label>
+                                    <label id="arrival-year"></label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pre-register__form-wrap grid-x grid-margin-x">
+                            <div class="pre-register__form-label cell small-12 medium-5 vertical-center">
+                                @Html.LabelFor(x => x.ArrivalFlight, "Arrival flight:")
+                            </div>
+                            <div class="pre-register__form-field cell small-12 medium-7">
+                                @Html.TextBoxFor(x => x.ArrivalFlight, new { type = "text", required = "required", placeholder = "arrival flight number *" })
+                                @Html.ValidationMessageFor(x => x.ArrivalFlight)
+                            </div>
+                        </div>
+
+                        <div class="pre-register__form-wrap grid-x grid-margin-x">
+                            <div class="pre-register__form-label cell small-12 medium-5 vertical-center">
+                                <h4>Departure date:</h4>
+                            </div>
+                            <div class="pre-register__form-field cell small-12 medium-7">
+                                <div class="date-wrap">
+                                    @Html.HiddenFor(x => x.DateOut)
+                                    <input type="text" id="departure" readonly autocomplete="off">
+                                    <label id="departure-month" class="booking__month"></label>
+                                    <label id="departure-year"></label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pre-register__form-wrap grid-x grid-margin-x">
+                            <div class="pre-register__form-label cell small-12 medium-5 vertical-center">
+                                @Html.LabelFor(x => x.DepartureFlight, "Departure flight:")
+                            </div>
+                            <div class="pre-register__form-field cell small-12 medium-7">
+                                @Html.TextBoxFor(x => x.DepartureFlight, new { type = "text", required = "required", placeholder = "departure flight number *" })
+                                @Html.ValidationMessageFor(x => x.DepartureFlight)
+                            </div>
+                        </div>
+
+                        <div class="pre-register__form-wrap grid-x grid-margin-x">
+                            <div class="pre-register__form-label cell small-12 medium-5 vertical-center">
+                                <h4>Purpose of stay:</h4>
+                            </div>
+                            <div class="pre-register__form-field cell small-12 medium-7">
+                                <div>
+                                    <p>Leisure</p>
+                                    @Html.RadioButtonFor(x => x.PurposeOfStay, "Leisure", new { required = "required" })
+                                </div>
+                                <div>
+                                    <p>Honeymoon</p>
+                                    @Html.RadioButtonFor(x => x.PurposeOfStay, "Honeymoon", new { required = "required" })
+                                </div>
+                                <div>
+                                    <p>Birthday celebration</p>
+                                    @Html.RadioButtonFor(x => x.PurposeOfStay, "Birthday", new { required = "required" })
+                                </div>
+                                <div>
+                                    <p>Wedding</p>
+                                    @Html.RadioButtonFor(x => x.PurposeOfStay, "Wedding", new { required = "required" })
+                                </div>
+                                <div>
+                                    <p>Family holiday</p>
+                                    @Html.RadioButtonFor(x => x.PurposeOfStay, "Family", new { required = "required" })
+                                </div>
+                                <div>
+                                    <p>Other</p>
+                                    @Html.RadioButtonFor(x => x.PurposeOfStay, "Other", new { required = "required" })
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pre-register__form-wrap grid-x grid-margin-x">
+                            <div class="pre-register__form-label cell small-12 medium-5 vertical-center">
+                                @Html.LabelFor(x => x.PurposeOfStayOther, "Purpose of stay (if other):")
+                            </div>
+                            <div class="pre-register__form-field cell small-12 medium-7">
+                                @Html.TextAreaFor(x => x.PurposeOfStayOther, new { placeholder = "if other please detail here" })
+                                @Html.ValidationMessageFor(x => x.PurposeOfStayOther)
+                            </div>
+                        </div>
+
+                        <div class="pre-register__form-wrap grid-x grid-margin-x">
+                            <div class="pre-register__form-label cell small-12 medium-5 vertical-center">
+                                <h4>Wedding date (if wedding):</h4>
+                            </div>
+                            <div class="pre-register__form-field cell small-12 medium-7">
+                                <div class="date-wrap">
+                                    @Html.HiddenFor(x => x.Wedding)
+                                    <input type="text" id="wedding" readonly autocomplete="off">
+                                    <label id="wedding-month" class="booking__month"></label>
+                                    <label id="wedding-year"></label>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="pre-register__form-disclaimer">
+                        @Html.Wrap("p", Model.RefundText.ShowTextWithLineBreaks())
+
+                        @if (!string.IsNullOrEmpty(Model.ConsentText))
+                        {
+                            <p>
+                                @Html.CheckBoxFor(x => Model.Consent, new { required = "required" })
+                                @Model.ConsentText
+                            </p>
+
+                            @Html.ValidationMessageFor(x => x.Consent)
+                        }
+                    </div>
+
+                    @Html.reCaptcha(false)
+
+                    if (showRecaptchaValidation)
+                    {
+                        <p style="color: red">Please confirm that you are human!</p>
+                    }
+
+                    <div class="text-center">
+                        <button type="submit" class="cta orange-solid">submit</button>
+                    </div>
+                }
+            </div>
+        </div>
+
+        <div class="pre-register__contact cell small-12 small-order-1 medium-order-2">
+            <div class="pre-register__contact-info">
+                @Html.Wrap("h3", formComponent.ReservationsHeading)
+                <ul>
+                    @if (!string.IsNullOrEmpty(formComponent.ReservationsEmailAddress))
+                    {
+                        <li><a href="mailto:@formComponent.ReservationsEmailAddress">E: @formComponent.ReservationsEmailAddress</a></li>
+                    }
+
+                    @if (!string.IsNullOrEmpty(formComponent.ReservationsTelephoneNumber))
+                    {
+                        <li><a href="tel:@formComponent.ReservationsTelephoneNumber">T: @formComponent.ReservationsTelephoneNumber</a></li>
+                    }
+                </ul>
+            </div>
+        </div>
+
+        <div class="pre-register__terms cell small-12 small-order-3">
+            @formComponent.TermsConditions
+        </div>
+
+    </div>
+
+</div>

@@ -1,0 +1,7 @@
+@inherits UmbracoViewPage<StandardContent>
+
+    <div class="plain-text">
+        @Html.Wrap("h1", Model.Heading)
+
+        @Model.Text
+    </div>

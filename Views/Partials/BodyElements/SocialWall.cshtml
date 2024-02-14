@@ -1,0 +1,266 @@
+﻿@inherits UmbracoViewPage<SocialWall>
+@using SunSiyam.Core.Helpers
+@{
+    var socialItems = Model.SocialPosts;
+    if (!socialItems.Any())
+    {
+        return;
+    }
+}
+
+<div class="social">
+    <div class="social__heading transform--will-fade-down grid-x transition--1500" data-animate-in-view="transform--completed-fade-down">
+        <div class="social__heading-title cell small-12">
+            @Html.Wrap("h2", Model.SocialHeading)
+        </div>
+        <div class="social__heading-text cell small-12">
+            <!-- WYSIWYG -->
+            @Model.SocialText
+        </div>
+    </div>
+    <div class="social__wall">
+        <div class="social__wall-wrapper">
+            @if (socialItems.Count() > 1)
+            {
+                <div class="social__wall-row grid-x grid-margin-x">
+                    @foreach (var post in socialItems.Take(2))
+                    {
+                        <div class="social__wall-item cell small-6 medium-3 medium-offset-@(socialItems.IndexOf(post) == 0 ? "6":"0")">
+                            @if (post.SocialLogo == "tiktok.svg" && !post.TikTokEmbedCode.IsNullOrWhiteSpace())
+                            {
+                                <div class="social__wall-item-wrap" data-bg="greige" style="background-image:none;">
+                                    @if (!string.IsNullOrEmpty(post.SocialLogo))
+                                    {
+                                        <img src="/assets/img/@post.SocialLogo" />
+                                    }
+                                    <button class="button" reveal data-open="tiktok-embedded">
+                                        <div class="social__wall-play" style="background-image:@(post.Image == null ? "none;" : "url(" + post.Image.GetCroppedImageUrl("345x345") + ")" ); background-size:contain">
+                                            <img src="/assets/img/play-button-white.svg" class="tiktok-embedded">
+                                        </div>
+                                    </button>
+                                </div>
+                                <div class="social__wall-overlay reveal" id="tiktok-embedded" data-reveal>
+                                    @Html.Raw(post.TikTokEmbedCode)
+                                    <button class="close-button social__wall-overlay-close" data-close aria-label="Close modal" type="button">
+                                        <img src="assets/img/social-wall-close.svg">
+                                    </button>
+                                </div>
+                            }
+                            else
+                            {
+                                <a href="@post.PostLink.GetLinkUrl()">
+                                    <div class="social__wall-item-wrap @(post.SocialLogo == "Tweeter.svg" ? "tweet" : null)" data-bg="@SocialWallHelper.GetSocialItemBgClass(post.SocialLogo)" style="background-image:@(post.Image == null ? "none;" : "url(" + post.Image.GetCroppedImageUrl("345x345") + ")" )">
+                                        @if (!string.IsNullOrEmpty(post.SocialLogo))
+                                        {
+                                            <img src="/assets/img/@post.SocialLogo" />
+                                        }
+                                        @if (post.Description != null && !String.IsNullOrEmpty(post.Description.ToString()))
+                                        {
+                                            <div class="social__wall-item-wrap-text @(post.SocialLogo == "Tweeter.svg" ? "tweet" : "note")">
+                                                @post.Description
+                                            </div>
+                                        }
+                                    </div>
+                                </a>
+                            }
+                        </div>
+                    }
+                </div>
+            }
+
+            @if (socialItems.Count() > 2)
+            {
+                <div class="social__wall-row grid-x grid-margin-x">
+                    @foreach (var post in socialItems.Skip(2).Take(3))
+                    {
+                        <div class="@(socialItems.IndexOf(post) == 2 ? "social__wall-item cell small-12 medium-3 medium-offset-3":"social__wall-item cell small-6 medium-3")">
+                            @if (post.SocialLogo == "tiktok.svg" && !post.TikTokEmbedCode.IsNullOrWhiteSpace())
+                            {
+                                <div class="social__wall-item-wrap" data-bg="greige" style="background-image:none;">
+                                    @if (!string.IsNullOrEmpty(post.SocialLogo))
+                                    {
+                                        <img src="/assets/img/@post.SocialLogo" />
+                                    }
+                                    <button class="button" reveal data-open="tiktok-embedded">
+                                        <div class="social__wall-play" style="background-image:@(post.Image == null ? "none;" : "url(" + post.Image.GetCroppedImageUrl("345x345") + ")" ); background-size:contain">
+                                            <img src="/assets/img/play-button-white.svg" class="tiktok-embedded">
+                                        </div>
+                                    </button>
+                                </div>
+                                <div class="social__wall-overlay reveal" id="tiktok-embedded" data-reveal>
+                                    @Html.Raw(post.TikTokEmbedCode);
+                                    <button class="close-button social__wall-overlay-close" data-close aria-label="Close modal" type="button">
+                                        <img src="assets/img/social-wall-close.svg">
+                                    </button>
+                                </div>
+                            }
+                            else
+                            {
+                                <a href="@post.PostLink.GetLinkUrl()">
+                                    <div class="social__wall-item-wrap @(post.SocialLogo == "Tweeter.svg" ? "tweet" : null)" data-bg="@SocialWallHelper.GetSocialItemBgClass(post.SocialLogo)" style="background-image:@(post.Image == null ? "none;" : "url(" + post.Image.GetCroppedImageUrl("345x345") + ")" )">
+                                        @if (!string.IsNullOrEmpty(post.SocialLogo))
+                                        {
+                                            <img src="/assets/img/@post.SocialLogo" />
+                                        }
+                                        @if (post.Description != null && !String.IsNullOrEmpty(post.Description.ToString()))
+                                        {
+                                            <div class="social__wall-item-wrap-text @(post.SocialLogo == "Tweeter.svg" ? "tweet" : "note")">
+                                                @post.Description
+                                            </div>
+                                        }
+                                    </div>
+                                </a>
+                            }
+                        </div>
+                    }
+                </div>
+            }
+
+            @if (socialItems.Count() > 5)
+            {
+                <div class="social__wall-row grid-x grid-margin-x">
+                    @foreach (var post in socialItems.Skip(5).Take(4))
+                    {
+                        <div class="social__wall-item cell small-12 medium-3">
+                            @if (post.SocialLogo == "tiktok.svg" && !post.TikTokEmbedCode.IsNullOrWhiteSpace())
+                            {
+                                <div class="social__wall-item-wrap" data-bg="greige" style="background-image:none;">
+                                    @if (!string.IsNullOrEmpty(post.SocialLogo))
+                                    {
+                                        <img src="/assets/img/@post.SocialLogo" />
+                                    }
+                                    <button class="button" reveal data-open="tiktok-embedded">
+                                        <div class="social__wall-play" style="background-image:@(post.Image == null ? "none;" : "url(" + post.Image.GetCroppedImageUrl("345x345") + ")" ); background-size:contain">
+                                            <img src="/assets/img/play-button-white.svg" class="tiktok-embedded">
+                                        </div>
+                                    </button>
+                                </div>
+                                <div class="social__wall-overlay reveal" id="tiktok-embedded" data-reveal>
+                                    @Html.Raw(post.TikTokEmbedCode);
+                                    <button class="close-button social__wall-overlay-close" data-close aria-label="Close modal" type="button">
+                                        <img src="assets/img/social-wall-close.svg">
+                                    </button>
+                                </div>
+                            }
+                            else
+                            {
+                                <a href="@post.PostLink.GetLinkUrl()">
+                                    <div class="social__wall-item-wrap @(post.SocialLogo == "Tweeter.svg" ? "tweet" : null)" data-bg="@SocialWallHelper.GetSocialItemBgClass(post.SocialLogo)" style="background-image:@(post.Image == null ? "none;" : "url(" + post.Image.GetCroppedImageUrl("345x345") + ")" )">
+                                        @if (!string.IsNullOrEmpty(post.SocialLogo))
+                                        {
+                                            <img src="/assets/img/@post.SocialLogo" />
+                                        }
+                                        @if (post.Description != null && !String.IsNullOrEmpty(post.Description.ToString()))
+                                        {
+                                            <div class="social__wall-item-wrap-text @(post.SocialLogo == "Tweeter.svg" ? "tweet" : "note")">
+                                                @post.Description
+                                            </div>
+                                        }
+                                    </div>
+                                </a>
+                            }
+                        </div>
+                    }
+                </div>
+            }
+
+            @if (socialItems.Count() > 9)
+            {
+                <div class="social__wall-row grid-x grid-margin-x">
+                    @foreach (var post in socialItems.Skip(9).Take(3))
+                    {
+                        <div class="@(socialItems.IndexOf(post) == 9 ? "social__wall-item cell small-12 medium-3 medium-offset-3":"social__wall-item cell small-12 medium-3")">
+                            @if (post.SocialLogo == "tiktok.svg" && !post.TikTokEmbedCode.IsNullOrWhiteSpace())
+                            {
+                                <div class="social__wall-item-wrap" data-bg="greige" style="background-image:none;">
+                                    @if (!string.IsNullOrEmpty(post.SocialLogo))
+                                    {
+                                        <img src="/assets/img/@post.SocialLogo" />
+                                    }
+                                    <button class="button" reveal data-open="tiktok-embedded">
+                                        <div class="social__wall-play" style="background-image:@(post.Image == null ? "none;" : "url(" + post.Image.GetCroppedImageUrl("345x345") + ")" ); background-size:contain">
+                                            <img src="/assets/img/play-button-white.svg" class="tiktok-embedded">
+                                        </div>
+                                    </button>
+                                </div>
+                                <div class="social__wall-overlay reveal" id="tiktok-embedded" data-reveal>
+                                    @Html.Raw(post.TikTokEmbedCode);
+                                    <button class="close-button social__wall-overlay-close" data-close aria-label="Close modal" type="button">
+                                        <img src="assets/img/social-wall-close.svg">
+                                    </button>
+                                </div>
+                            }
+                            else
+                            {
+                                <a href="@post.PostLink.GetLinkUrl()">
+                                    <div class="social__wall-item-wrap @(post.SocialLogo == "Tweeter.svg" ? "tweet" : null)" data-bg="@SocialWallHelper.GetSocialItemBgClass(post.SocialLogo)" style="background-image:@(post.Image == null ? "none;" : "url(" + post.Image.GetCroppedImageUrl("345x345") + ")" )">
+                                        @if (!string.IsNullOrEmpty(post.SocialLogo))
+                                        {
+                                            <img src="/assets/img/@post.SocialLogo" />
+                                        }
+                                        @if (post.Description != null && !String.IsNullOrEmpty(post.Description.ToString()))
+                                        {
+                                            <div class="social__wall-item-wrap-text @(post.SocialLogo == "Tweeter.svg" ? "tweet" : "note")">
+                                                @post.Description
+                                            </div>
+                                        }
+                                    </div>
+                                </a>
+                            }
+                        </div>
+                    }
+                </div>
+            }
+
+            @if (socialItems.Count() > 12)
+            {
+                <div class="social__wall-row grid-x grid-margin-x">
+                    @foreach (var post in socialItems.Skip(12).Take(2))
+                    {
+                        <div class="@(socialItems.IndexOf(post) == 12 ? "social__wall-item cell small-12 medium-3 medium-offset-6":"social__wall-item cell small-12 medium-3")">
+                            @if (post.SocialLogo == "tiktok.svg" && !post.TikTokEmbedCode.IsNullOrWhiteSpace())
+                            {
+                                <div class="social__wall-item-wrap" data-bg="greige" style="background-image:none;">
+                                    @if (!string.IsNullOrEmpty(post.SocialLogo))
+                                    {
+                                        <img src="/assets/img/@post.SocialLogo" />
+                                    }
+                                    <button class="button" reveal data-open="tiktok-embedded">
+                                        <div class="social__wall-play" style="background-image:@(post.Image == null ? "none;" : "url(" + post.Image.GetCroppedImageUrl("345x345") + ")" ); background-size:contain">
+                                            <img src="/assets/img/play-button-white.svg" class="tiktok-embedded">
+                                        </div>
+                                    </button>
+                                </div>
+                                <div class="social__wall-overlay reveal" id="tiktok-embedded" data-reveal>
+                                    @Html.Raw(post.TikTokEmbedCode);
+                                    <button class="close-button social__wall-overlay-close" data-close aria-label="Close modal" type="button">
+                                        <img src="assets/img/social-wall-close.svg">
+                                    </button>
+                                </div>
+                            }
+                            else
+                            {
+                                <a href="@post.PostLink.GetLinkUrl()">
+                                    <div class="social__wall-item-wrap @(post.SocialLogo == "Tweeter.svg" ? "tweet" : null)" data-bg="@SocialWallHelper.GetSocialItemBgClass(post.SocialLogo)" style="background-image:@(post.Image == null ? "none;" : "url(" + post.Image.GetCroppedImageUrl("345x345") + ")" )">
+                                        @if (!string.IsNullOrEmpty(post.SocialLogo))
+                                        {
+                                            <img src="/assets/img/@post.SocialLogo" />
+                                        }
+                                        @if (post.Description != null && !String.IsNullOrEmpty(post.Description.ToString()))
+                                        {
+                                            <div class="social__wall-item-wrap-text @(post.SocialLogo == "Tweeter.svg" ? "tweet" : "note")">
+                                                @post.Description
+                                            </div>
+                                        }
+                                    </div>
+                                </a>
+                            }
+                        </div>
+                    }
+                </div>
+            }
+
+
+        </div>
+    </div>
+</div>

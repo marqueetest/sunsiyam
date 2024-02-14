@@ -1,0 +1,20 @@
+@inherits Umbraco.Web.Mvc.UmbracoViewPage
+@{
+    var homePage = Model.AncestorOrSelf(1);
+    var websiteSettings = Umbraco.GetAuxiliaryContent<IAuxiliaryFoldersComposition, WebsiteSettings>(s => s.WebsiteSettings);
+}
+
+<footer class="footer">
+
+    <div class="footer__inner grid-x">
+
+        <div class="footer__logo cell small-12 large-3">
+            <a href="@homePage.Url"><img width="110" height="98" src="/assets/img/footer-logo.svg"></a>
+        </div>
+        @{
+            this.RenderElements(websiteSettings.FooterElements, "FooterElements");
+        }
+
+    </div>
+
+</footer>

@@ -1,0 +1,34 @@
+@inherits UmbracoViewPage<DirectionsMap>
+
+@{
+    var websiteSettings = Umbraco.GetAuxiliaryContent<IAuxiliaryFoldersComposition, WebsiteSettings>(s => s.WebsiteSettings);
+    TempData[ApplicationConstants.TempData.GoogleMaps] = true;
+    var coordinates = $"{Model.Latitude}, {Model.Longitude}";
+}
+
+@if (!string.IsNullOrEmpty(Model.Heading))
+{
+    <div class="title">
+        <div class="title__wrap">
+            @Html.Wrap("h2", Model.Heading)
+        </div>
+    </div>
+}
+
+<div class="directions-map">
+    <div class="map-container" data-map data-map-center-coords="@coordinates" data-map-zoom="@Model.ZoomLevel"></div>
+    <div data-main-resort data-marker-coordinates="@coordinates" data-label="@Model.Destination"></div>
+
+    <!-- other resorts -->
+    @if (Model.DirectionMap != null || Model.DirectionMap.Any())
+    {
+        foreach (var item in Model.DirectionMap)
+        {
+            var otherResortCoordinates = $"{item.Latitude}, {item.Longitude}";
+
+            <div data-markers data-marker-coordinates="@otherResortCoordinates" data-label="@item.Destination"></div>
+        }
+
+    }
+</div>
+

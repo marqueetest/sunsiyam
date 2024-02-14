@@ -1,0 +1,13 @@
+@inherits UmbracoViewPage<Video>
+
+@if(Model.VideoLink == null)
+{
+    return;
+}
+
+<div class="full-width-video">
+    <div class="iframe-wrap">
+        <iframe src="@Model.VideoLink.GetLinkUrl()" loading="lazy" id="vimeo-player" width="640" height="281" frameborder="0" allow="fullscreen; autoplay" allowfullscreen></iframe>
+    </div>
+    <img class="play-button" src="/assets/img/video-play.svg">
+</div>

@@ -1,0 +1,113 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage
+@{
+    Layout = null;
+
+    var currentLanguage = Model.GetCultureFromDomains().Split(new char[] { '-' }).FirstOrDefault()?.ToUpper();
+    var lang = String.IsNullOrEmpty(currentLanguage) ? "" : currentLanguage.ToLower();
+
+    var websiteSettings = Umbraco.GetAuxiliaryContent<IAuxiliaryFoldersComposition, WebsiteSettings>(s => s.WebsiteSettings);
+    var page = Umbraco.AssignedContentItem;
+    Umbraco.RenderMacro("TestError");
+}
+<!DOCTYPE html>
+<html lang="@lang">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/png" href="/assets/img/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/assets/img/favicon-16x16.png" sizes="16x16" />
+    @Html.Partial("Seo")
+    @Html.Partial("HrefLang")
+    @Html.Raw(websiteSettings.HeaderMarkup)
+    <link rel="stylesheet" type="text/css" href="/assets/main.css">
+    <script type="text/javascript" src="//fast.fonts.net/jsapi/a37c96a9-0420-42a3-a7b5-e6a3d2da2855.js"></script>
+    <script id="mcjs">!function (c, h, i, m, p) { m = c.createElement(h), p = c.getElementsByTagName(h)[0], m.async = 1, m.src = i, p.parentNode.insertBefore(m, p) }(document, "script", "https://chimpstatic.com/mcjs-connected/js/users/904d4bff4e1c30acbb41dbd9e/96843d9ab9137bf937d6ce625.js");</script>
+    <script src="/scripts/VWO.js"></script>
+</head>
+
+<body class="@Model.Value("bodyClass", fallback:Fallback.ToAncestors) @ViewBag.BodyClass">
+
+    @if (!websiteSettings.CookiePanelText.ToString().IsNullOrWhiteSpace())
+    {
+        <div class="cookie-message" id="notification-banner" data-notification-banner-keep-hidden-for-n-days="1">
+            <div class="notification-banner__wrapper grid-x grid-margin-x">
+                <div class="notification-banner__text cell small-12 medium-auto large-auto vertical-center">
+                    <p>
+                        @websiteSettings.CookiePanelText.RemoveSurroundingTag("p")
+                        <a href="#" class="cookiebar-close">Accept</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    }
+
+    @Html.Raw(websiteSettings.BodyMarkup)
+
+    <div class="off-canvas-wrapper">
+        @Html.Partial("NotificationBanner")
+
+        @if (page.AncestorOrSelf("resortsHomepage") != null)
+        {
+            @Html.Partial("ResortBurger")
+        }
+
+        @Html.Partial("Burger")
+
+
+        @Html.Partial("Booking")
+        <div class="off-canvas-content" data-off-canvas-content>
+
+            @if (page.AncestorOrSelf("resortsHomepage") != null)
+            {
+                @Html.Partial("ResortHeader", page)
+                @Html.Partial("ResortHeaderMobile")
+            }
+            else
+            {
+                @Html.Partial("Header", page)
+                @Html.Partial("HeaderMobile")
+            }
+
+
+
+            <main id="mainContent" role="main">
+                @RenderBody()
+            </main>
+            @Html.Partial("Footer")
+
+        </div>
+    </div>
+
+    @* renders pop ups and such *@
+    @Html.Partial("Components")
+
+    @RenderUmbracoForms()
+    @RenderGoogleMaps()
+    <script src="/assets/main.js"></script>
+    @RenderSection("FooterScript", required: false)
+
+    @Html.Raw(websiteSettings.BodyBottomMarkup)
+</body>
+</html>
+
+@helper RenderUmbracoForms()
+{
+    var umbracoForms = TempData[ApplicationConstants.TempData.UmbracoForms];
+    if (umbracoForms != null)
+    {
+        foreach (var form in (List<Guid>)umbracoForms)
+        {
+            Html.RenderAction("RenderFormScripts", "UmbracoForms", new { formid = form, theme = "default" });
+        }
+    }
+}
+
+@helper RenderGoogleMaps()
+{
+    if (TempData[ApplicationConstants.TempData.GoogleMaps] != null)
+    {
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDzns5XDMbnK_Nh0RZWb8aW5v-jqGMbL0Y"></script>
+    }
+}
+

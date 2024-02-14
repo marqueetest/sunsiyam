@@ -1,0 +1,32 @@
+﻿@inherits UmbracoViewPage<GallerySliders>
+@{
+    var galleries = Model.Galleries.OfType<Gallery>();
+
+    if (!galleries.Any())
+    {
+        return;
+    }
+}
+
+@foreach (var gallery in galleries)
+{
+    <div class="gallery">
+        <div class="gallery__header">
+            @Html.Wrap("h2", gallery.Heading)
+        </div>
+        @if (gallery.Pictures.Any())
+        {
+            int i = 0;
+            <div class="gallery__carousel" data-gallery-slider="@gallery.Url">
+                @foreach (var item in gallery.Pictures)
+                {
+                    i++;
+                    <div class="gallery__carousel-item">
+                        @item.Image.GetCroppedImage("590x400")
+                        <button class="gallery__magnify" data-gallery-index="@i">@Umbraco.GetDictionaryValue("Magnify")</button>
+                    </div>
+                }
+            </div>
+        }
+    </div>
+}

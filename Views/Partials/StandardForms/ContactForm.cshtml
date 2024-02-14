@@ -1,0 +1,65 @@
+@inherits UmbracoViewPage<ContactFormViewModel>
+@using SunSiyam.Core.ViewModels
+@using SunSiyam.Core.Controllers
+@using HappyPorch.UmbracoExtensions.Core.Recaptcha
+@{
+    var page = Umbraco.AssignedContentItem as IContentComposition;
+    var element = page.BodyElements.FirstOrDefault(e => e is Form) as Form;
+    var formComponent = element.FormPicker as ContactFormComponent;
+}
+
+@Html.reCaptchaScript()
+
+<div class="contact__wrap">
+    <div class="contact">
+        <div class="contact__container">
+            <div class="contact__title text-center">
+                @Html.Wrap("h2", formComponent.Heading)
+            </div>
+
+            <div class="contact__container grid-x">
+                <div class="contact__container-info cell small-12 medium-6">
+                    @Html.Wrap("h2", formComponent.Subheading)
+                    @formComponent.Text
+                </div>
+                <div class="contact__container-form cell small-12 medium-6">
+                    @Html.Wrap("h3", formComponent.FormHeading)
+                    @using (Html.BeginUmbracoForm<ContactFormController>("Submit", null, new { @class = "validate-form" }, FormMethod.Post))
+                    {
+                        var showRecaptchaValidation = Convert.ToBoolean(TempData["ShowRecaptchaValidation"]);
+                        @Html.AntiForgeryToken()
+                        @Html.HiddenFor(x => x.Guid)
+                        @Html.HiddenFor(x => x.ConsentText)
+
+                        @Html.TextBoxFor(x => Model.Title, new { type = "text", required = "required", placeholder = "title *" })
+                        @Html.ValidationMessageFor(x => x.Title)
+
+                        @Html.TextBoxFor(x => Model.Name, new { type = "text", required = "required", placeholder = "name *" })
+                        @Html.ValidationMessageFor(x => x.Name)
+
+                        @Html.TextBoxFor(x => Model.Property, new { type = "text", required = "required", placeholder = "property/organisation *" })
+                        @Html.ValidationMessageFor(x => x.Property)
+
+                        @Html.TextBoxFor(x => Model.Email, new { type = "email", required = "required", placeholder = "email *" })
+                        @Html.ValidationMessageFor(x => x.Email)
+
+                        @Html.TextBoxFor(x => Model.Subject, new { type = "text", placeholder = "subject *" })
+                        @Html.ValidationMessageFor(x => x.Subject)
+
+                        @Html.TextAreaFor(x => Model.Message, new { type = "text", required = "required", placeholder = "message *" })
+                        @Html.ValidationMessageFor(x => x.Message)
+
+                        if (!string.IsNullOrEmpty(Model.ConsentText))
+                        {
+                            @Html.CheckBoxFor(x => Model.Consent)
+                            @Html.LabelFor(x => Model.Consent, Model.ConsentText)
+                            @Html.ValidationMessageFor(x => x.Consent)
+                        }
+
+                        <button class="cta orange-outline wide" type="submit">submit</button>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,113 @@
+﻿@inherits UmbracoViewPage<OffersSlider>
+@{
+    var offers = Model.Offers;
+}
+@if (!offers.Any())
+{
+    return;
+}
+<div class="offers-slider__wrapper">
+    <div class="offers-slider__title cell small-12 text-center">
+        @Html.Wrap("h2", Model.OffersHeading)
+    </div>
+    <div class="offers-slider">
+
+        <div class="offers-slider__container show-for-medium">
+            @foreach (var item in offers)
+            {
+                if (item.Offers?.Any() != true)
+                {
+                    continue;
+                }
+
+                var firstOffer = item.Offers.FirstOrDefault() as OfferDetailsPage;
+                var firstOfferResort = firstOffer.AncestorOrSelf("resortsHomePage") as ResortsHomePage;
+
+                <div class="offers-slider__slide">
+                    <div class="offers-slider__slide-wrap grid-x grid-margin-x">
+                        <div class="offers-slider__slide-img-offer grid-x cell small-7 text-center transform--will-fade-up transition--1250" data-animate-in-view="transform--completed-fade-up">
+                            <div class="offers-slider__slide-img-offer-img cell small-6">
+	                            <div class="offers-slider__slide-img-offer-img-inner" style="background-image:url('@firstOffer.ListingImage.GetCroppedImageUrl("435x525")')"></div>
+                            </div>
+                            <div class="offers-slider__slide-img-offer-offer cell small-6 vertical-center transform--will-fade-up transition--1750" data-animate-in-view="transform--completed-fade-up">
+                                @Html.Wrap("h3", firstOffer.ListingTitle)
+                                @Html.Wrap("h4", firstOfferResort.Name)
+                                @firstOffer.ListingDescription
+                                <div class="offers-slider__slide-img-offer-offer-cta">
+                                    @firstOffer.BookingLink.GetLink(cssClass: "cta secondary-outline")
+                                    <a href="@firstOffer.Url" class="cta solid-grey">@Umbraco.GetDictionaryValue("view")</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="offers-slider__slide-double-offer grid-x cell small-5 text-center transform--will-fade-up transition--1250" data-animate-in-view="transform--completed-fade-up">
+                            @foreach (var offer in item.Offers.OfType<OfferDetailsPage>().Skip(1).Take(2))
+                            {
+                                var resortOffer = offer.AncestorOrSelf("resortsHomePage") as ResortsHomePage;
+                                <div class="offers-slider__slide-double-offer-top cell small-12 transform--will-fade-up transition--1750" data-animate-in-view="transform--completed-fade-up">
+	                                <div class="offers-slider__slide-double-offer-image" style="background-image:url('@offer.ListingImage.GetCroppedImageUrl("600x250")')"></div>
+                                    <div class="offers-slider__slide-double-offer-overlay"></div>
+                                    @Html.Wrap("h3", offer.ListingTitle)
+                                    @Html.Wrap("h4", resortOffer.Name)
+                                    <div class="offers-slider__slide-double-offer-top-cta">
+                                        @offer.BookingLink.GetLink(cssClass: "cta white-outline")
+                                        <a href="@offer.Url" class="cta white-outline">@Umbraco.GetDictionaryValue("view offer")</a>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+
+        <div class="offers-slider-mobile__container hide-for-medium">
+            @foreach (var item in offers)
+            {
+                if (item.Offers?.Any() != true)
+                {
+                    continue;
+                }
+
+                foreach (var offer in item.Offers.OfType<OfferDetailsPage>())
+                {
+                    var resortOffer = offer.AncestorOrSelf("resortsHomePage") as ResortsHomePage;
+                    <div class="offers-slider-mobile__slide transform--will-fade-up transition--1750" data-animate-in-view="transform--completed-fade-up">
+                        <div class="offers-slider-mobile__slide-wrap grid-x">
+                            <div class="offers-slider-mobile__slide-img-offer grid-x cell small-12 text-center">
+                                <div class="offers-slider-mobile__slide-img-offer-img cell small-12" style="background-image:url('@offer.ListingImage.GetCroppedImageUrl("435x525")')"></div>
+                                <div class="offers-slider-mobile__slide-img-offer-offer cell small-12 vertical-center">
+                                    @Html.Wrap("h3", offer.ListingTitle)
+                                    @Html.Wrap("h4", resortOffer.Name)
+                                    @offer.ListingDescription
+                                    <div class="offers-slider-mobile__slide-img-offer-offer-cta">
+                                        @offer.BookingLink.GetLink(cssClass: "cta secondary-outline")
+                                        <a href="@offer.Url" class="cta solid-grey">@Umbraco.GetDictionaryValue("view")</a>
+                                        <div class="offers-slider-mobile__slide-img-offer-offer-cta-arrows">
+
+                                        </div>
+                                        @Model.AllOffersLink.GetLink(cssClass: "cta solid-grey offers-slider-mobile__slide-img-offer-offer-cta-all")
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+
+            }
+        </div>
+
+
+        <div class="offers-slider__nav text-center">
+            @if (offers.Count() > 1)
+            {
+                <div class="offers-slider__nav--has-scrollbar offers-slider__nav--single-image"></div>
+            }
+        </div>
+
+
+        <div class="offers-slider__nav-view-all text-center">
+            @Model.AllOffersLink.GetLink(cssClass: "cta solid-grey")
+        </div>
+
+    </div>
+</div>

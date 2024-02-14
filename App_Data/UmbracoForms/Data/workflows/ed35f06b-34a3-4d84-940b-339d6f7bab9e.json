@@ -1,0 +1,16 @@
+{
+  "id": "ed35f06b-34a3-4d84-940b-339d6f7bab9e",
+  "name": "info@siyamworld.com",
+  "form": "4b6a72c2-2a8b-4560-8f29-615a234115ef",
+  "active": true,
+  "workflowTypeId": "17c61629-d984-4e86-b43b-a8407b3efea9",
+  "executesOn": "Submitted",
+  "settings": {
+    "Email": "info@siyamworld.com",
+    "SenderEmail": "",
+    "Subject": "The Form '{form_name}' was submitted",
+    "RazorViewFilePath": "Forms/Emails/Default-Template.cshtml",
+    "Attachment": ""
+  },
+  "sortOrder": 0
+}

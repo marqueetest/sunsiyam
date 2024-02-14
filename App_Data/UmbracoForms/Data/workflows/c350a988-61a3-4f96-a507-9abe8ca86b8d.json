@@ -1,0 +1,16 @@
+{
+  "id": "c350a988-61a3-4f96-a507-9abe8ca86b8d",
+  "name": "info.vilureef@sunsiyam.com",
+  "form": "7eb5a2f4-2517-4e15-8bcb-0ffa1ef36aa9",
+  "active": true,
+  "workflowTypeId": "17c61629-d984-4e86-b43b-a8407b3efea9",
+  "executesOn": "Submitted",
+  "settings": {
+    "Email": "info.vilureef@sunsiyam.com",
+    "SenderEmail": "",
+    "Subject": "The Form '{form_name}' was submitted",
+    "RazorViewFilePath": "Forms/Emails/Default-Template.cshtml",
+    "Attachment": ""
+  },
+  "sortOrder": 0
+}

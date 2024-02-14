@@ -1,0 +1,13 @@
+﻿@inherits UmbracoViewPage<FooterNavigation>
+
+@if (Model.Navigation.IsValidLink())
+{
+    <div class="footer__nav cell small-12 large-6 text-center">
+        <ul>
+            @foreach (var item in Model.Navigation)
+            {
+                <li>@item.GetLink()</li>
+            }
+        </ul>
+    </div>
+}

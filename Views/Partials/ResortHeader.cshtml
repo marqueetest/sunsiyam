@@ -1,0 +1,36 @@
+﻿@inherits UmbracoViewPage
+
+@{
+    var homePage = Model.AncestorOrSelf(1);
+    var resortsHomePage = Model.AncestorOrSelf("resortsHomePage") as ResortsHomePage;
+}
+<header class="resort-header sticky">
+    <a class="resort-header__group-link show-for-medium" data-toggle="burger-menu">Sun Siyam Resorts</a>
+    <a class="resort-header__group-link-mobile hide-for-medium" href="@homePage.Url">group</a>
+
+    <button type="button" class="resort-header__open" data-toggle="burger-menu-resorts"></button>
+
+    @Html.Partial("LanguageSelector", Model)
+
+    <div class="resort-header__logo">
+        <a href="@resortsHomePage.Url">
+            @if (resortsHomePage.HeaderLogo != null)
+            {
+                @resortsHomePage.HeaderLogo.GetImage(cssClass: "logo")
+                @resortsHomePage.BurgerMenuLogo.GetImage(cssClass: "logo-no-slider")
+            }
+            <img class="logo-scroll" src="/assets/img/logo-circle.svg">
+        </a>
+    </div>
+
+    <div class="resort-header__buttons show-for-medium">
+        <div class="resort-header__buttons-inner grid-x text-right">
+            <div class="cell small-12 large-6">
+                @resortsHomePage.ResortBrowseOffersLink.GetLink(cssClass: "cta white-outline")
+            </div>
+            <div class="cell small-12 large-6">
+                <a class="cta orange-solid" href="#" data-toggle="booking">@Umbraco.GetDictionaryValue("book your stay")</a>
+            </div>
+        </div>
+    </div>
+</header>

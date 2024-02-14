@@ -1,0 +1,46 @@
+@inherits UmbracoViewPage<SliderFullHeight>
+
+@{
+    var page = Umbraco.AssignedContentItem;
+}
+
+<div class="slider @(page.ContentType.Alias != "subscribePage" ? "slider--full-height": null)">
+    <div class="slider__inner">
+        @if (Model.ShowVideo)
+        {
+            <div class="slider__slide">
+                <div class="iframe-wrap">
+                    <iframe src="@Model.Video.GetLinkUrl()" loading="lazy" id="vimeo-player" width="640" height="360" frameborder="0" allow="fullscreen; autoplay" allowfullscreen></iframe>
+                </div>
+                <img class="play-button" src="/assets/img/video-play.svg">
+                <div class="video-bar">
+                    <span class="volume">@Umbraco.GetDictionaryValue("VOLUME")</span>
+                    <span class="volume-off" id="volumeOff">@Umbraco.GetDictionaryValue("off")</span>
+                    <span class="volume-on" id="volumeOn">@Umbraco.GetDictionaryValue("on")</span>
+                    <input type="checkbox" id="volumeSwitch"><label for="volumeSwitch">@Umbraco.GetDictionaryValue("Toggle")</label>
+                </div>
+            </div>
+        }
+        else
+        {
+            foreach (var slide in Model.Slides)
+            {
+                <div class="slider__slide">
+                    <div class="slider__image" style="background-image: url('@slide.Image.GetCroppedImageUrl("2000x1125")'); background-position:@slide.ImagePosition;"></div>
+                    <div class="slider__caption">
+                        @Html.Wrap("h1", Model.SliderCaption)
+                        @Html.Wrap("h2", Model.SliderSubheading)
+
+                        @if (!string.IsNullOrEmpty(Model.SliderText?.ToString()))
+                        {
+                            <div class="separator">
+                                <img src="/assets/img/separator-white.svg">
+                            </div>
+                            @Model.SliderText
+                        }
+                    </div>
+                </div>
+            }
+        }
+    </div>
+</div>

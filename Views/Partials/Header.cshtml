@@ -1,0 +1,27 @@
+﻿@inherits UmbracoViewPage
+
+@{
+    var homePage = Model.AncestorOrSelf(1);
+    var websiteSettings = Umbraco.GetAuxiliaryContent<IAuxiliaryFoldersComposition, WebsiteSettings>(s => s.WebsiteSettings);
+}
+
+<header class="header sticky">
+    <button type="button" class="header__open" data-toggle="burger-menu"></button>
+
+    @Html.Partial("LanguageSelector", Model)
+
+    <div class="header__logo">
+        <a href="@homePage.Url"><img width="122" height="108"  class="logo-grey" src="/assets/img/group-logo-gold.svg"><img class="logo" width="118" height="105"  src="/assets/img/group-logo.svg"><img width="46" height="46"  class="logo-scroll" src="/assets/img/logo-circle.svg"></a>
+    </div>
+
+    <div class="header__buttons show-for-medium">
+        <div class="header__buttons-inner grid-x text-right">
+            <div class="cell small-12 large-6">
+                @websiteSettings.BrowseOffersLink.GetLink(cssClass: "cta white-outline")
+            </div>
+            <div class="cell small-12 large-6">
+                <a class="cta orange-solid" data-toggle="booking">@Umbraco.GetDictionaryValue("book your stay")</a>
+            </div>
+        </div>
+    </div>
+</header>

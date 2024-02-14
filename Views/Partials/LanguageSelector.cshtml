@@ -1,0 +1,19 @@
+@inherits UmbracoViewPage
+@*@using Endzone.Umbraco.ModelsBuilderExtensions.Extensions*@
+@{
+    var variants = Model.GetHrefLangPages();
+
+    if (variants.Any())
+    {
+        <div class="header__language">
+            <button>@(Model.GetCultureFromDomains()?.Substring(0,2).ToUpper())</button>
+
+            <ul class="language-select">
+                @foreach (var variant in variants)
+                {
+                    <li><a href="@variant.Url(mode: UrlMode.Absolute)">@(variant.GetCultureFromDomains()?.Substring(0,2).ToUpper())</a></li>
+                }
+            </ul>
+        </div>
+    }
+}

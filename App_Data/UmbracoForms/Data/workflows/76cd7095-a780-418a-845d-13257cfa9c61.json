@@ -1,0 +1,16 @@
+{
+  "id": "76cd7095-a780-418a-845d-13257cfa9c61",
+  "name": "Add to Mailing List",
+  "form": "993c96be-d38a-4acb-aef0-ed1d6c5d7a7f",
+  "active": true,
+  "workflowTypeId": "021728e1-3652-4fab-b3d2-b5d32fb9a81c",
+  "executesOn": "Submitted",
+  "settings": {
+    "ConsentField": "newsletter",
+    "EmailField": "email",
+    "FirstNameField": "name",
+    "LastNameField": "name",
+    "MailingListIds": "1234567890"
+  },
+  "sortOrder": 1
+}

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<parameters>
+  <parameter name="umbracoDbDSN-Web.config Connection String" defaultValue="">
+    <parameterEntry kind="XmlFile" scope="\\web\.config$" match="/configuration/connectionStrings/add[@name='umbracoDbDSN']" />
+  </parameter>
+  <parameter name="Web.config customErrors mode" defaultValue="RemoteOnly">
+    <parameterEntry kind="XmlFile" scope="\\web\.config$" match="/configuration/system.web/customErrors/@mode" />
+  </parameter>
+  <parameter name="Web.config httpErrors existingResponse" defaultValue="Replace">
+    <parameterEntry kind="XmlFile" scope="\\web\.config$" match="/configuration/system.webServer/httpErrors/@existingResponse" />
+  </parameter>
+  <parameter name="Web.config debug mode" defaultValue="false">
+    <parameterEntry kind="XmlFile" scope="\\web\.config$" match="/configuration/system.web/compilation/@debug" />
+  </parameter>
+  <parameter name="Web.config race enabled" defaultValue="false">
+    <parameterEntry kind="XmlFile" scope="\\web\.config$" match="/configuration/system.web/trace/@enabled" />
+  </parameter>
+  <parameter name="Web.config UseHttps" defaultValue="true">
+    <parameterEntry kind="XmlFile" scope="\\web\.config$" match="/configuration/appSettings/add[@key='Umbraco.Core.UseHttps']/@value" />
+  </parameter>
+  <parameter name="Web.config Umbraco.ModelsBuilder.ModelsMode" defaultValue="Nothing">
+    <parameterEntry kind="XmlFile" scope="\\web\.config$" match="/configuration/appSettings/add[@key='Umbraco.ModelsBuilder.ModelsMode']/@value" />
+  </parameter>
+  <parameter name="Web.config SMTP host" defaultValue="smtp.mailtrap.io">
+    <parameterEntry kind="XmlFile" scope="\\web\.config$" match="/configuration/system.net/mailSettings/smtp/network/@host" />
+  </parameter>
+  <parameter name="Web.config SMTP userName" defaultValue="32710c1ac7384dad5">
+    <parameterEntry kind="XmlFile" scope="\\web\.config$" match="/configuration/system.net/mailSettings/smtp/network/@userName" />
+  </parameter>
+  <parameter name="Web.config SMTP password" defaultValue="baae31e0e2f813">
+    <parameterEntry kind="XmlFile" scope="\\web\.config$" match="/configuration/system.net/mailSettings/smtp/network/@password" />
+  </parameter>
+  
+  <parameter name="umbracoSettings.config keepUserLoggedIn" defaultValue="false">
+    <parameterEntry kind="XmlFile" scope="\\config\\umbracoSettings\.config$" match="/settings/security/keepUserLoggedIn/text()" />
+  </parameter>
+  <parameter name="umbracoSettings.config disableRedirectUrlTracking" defaultValue="false" description="Enable automatic redirects by default">
+    <parameterEntry kind="XmlFile" scope="\\config\\umbracoSettings\.config$" match="/settings/web.routing/@disableRedirectUrlTracking" />
+  </parameter>
+  <parameter name="UmbracoSettings.config umbracoApplicationUrl" defaultValue="">
+    <parameterEntry kind="XmlFile" scope="\\config\\umbracoSettings\.config$" match="/settings/web.routing/@umbracoApplicationUrl" />
+  </parameter>
+  
+  <parameter name="uSync8.config ImportAtStartup" defaultValue="false">
+    <parameterEntry kind="XmlFile" scope="\\config\\uSync8\.config$" match="/uSync/BackOffice/ImportAtStartup/text()" />
+  </parameter>
+  <parameter name="uSync8.config ExportAtStartup" defaultValue="false">
+    <parameterEntry kind="XmlFile" scope="\\config\\uSync8\.config$" match="/uSync/BackOffice/ExportAtStartup/text()" />
+  </parameter>
+  <parameter name="uSync8.config ExportOnSave" defaultValue="false">
+    <parameterEntry kind="XmlFile" scope="\\config\\uSync8\.config$" match="/uSync/BackOffice/ExportOnSave/text()" />
+  </parameter>
+</parameters>

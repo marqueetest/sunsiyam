@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ff5000;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g id="Group_2" data-name="Group 2" transform="translate(-375 -226)">
+    <rect id="Rectangle_13" data-name="Rectangle 13" class="cls-1" width="11" height="11" transform="translate(375 226)"/>
+    <path id="Icon_awesome-check" data-name="Icon awesome-check" class="cls-2" d="M2.235,9.388.1,7.249a.329.329,0,0,1,0-.465l.465-.465a.329.329,0,0,1,.465,0L2.468,7.759,5.553,4.674a.329.329,0,0,1,.465,0l.465.465a.329.329,0,0,1,0,.465L2.7,9.388A.329.329,0,0,1,2.235,9.388Z" transform="translate(377.42 224.423)"/>
+  </g>
+</svg>

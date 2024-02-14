@@ -1,0 +1,55 @@
+﻿@inherits UmbracoViewPage<BlogsGridWithFilter>
+@{
+    var items = Umbraco.AssignedContentItem.Children<BlogDetailPage>().OrderByDescending(x => x.ListingDate);
+}
+<div class="blog-index">
+
+    <div class="blog-index__wrap grid-x" data-filter data-filter-class="filter-me" data-filter-controls="filter-controls">
+        <div class="cell small-12">
+            <!-- This empty div is where the filter buttons are appended to: -->
+
+            <div class="blog-index__filters-accordion grid-x">
+                <div class="accordionButton blog-type cell small-12 text-center">
+                    <h4 class="">@Umbraco.GetDictionaryValue("filter posts")</h4>
+                </div>
+                <div class="filter-controls accordionContent blog-type-content cell small-12 text-center"></div>
+            </div>
+        </div>
+
+        <div class="blog-index__intro cell small-12 text-center">
+            @Model.Text
+        </div>
+
+        <!-- Your elements that you want to filter. The categories are in the data-filter-categories attribute -->
+        <!-- Set mulitple categories by sepearating them with the pipe -->
+        @if (items.Any())
+        {
+            <div class="blog-index__container cell small-12 grid-x grid-margin-x">
+                @foreach (var item in items)
+                {
+                    <div class="blog-index__item cell small-12 medium-4 filter-me" data-filter-categories="@item.BlogCategory">
+                        @if (item.ListingImage != null)
+                        {
+                            <div class="blog-index__item-img">
+                                @item.ListingImage.GetCroppedImage("440x425")
+                            </div>
+                        }
+
+                        <div class="blog-index__item-info">
+                            @if (item.ListingDate != null)
+                            {
+                                @Html.Wrap("h4", item.ListingDate.ToString("MMMM dd"))
+                            }
+                            @Html.Wrap("h2", item.ListingHeading)
+                            @item.ListingDescription
+
+                            <a href="@item.Url" class="cta orange-solid">@Umbraco.GetDictionaryValue("read more")</a>
+                        </div>
+                    </div>
+                }
+            </div>
+        }
+
+    </div>
+
+</div>

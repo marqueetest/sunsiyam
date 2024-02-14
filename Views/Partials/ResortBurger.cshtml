@@ -1,0 +1,46 @@
+﻿@using System.Linq
+@inherits UmbracoViewPage
+
+@{
+    var homePage = Model.AncestorOrSelf(1);
+    var resortsHomePage = Model.AncestorOrSelf("resortsHomePage") as ResortsHomePage;
+    var websiteSettings = Umbraco.GetAuxiliaryContent<IAuxiliaryFoldersComposition, WebsiteSettings>(s => s.WebsiteSettings);
+    var navigationLinks = resortsHomePage.PrimaryNavigation.ToList()?.ChunkBy(2);
+    var footerItems = websiteSettings.FooterElements.FirstOrDefault(x => x.ContentType.Alias == "footerNavigation") as FooterNavigation;
+}
+
+<div class="off-canvas resort-burger-menu position-left" id="burger-menu-resorts" data-off-canvas data-transition="overlap" data-content-scroll="false">
+    <div class="resort-burger-menu__container">
+
+        <button class="resort-burger-menu__close" type="button" data-close></button>
+
+        <div class="resort-burger-menu__nav">
+            @foreach (var linkGroup in navigationLinks)
+            {
+                <div class="resort-burger-menu__nav-column">
+                    <ul class="resort-burger-menu__nav-column-primary-list">
+                        @foreach (var item in linkGroup)
+                        {
+                            <li>@item.Link.GetLink()</li>
+                        }
+                    </ul>
+                </div>
+            }
+        </div>
+
+        @if (footerItems != null)
+        {
+            <div class="resort-burger-menu__footer">
+                <div class="resort-burger-menu__footer-nav">
+                    <ul>
+                        @foreach (var item in footerItems.Navigation)
+                        {
+                            <li>@item.GetLink()</li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        }
+
+    </div>
+</div>

@@ -1,0 +1,15 @@
+@inherits UmbracoViewPage<CoordinatesMap>
+
+@{
+    TempData[ApplicationConstants.TempData.GoogleMaps] = true;
+}
+
+<div class="location transform--will-fade-up transition--1000" data-animate-in-view="transform--completed-fade-up">
+    <div class="location__map">
+        <div data-attractions-map data-map-center-coords="@Model.CenterCoordinates" data-map-zoom="@Model.ZoomLevelDesktop" data-map-zoom-small="@Model.ZoomLevelMobile"></div>
+        @foreach (var location in Model.Locations)
+        {
+            <div data-map-marker data-map-marker-coords="@location.Coordinates" data-map-marker-url="@location.Image.GetImageUrl()"></div>
+        }
+    </div>
+</div>

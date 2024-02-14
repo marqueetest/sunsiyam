@@ -1,0 +1,23 @@
+﻿@inherits UmbracoViewPage<InlineImageSocialFeedPanel>
+
+@if (Model.ShowImage)
+{
+    <div class="inline-image">
+        @Model.Image.GetCroppedImage("1010x495")
+    </div>
+}
+else
+{
+    if (!string.IsNullOrEmpty(Model.SocialFeedHeading) || !string.IsNullOrEmpty(Model.SocialFeed))
+    {
+        <div class="inline-social">
+            <div class="inline-social__heading">
+                @Html.Wrap("h2", Model.SocialFeedHeading)
+            </div>
+
+            <div class="inline-social__feed">
+                @Model.SocialFeed
+            </div>
+        </div>
+    }
+}

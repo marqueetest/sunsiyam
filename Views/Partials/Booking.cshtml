@@ -1,0 +1,126 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage
+@{
+    var page = Umbraco.AssignedContentItem;
+    var websiteSettings = Umbraco.GetAuxiliaryContent<IAuxiliaryFoldersComposition, WebsiteSettings>(s => s.WebsiteSettings);
+    var resortsHomePage = Model.AncestorOrSelf("resortsHomePage") as ResortsHomePage;
+}
+<div class="off-canvas booking position-right" id="booking" data-off-canvas data-transition="overlap">
+    @if (page.AncestorOrSelf("resortsHomepage") != null)
+    {
+        if (resortsHomePage.ResortBrowseOffersLink != null)
+        {
+            <div class="booking__offers">
+                <a href="@resortsHomePage.ResortBrowseOffersLink.GetLinkUrl()">
+                    @Html.Wrap("h4", resortsHomePage.ResortBrowseOffersLink.Name)
+                </a>
+            </div>
+        }
+    }
+    else
+    {
+        if (websiteSettings.BrowseOffersLink != null)
+        {
+            <div class="booking__offers">
+                <a href="@websiteSettings.BrowseOffersLink.GetLinkUrl()">
+                    @Html.Wrap("h4", websiteSettings.BrowseOffersLink.Name)
+                </a>
+            </div>
+        }
+    }
+
+
+
+    <div class="booking__form">
+        <button class="booking__close" type="button" data-close></button>
+        @Html.Wrap("h4", websiteSettings.BookStayHeading)
+
+        <form action="" method="get" target="_blank" data-base-url="https://bookings.sunsiyam.com/">
+            <div class="booking__form-container grid-x">
+                <div class="booking__fields grid-x grid-margin-x small-12">
+                    <div class="booking__form-resort cell small-12">
+                        @if (websiteSettings.ResortPicker != null)
+                        {
+                            <label for="resort">@Umbraco.GetDictionaryValue("resort")</label>
+                            <div class="custom-select">
+                                <select name="hotelid">
+                                    @if (page.AncestorOrSelf("resortsHomepage") == null)
+                                    {
+                                        <option name="resort" selected disabled value="">@Umbraco.GetDictionaryValue("Choose your resort")</option>
+                                    }
+
+                                    @foreach (var item in websiteSettings.ResortPicker)
+                                    {
+                                        var resort = item as ResortsHomePage;
+                                        <option @(resortsHomePage == resort ? "selected" : null) value="@resort.HotelId">@resort.Name</option>
+                                    }
+                                </select>
+                            </div>
+                        }
+                    </div>
+
+                    <div class="cell small-6">
+                        <label>@Umbraco.GetDictionaryValue("Check-in")</label>
+                        <div class="date-wrap">
+                            <input type="hidden" name="DateIn">
+                            <input type="text" id="check-in" readonly autocomplete="off">
+                            <label id="check-in-month" class="booking__month"></label>
+                            <label id="check-in-year"></label>
+                        </div>
+                    </div>
+                    <div class="cell small-6">
+                        <label>@Umbraco.GetDictionaryValue("Check-out")</label>
+                        <div class="date-wrap">
+                            <input type="hidden" name="DateOut">
+                            <input type="text" id="check-out" readonly autocomplete="off">
+                            <label id="check-out-month" class="booking__month"></label>
+                            <label id="check-out-year"></label>
+                        </div>
+                    </div>
+                    <div class="cell small-6">
+                        <label>@Umbraco.GetDictionaryValue("Adults")</label>
+                        <div class="date-wrap">
+                            <div class="custom-select">
+                                <select name="Adults" autocomplete="off">
+                                    <option>1</option>
+                                    <option selected="selected">2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cell small-6">
+                        <label>@Umbraco.GetDictionaryValue("Children")</label>
+                        <div class="date-wrap">
+                            <div class="custom-select">
+                                <select name="Children" autocomplete="off">
+                                    <option selected="selected">0</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="booking__submit">
+                    <input type="submit" class="cta orange-solid" value="@Umbraco.GetDictionaryValue("CHECK AVAILABILITY")">
+                </div>
+
+                <div class="booking__direct">
+
+                        @Html.Wrap("h4", websiteSettings.BookDirectHeading)
+
+
+                        @websiteSettings.BookDirectText
+                        @websiteSettings.BookDirectLink.GetLink(cssClass: "booking__direct-link")
+                        <p><span>@websiteSettings.TermsConditionTitle</span></p>
+
+                </div>
+            </div>
+        </form>
+
+    </div>
+
+</div>

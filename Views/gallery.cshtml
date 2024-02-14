@@ -1,0 +1,35 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<Gallery>
+@using SunSiyam.Core.Models
+@{
+    Layout = null;
+    var pictures = Model.Pictures;
+
+    if (!pictures.Any())
+    {
+        return;
+    }
+}
+@foreach (var item in pictures)
+{
+    <div class="gallery-modal__slide">
+        <div class="gallery-modal__slide-image" style="background-image: url('@item.Image.GetCroppedImageUrl("1280x910")'); "></div>
+        <div class="gallery-modal__slide-caption">
+            <div class="gallery-modal__slide-caption__text">
+                @item.Text
+            </div>
+            @if (!string.IsNullOrEmpty(item.PriceText))
+            {
+                <div class="gallery-modal__slide-caption__price">
+                    @Html.Raw(item.PriceText.ReplaceSquareBracketsWithTag("small"))
+                </div>
+            }
+            @if (item.Link.IsValidLink())
+            {
+                <div class="gallery-modal__slide-caption__cta">
+                    @item.Link.GetLink(cssClass: "cta orange-solid")
+                </div>
+            }
+        </div>
+    </div>
+
+}

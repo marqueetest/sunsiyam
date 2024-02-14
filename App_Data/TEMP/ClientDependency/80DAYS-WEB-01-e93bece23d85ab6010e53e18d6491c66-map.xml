@@ -1,0 +1,427 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<map>
+  <item key="L3VtYnJhY28vYXNzZXRzL2Nzcy91bWJyYWNvLmNzczsvdW1icmFjby9saWIvYm9vdHN0cmFwLXNvY2lhbC9ib290c3RyYXAtc29jaWFsLmNzczsvdW1icmFjby9saWIvZm9udC1hd2Vzb21lL2Nzcy9mb250LWF3ZXNvbWUubWluLmNzczs" file="D:\Websites\Sun Siyam - Live\App_Data\TEMP\ClientDependency\1349571293_d4ccfe737de04a159aaff527a3302843.cdC" compression="gzip" version="1349571293">
+    <files>
+      <file name="/umbraco/assets/css/umbraco.css" />
+      <file name="/umbraco/lib/bootstrap-social/bootstrap-social.css" />
+      <file name="/umbraco/lib/font-awesome/css/font-awesome.min.css" />
+    </files>
+  </item>
+  <item key="L3VtYnJhY28vbGliL2pxdWVyeS9qcXVlcnkubWluLmpzOy91bWJyYWNvL2xpYi9qcXVlcnktdWkvanF1ZXJ5LXVpLm1pbi5qczsvdW1icmFjby9saWIvanF1ZXJ5LXVpLXRvdWNoLXB1bmNoL2pxdWVyeS51aS50b3VjaC1wdW5jaC5taW4uanM7L3VtYnJhY28vbGliL2FuZ3VsYXIvYW5ndWxhci5qczsvdW1icmFjby9saWIvdW5kZXJzY29yZS91bmRlcnNjb3JlLW1pbi5qczsvdW1icmFjby9saWIvbW9tZW50L21vbWVudC5taW4uanM7L3VtYnJhY28vbGliL2ZsYXRwaWNrci9mbGF0cGlja3IuanM7L3VtYnJhY28vbGliL2FuaW1lanMvYW5pbWUubWluLmpzOy91bWJyYWNvL2xpYi9hbmd1bGFyLXJvdXRlL2FuZ3VsYXItcm91dGUuanM7L3VtYnJhY28vbGliL2FuZ3VsYXItY29va2llcy9hbmd1bGFyLWNvb2tpZXMuanM7L3VtYnJhY28vbGliL2FuZ3VsYXItYXJpYS9hbmd1bGFyLWFyaWEubWluLmpzOy91bWJyYWNvL2xpYi9hbmd1bGFyLXRvdWNoL2FuZ3VsYXItdG91Y2guanM7L3VtYnJhY28vbGliL2FuZ3VsYXItc2FuaXRpemUvYW5ndWxhci1zYW5pdGl6ZS5qczsvdW1icmFjby9saWIvYW5ndWxhci1hbmltYXRlL2FuZ3VsYXItYW5pbWF0ZS5qczsvdW1icmFjby9saWIvYW5ndWxhci1tZXNzYWdlcy9hbmd1bGFyLW1lc3NhZ2VzLmpzOy91bWJyYWNvL2xpYi9hbmd1bGFyLXVpLXNvcnRhYmxlL3NvcnRhYmxlLmpzOy91bWJyYWNvL2xpYi9hbmd1bGFyLWR5bmFtaWMtbG9jYWxlL3RtaER5bmFtaWNMb2NhbGUubWluLmpzOy91bWJyYWNvL2xpYi9uZy1maWxlLXVwbG9hZC9uZy1maWxlLXVwbG9hZC5taW4uanM7L3VtYnJhY28vbGliL2FuZ3VsYXItbG9jYWwtc3RvcmFnZS9hbmd1bGFyLWxvY2FsLXN0b3JhZ2UubWluLmpzOy91bWJyYWNvL2xpYi9jaGFydC5qcy9jaGFydC5taW4uanM7L3VtYnJhY28vbGliL2FuZ3VsYXItY2hhcnQuanMvYW5ndWxhci1jaGFydC5taW4uanM7L3VtYnJhY28vbGliL3dpY2ctaW5lcnQvZGlzdC9pbmVydC5taW4uanM7L3VtYnJhY28vbGliL3VtYnJhY28vRXh0ZW5zaW9ucy5qczsvdW1icmFjby9saWIvdW1icmFjby9OYW1lc3BhY2VNYW5hZ2VyLmpzOy91bWJyYWNvL2xpYi91bWJyYWNvL0xlZ2FjeVNwZWVjaEJ1YmJsZS5qczsvdW1icmFjby9qcy91dGlsaXRpZXMuanM7L3VtYnJhY28vanMvYXBwLmpzOy91bWJyYWNvL2pzL3VtYnJhY28ucmVzb3VyY2VzLmpzOy91bWJyYWNvL2pzL3VtYnJhY28uZGlyZWN0aXZlcy5qczsvdW1icmFjby9qcy91bWJyYWNvLmZpbHRlcnMuanM7L3VtYnJhY28vanMvdW1icmFjby5zZXJ2aWNlcy5qczsvdW1icmFjby9qcy91bWJyYWNvLmludGVyY2VwdG9ycy5qczsvdW1icmFjby9qcy91bWJyYWNvLmNvbnRyb2xsZXJzLmpzOy91bWJyYWNvL2pzL3JvdXRlcy5qczsvdW1icmFjby9qcy9pbml0LmpzOy9BcHBfUGx1Z2lucy9Db25kaXRpb25hbERpc3BsYXllcnMvcHJvcGVydHllZGl0b3JzL2NkU2hhcmVkTG9naWMuanM7" file="D:\Websites\Sun Siyam - Live\App_Data\TEMP\ClientDependency\1349571293_58a4b40f647948489b8297c9e617abee.cdJ" compression="gzip" version="1349571293">
+    <files>
+      <file name="/umbraco/lib/jquery/jquery.min.js" />
+      <file name="/umbraco/lib/jquery-ui/jquery-ui.min.js" />
+      <file name="/umbraco/lib/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js" />
+      <file name="/umbraco/lib/angular/angular.js" />
+      <file name="/umbraco/lib/underscore/underscore-min.js" />
+      <file name="/umbraco/lib/moment/moment.min.js" />
+      <file name="/umbraco/lib/flatpickr/flatpickr.js" />
+      <file name="/umbraco/lib/animejs/anime.min.js" />
+      <file name="/umbraco/lib/angular-route/angular-route.js" />
+      <file name="/umbraco/lib/angular-cookies/angular-cookies.js" />
+      <file name="/umbraco/lib/angular-aria/angular-aria.min.js" />
+      <file name="/umbraco/lib/angular-touch/angular-touch.js" />
+      <file name="/umbraco/lib/angular-sanitize/angular-sanitize.js" />
+      <file name="/umbraco/lib/angular-animate/angular-animate.js" />
+      <file name="/umbraco/lib/angular-messages/angular-messages.js" />
+      <file name="/umbraco/lib/angular-ui-sortable/sortable.js" />
+      <file name="/umbraco/lib/angular-dynamic-locale/tmhDynamicLocale.min.js" />
+      <file name="/umbraco/lib/ng-file-upload/ng-file-upload.min.js" />
+      <file name="/umbraco/lib/angular-local-storage/angular-local-storage.min.js" />
+      <file name="/umbraco/lib/chart.js/chart.min.js" />
+      <file name="/umbraco/lib/angular-chart.js/angular-chart.min.js" />
+      <file name="/umbraco/lib/wicg-inert/dist/inert.min.js" />
+      <file name="/umbraco/lib/umbraco/Extensions.js" />
+      <file name="/umbraco/lib/umbraco/NamespaceManager.js" />
+      <file name="/umbraco/lib/umbraco/LegacySpeechBubble.js" />
+      <file name="/umbraco/js/utilities.js" />
+      <file name="/umbraco/js/app.js" />
+      <file name="/umbraco/js/umbraco.resources.js" />
+      <file name="/umbraco/js/umbraco.directives.js" />
+      <file name="/umbraco/js/umbraco.filters.js" />
+      <file name="/umbraco/js/umbraco.services.js" />
+      <file name="/umbraco/js/umbraco.interceptors.js" />
+      <file name="/umbraco/js/umbraco.controllers.js" />
+      <file name="/umbraco/js/routes.js" />
+      <file name="/umbraco/js/init.js" />
+      <file name="/App_Plugins/ConditionalDisplayers/propertyeditors/cdSharedLogic.js" />
+    </files>
+  </item>
+  <item key="L0FwcF9QbHVnaW5zL0NvbmRpdGlvbmFsRGlzcGxheWVycy9wcm9wZXJ0eWVkaXRvcnMvZHJvcGRvd25GbGV4aWJsZS9kcm9wZG93bkZsZXhpYmxlLmNvbnRyb2xsZXIuanM7L0FwcF9QbHVnaW5zL0NvbmRpdGlvbmFsRGlzcGxheWVycy9wcm9wZXJ0eWVkaXRvcnMvY2hlY2tib3gvY2hlY2tib3guY29udHJvbGxlci5qczsvQXBwX1BsdWdpbnMvQ29uZGl0aW9uYWxEaXNwbGF5ZXJzL3ByZXZhbHVlZWRpdG9ycy9jZE11bHRpdmFsdWVzLmNvbnRyb2xsZXIuanM7L0FwcF9QbHVnaW5zL0xpbmtlZFBhZ2VzL2xpbmtlZERpYWxvZ0NvbnRyb2xsZXIuanM7L0FwcF9QbHVnaW5zL0xpbmtlZFBhZ2VzL2xpbmtlZFBhZ2VzU2VydmljZS5qczsvQXBwX1BsdWdpbnMvT3VyLlVtYnJhY28uTWF0cnlvc2hrYS9jb250ZW50LWludGVyY2VwdG9yLmpzOy9BcHBfUGx1Z2lucy9PdXIuVW1icmFjby5NYXRyeW9zaGthL2RpcmVjdGl2ZXMvbWF0cnlvc2hrYS10YWJiZWQtY29udGVudC5kaXJlY3RpdmUuanM7L0FwcF9QbHVnaW5zL091ci5VbWJyYWNvLk1hdHJ5b3Noa2EvZGlyZWN0aXZlcy9tYXRyeW9zaGthLXZhbC10YWIuZGlyZWN0aXZlLmpzOy9BcHBfUGx1Z2lucy9Ta3licnVkLlVtYnJhY28uUmVkaXJlY3RzL1NjcmlwdHMvU2VydmljZXMvUmVkaXJlY3RzU2VydmljZS5qczsvQXBwX1BsdWdpbnMvU2t5YnJ1ZC5VbWJyYWNvLlJlZGlyZWN0cy9TY3JpcHRzL0NvbnRyb2xsZXJzL0Rhc2hib2FyZHMvRGVmYXVsdC5qczsvQXBwX1BsdWdpbnMvU2t5YnJ1ZC5VbWJyYWNvLlJlZGlyZWN0cy9TY3JpcHRzL0NvbnRyb2xsZXJzL0RpYWxvZ3MvUmVkaXJlY3QuanM7L0FwcF9QbHVnaW5zL1NreWJydWQuVW1icmFjby5SZWRpcmVjdHMvU2NyaXB0cy9Db250cm9sbGVycy9FZGl0b3JzL0luYm91bmQuanM7L0FwcF9QbHVnaW5zL1NreWJydWQuVW1icmFjby5SZWRpcmVjdHMvU2NyaXB0cy9Db250cm9sbGVycy9FZGl0b3JzL0Rlc3RpbmF0aW9uLmpzOy9BcHBfUGx1Z2lucy9Ta3licnVkLlVtYnJhY28uUmVkaXJlY3RzL1NjcmlwdHMvQ29udHJvbGxlcnMvRWRpdG9ycy9PdXRib3VuZC5qczsvQXBwX1BsdWdpbnMvU2t5YnJ1ZC5VbWJyYWNvLlJlZGlyZWN0cy9TY3JpcHRzL0NvbnRyb2xsZXJzL0VkaXRvcnMvT3JpZ2luYWxVcmwuanM7L0FwcF9QbHVnaW5zL1NreWJydWQuVW1icmFjby5SZWRpcmVjdHMvU2NyaXB0cy9Db250cm9sbGVycy9FZGl0b3JzL1JhZGlvR3JvdXAuanM7L0FwcF9QbHVnaW5zL3Rvb29yYW5nZXkuRWRpdG9yTm90ZXMudjgvRWRpdG9yTm90ZXMuY29udHJvbGxlci5qczsvQXBwX1BsdWdpbnMvdG9vb3JhbmdleS5FZGl0b3JOb3Rlcy52OC9FZGl0b3JOb3Rlc0RpYWxvZy5jb250cm9sbGVyLmpzOy9BcHBfUGx1Z2lucy90b29vcmFuZ2V5LkVkaXRvck5vdGVzLnY4L1JpY2hUZXh0UHJlVmFsdWVFZGl0b3IuY29udHJvbGxlci5qczs" file="D:\Websites\Sun Siyam - Live\App_Data\TEMP\ClientDependency\1349571293_a708b0f7204b46158d583584b803fcad.cdJ" compression="gzip" version="1349571293">
+    <files>
+      <file name="/App_Plugins/ConditionalDisplayers/propertyeditors/dropdownFlexible/dropdownFlexible.controller.js" />
+      <file name="/App_Plugins/ConditionalDisplayers/propertyeditors/checkbox/checkbox.controller.js" />
+      <file name="/App_Plugins/ConditionalDisplayers/prevalueeditors/cdMultivalues.controller.js" />
+      <file name="/App_Plugins/LinkedPages/linkedDialogController.js" />
+      <file name="/App_Plugins/LinkedPages/linkedPagesService.js" />
+      <file name="/App_Plugins/Our.Umbraco.Matryoshka/content-interceptor.js" />
+      <file name="/App_Plugins/Our.Umbraco.Matryoshka/directives/matryoshka-tabbed-content.directive.js" />
+      <file name="/App_Plugins/Our.Umbraco.Matryoshka/directives/matryoshka-val-tab.directive.js" />
+      <file name="/App_Plugins/Skybrud.Umbraco.Redirects/Scripts/Services/RedirectsService.js" />
+      <file name="/App_Plugins/Skybrud.Umbraco.Redirects/Scripts/Controllers/Dashboards/Default.js" />
+      <file name="/App_Plugins/Skybrud.Umbraco.Redirects/Scripts/Controllers/Dialogs/Redirect.js" />
+      <file name="/App_Plugins/Skybrud.Umbraco.Redirects/Scripts/Controllers/Editors/Inbound.js" />
+      <file name="/App_Plugins/Skybrud.Umbraco.Redirects/Scripts/Controllers/Editors/Destination.js" />
+      <file name="/App_Plugins/Skybrud.Umbraco.Redirects/Scripts/Controllers/Editors/Outbound.js" />
+      <file name="/App_Plugins/Skybrud.Umbraco.Redirects/Scripts/Controllers/Editors/OriginalUrl.js" />
+      <file name="/App_Plugins/Skybrud.Umbraco.Redirects/Scripts/Controllers/Editors/RadioGroup.js" />
+      <file name="/App_Plugins/tooorangey.EditorNotes.v8/EditorNotes.controller.js" />
+      <file name="/App_Plugins/tooorangey.EditorNotes.v8/EditorNotesDialog.controller.js" />
+      <file name="/App_Plugins/tooorangey.EditorNotes.v8/RichTextPreValueEditor.controller.js" />
+    </files>
+  </item>
+  <item key="L0FwcF9QbHVnaW5zL3Rvb29yYW5nZXkuRWRpdG9yTm90ZXMudjgvTm90ZXNNb2RlUHJlVmFsdWVFZGl0b3IuY29udHJvbGxlci5qczsvQXBwX1BsdWdpbnMvVHJhbnNsYXRpb25Db25uZWN0b3IuWGxpZmYvc3VibWl0dGVkQ29udHJvbGxlci5qczsvQXBwX1BsdWdpbnMvVHJhbnNsYXRpb25Db25uZWN0b3IuWGxpZmYvcGVuZGluZ0NvbnRyb2xsZXIuanM7L0FwcF9QbHVnaW5zL1RyYW5zbGF0aW9uQ29ubmVjdG9yLlhsaWZmL3hsaWZmRmlsZVNlcnZpY2UuanM7L0FwcF9QbHVnaW5zL1RyYW5zbGF0aW9uTWFuYWdlci90cmFuc2xhdGUtODcwLmpzOy9BcHBfUGx1Z2lucy9UcmFuc2xhdGlvbk1hbmFnZXIvc2VydmljZXMvY3VsdHVyZVNlcnZpY2UuanM7L0FwcF9QbHVnaW5zL1RyYW5zbGF0aW9uTWFuYWdlci9zZXJ2aWNlcy9qb2JTZXJ2aWNlLmpzOy9BcHBfUGx1Z2lucy9UcmFuc2xhdGlvbk1hbmFnZXIvc2VydmljZXMvbm9kZVNlcnZpY2UuanM7L0FwcF9QbHVnaW5zL1RyYW5zbGF0aW9uTWFuYWdlci9zZXJ2aWNlcy9zZXRTZXJ2aWNlLmpzOy9BcHBfUGx1Z2lucy9UcmFuc2xhdGlvbk1hbmFnZXIvc2VydmljZXMvcHJvdmlkZXJTZXJ2aWNlLmpzOy9BcHBfUGx1Z2lucy9UcmFuc2xhdGlvbk1hbmFnZXIvc2VydmljZXMvc2V0dGluZ3NTZXJ2aWNlLmpzOy9BcHBfUGx1Z2lucy9UcmFuc2xhdGlvbk1hbmFnZXIvc2VydmljZXMvc3RhdHVzU2VydmljZS5qczsvQXBwX1BsdWdpbnMvVHJhbnNsYXRpb25NYW5hZ2VyL3Jlc291cmNlcy9ub2RlTWFuYWdlci5qczsvQXBwX1BsdWdpbnMvVHJhbnNsYXRpb25NYW5hZ2VyL3Jlc291cmNlcy9kaWFsb2dNYW5hZ2VyLmpzOy9BcHBfUGx1Z2lucy9UcmFuc2xhdGlvbk1hbmFnZXIvc2l0ZXBpY2tlci9waWNrZXJDb250cm9sbGVyLmpzOy9BcHBfUGx1Z2lucy9UcmFuc2xhdGlvbk1hbmFnZXIvc2l0ZXBpY2tlci9waWNrZXJEaWFsb2dDb250cm9sbGVyLmpzOy9BcHBfUGx1Z2lucy9UcmFuc2xhdGlvbk1hbmFnZXIvYmFja29mZmljZS90bVNldHRpbmdzL3NldEVkaXRDb250cm9sbGVyLmpzOy9BcHBfUGx1Z2lucy9UcmFuc2xhdGlvbk1hbmFnZXIvYmFja29mZmljZS90bVNldHRpbmdzL3NldERlbGV0ZUNvbnRyb2xsZXIuanM7L0FwcF9QbHVnaW5zL1RyYW5zbGF0aW9uTWFuYWdlci9iYWNrb2ZmaWNlL3RtU2V0dGluZ3Mvc2V0c0Rhc2hib2FyZENvbnRyb2xsZXIuanM7L0FwcF9QbHVnaW5zL1RyYW5zbGF0aW9uTWFuYWdlci9iYWNrb2ZmaWNlL3RtU2V0dGluZ3MvcHJvdmlkZXJDb25maWdDb250cm9sbGVyLmpzOy9BcHBfUGx1Z2lucy9UcmFuc2xhdGlvbk1hbmFnZXIvYmFja29mZmljZS90bVNldHRpbmdzL3NldHRpbmdzVmlld0NvbnRyb2xsZXIuanM7L0FwcF9QbHVnaW5zL1RyYW5zbGF0aW9uTWFuYWdlci9iYWNrb2ZmaWNlL3RtU2V0dGluZ3MvcHJvdmlkZXJzQ29udHJvbGxlci5qczs" file="D:\Websites\Sun Siyam - Live\App_Data\TEMP\ClientDependency\1349571293_05fca9134e174e8ca462795375854fdc.cdJ" compression="gzip" version="1349571293">
+    <files>
+      <file name="/App_Plugins/tooorangey.EditorNotes.v8/NotesModePreValueEditor.controller.js" />
+      <file name="/App_Plugins/TranslationConnector.Xliff/submittedController.js" />
+      <file name="/App_Plugins/TranslationConnector.Xliff/pendingController.js" />
+      <file name="/App_Plugins/TranslationConnector.Xliff/xliffFileService.js" />
+      <file name="/App_Plugins/TranslationManager/translate-870.js" />
+      <file name="/App_Plugins/TranslationManager/services/cultureService.js" />
+      <file name="/App_Plugins/TranslationManager/services/jobService.js" />
+      <file name="/App_Plugins/TranslationManager/services/nodeService.js" />
+      <file name="/App_Plugins/TranslationManager/services/setService.js" />
+      <file name="/App_Plugins/TranslationManager/services/providerService.js" />
+      <file name="/App_Plugins/TranslationManager/services/settingsService.js" />
+      <file name="/App_Plugins/TranslationManager/services/statusService.js" />
+      <file name="/App_Plugins/TranslationManager/resources/nodeManager.js" />
+      <file name="/App_Plugins/TranslationManager/resources/dialogManager.js" />
+      <file name="/App_Plugins/TranslationManager/sitepicker/pickerController.js" />
+      <file name="/App_Plugins/TranslationManager/sitepicker/pickerDialogController.js" />
+      <file name="/App_Plugins/TranslationManager/backoffice/tmSettings/setEditController.js" />
+      <file name="/App_Plugins/TranslationManager/backoffice/tmSettings/setDeleteController.js" />
+      <file name="/App_Plugins/TranslationManager/backoffice/tmSettings/setsDashboardController.js" />
+      <file name="/App_Plugins/TranslationManager/backoffice/tmSettings/providerConfigController.js" />
+      <file name="/App_Plugins/TranslationManager/backoffice/tmSettings/settingsViewController.js" />
+      <file name="/App_Plugins/TranslationManager/backoffice/tmSettings/providersController.js" />
+    </files>
+  </item>
+  <item key="L0FwcF9QbHVnaW5zL1RyYW5zbGF0aW9uTWFuYWdlci9zZXRzL3NldFNldHRpbmdzQ29udHJvbGxlci5qczsvQXBwX1BsdWdpbnMvVHJhbnNsYXRpb25NYW5hZ2VyL2JhY2tvZmZpY2UvUGVuZGluZy9TdW1tYXJ5UGVuZGluZ0NvbnRyb2xsZXIuanM7L0FwcF9QbHVnaW5zL1RyYW5zbGF0aW9uTWFuYWdlci9iYWNrb2ZmaWNlL1BlbmRpbmcvbGlzdFBlbmRpbmdDb250cm9sbGVyLmpzOy9BcHBfUGx1Z2lucy9UcmFuc2xhdGlvbk1hbmFnZXIvYmFja29mZmljZS9TdWJtaXR0ZWQvU3VtbWFyeVN1Ym1pdHRlZENvbnRyb2xsZXIuanM7L0FwcF9QbHVnaW5zL1RyYW5zbGF0aW9uTWFuYWdlci9iYWNrb2ZmaWNlL1N1Ym1pdHRlZC9Kb2JzU3VibWl0dGVkQ29udHJvbGxlci5qczsvQXBwX1BsdWdpbnMvVHJhbnNsYXRpb25NYW5hZ2VyL2JhY2tvZmZpY2UvUmVjZWl2ZWQvU3VtbWFyeVJlY2VpdmVkQ29udHJvbGxlci5qczsvQXBwX1BsdWdpbnMvVHJhbnNsYXRpb25NYW5hZ2VyL2JhY2tvZmZpY2UvUmVjZWl2ZWQvSm9ic1JlY2VpdmVkQ29udHJvbGxlci5qczsvQXBwX1BsdWdpbnMvVHJhbnNsYXRpb25NYW5hZ2VyL2JhY2tvZmZpY2UvQXJjaGl2ZS9TdW1tYXJ5QXJjaGl2ZUNvbnRyb2xsZXIuanM7L0FwcF9QbHVnaW5zL1RyYW5zbGF0aW9uTWFuYWdlci9iYWNrb2ZmaWNlL0FyY2hpdmUvSm9ic0FyY2hpdmVDb250cm9sbGVyLmpzOy9BcHBfUGx1Z2lucy9UcmFuc2xhdGlvbk1hbmFnZXIvYmFja29mZmljZS9pdGVtcy9pdGVtVmlld0NvbnRyb2xsZXIuanM7L0FwcF9QbHVnaW5zL1RyYW5zbGF0aW9uTWFuYWdlci9iYWNrb2ZmaWNlL2pvYnMvam9iVmlld0NvbnRyb2xsZXIuanM7L0FwcF9QbHVnaW5zL1RyYW5zbGF0aW9uTWFuYWdlci9qb2JzL2pvYkxpc3RWaWV3Q29tcG9uZW50LmpzOy9BcHBfUGx1Z2lucy9UcmFuc2xhdGlvbk1hbmFnZXIvam9icy9jcmVhdGVEaWFsb2dDb250cm9sbGVyLmpzOy9BcHBfUGx1Z2lucy9UcmFuc2xhdGlvbk1hbmFnZXIvam9icy9qb2JIaXN0b3J5Q29udHJvbGxlci5qczsvQXBwX1BsdWdpbnMvVHJhbnNsYXRpb25NYW5hZ2VyL2l0ZW1zL2l0ZW1MaXN0Vmlld0NvbXBvbmVudC5qczsvQXBwX1BsdWdpbnMvVHJhbnNsYXRpb25NYW5hZ2VyL2l0ZW1zL2l0ZW1TdGF0dXNWaWV3Q29tcG9uZW50LmpzOy9BcHBfUGx1Z2lucy9UcmFuc2xhdGlvbk1hbmFnZXIvaXRlbXMvaXRlbVNldFZpZXdDb21wb25lbnQuanM7L0FwcF9QbHVnaW5zL1RyYW5zbGF0aW9uTWFuYWdlci9zZXR0aW5ncy9kaWFnbm9zdGljc0NvbnRyb2xsZXIuanM7L0FwcF9QbHVnaW5zL1RyYW5zbGF0aW9uTWFuYWdlci9hcHAvY29udGVudEFwcENvbnRyb2xsZXIuanM7L0FwcF9QbHVnaW5zL1RyYW5zbGF0aW9uTWFuYWdlci9hcHAvY3JlYXRlRGlhbG9nQ29udHJvbGxlci5qczsvQXBwX1BsdWdpbnMvVHJhbnNsYXRpb25NYW5hZ2VyL2FwcC9kaWN0aW9uYXJ5RGlhbG9nQ29udHJvbGxlci5qczs" file="D:\Websites\Sun Siyam - Live\App_Data\TEMP\ClientDependency\1349571293_ed0e8e3ce19a415fac7cf6542863de98.cdJ" compression="gzip" version="1349571293">
+    <files>
+      <file name="/App_Plugins/TranslationManager/sets/setSettingsController.js" />
+      <file name="/App_Plugins/TranslationManager/backoffice/Pending/SummaryPendingController.js" />
+      <file name="/App_Plugins/TranslationManager/backoffice/Pending/listPendingController.js" />
+      <file name="/App_Plugins/TranslationManager/backoffice/Submitted/SummarySubmittedController.js" />
+      <file name="/App_Plugins/TranslationManager/backoffice/Submitted/JobsSubmittedController.js" />
+      <file name="/App_Plugins/TranslationManager/backoffice/Received/SummaryReceivedController.js" />
+      <file name="/App_Plugins/TranslationManager/backoffice/Received/JobsReceivedController.js" />
+      <file name="/App_Plugins/TranslationManager/backoffice/Archive/SummaryArchiveController.js" />
+      <file name="/App_Plugins/TranslationManager/backoffice/Archive/JobsArchiveController.js" />
+      <file name="/App_Plugins/TranslationManager/backoffice/items/itemViewController.js" />
+      <file name="/App_Plugins/TranslationManager/backoffice/jobs/jobViewController.js" />
+      <file name="/App_Plugins/TranslationManager/jobs/jobListViewComponent.js" />
+      <file name="/App_Plugins/TranslationManager/jobs/createDialogController.js" />
+      <file name="/App_Plugins/TranslationManager/jobs/jobHistoryController.js" />
+      <file name="/App_Plugins/TranslationManager/items/itemListViewComponent.js" />
+      <file name="/App_Plugins/TranslationManager/items/itemStatusViewComponent.js" />
+      <file name="/App_Plugins/TranslationManager/items/itemSetViewComponent.js" />
+      <file name="/App_Plugins/TranslationManager/settings/diagnosticsController.js" />
+      <file name="/App_Plugins/TranslationManager/app/contentAppController.js" />
+      <file name="/App_Plugins/TranslationManager/app/createDialogController.js" />
+      <file name="/App_Plugins/TranslationManager/app/dictionaryDialogController.js" />
+    </files>
+  </item>
+  <item key="L0FwcF9QbHVnaW5zL1RyYW5zbGF0aW9uTWFuYWdlci9hcHAvdHJhbnNsYXRlV29yZENvdW50Q29tcG9uZW50LmpzOy9BcHBfUGx1Z2lucy9UcmFuc2xhdGlvbk1hbmFnZXIvY29tcG9uZW50cy9sYW5ndWFnZVBpY2tlci5qczsvQXBwX1BsdWdpbnMvVHJhbnNsYXRpb25NYW5hZ2VyL2NvbXBvbmVudHMvam9iT3B0aW9uc0NvbnRyb2xsZXIuanM7L0FwcF9QbHVnaW5zL1RyYW5zbGF0aW9uTWFuYWdlci9jb21wb25lbnRzL3Byb3ZpZGVyVmlld0NvbnRyb2xsZXIuanM7L0FwcF9QbHVnaW5zL1RyYW5zbGF0aW9uTWFuYWdlci9jb21wb25lbnRzL3ZhbHVlVmlldy5qczsvQXBwX1BsdWdpbnMvVHJhbnNsYXRpb25NYW5hZ2VyL2NvbXBvbmVudHMvbGljZW5jZUJhbm5lckNvbnRyb2xsZXIuanM7L0FwcF9QbHVnaW5zL1RyYW5zbGF0aW9uTWFuYWdlci9jb21wb25lbnRzL2Vycm9yRGlhbG9nLmpzOy9BcHBfUGx1Z2lucy9UcmFuc2xhdGlvbk1hbmFnZXIvY29tcG9uZW50cy9lcnJvckNvbXBvbmVudC5qczsvQXBwX1BsdWdpbnMvVHJhbnNsYXRpb25NYW5hZ2VyL2Rhc2hib2FyZENvbnRyb2xsZXIuanM7L0FwcF9QbHVnaW5zL1RyYW5zbGF0aW9uTWFuYWdlci9waWNrZXIvcGlja2VyRGFzaGJvYXJkQ29udHJvbGxlci5qczsvQXBwX1BsdWdpbnMvVHJhbnNsYXRpb25NYW5hZ2VyL3RyYW5zbGF0ZUh1Yi5qczsvQXBwX1BsdWdpbnMvVW1icmFjb0Jhc2UvYmFja29mZmljZS9qcy9uZXN0ZWRDb250ZW50RWxlbWVudHMuanM7L0FwcF9QbHVnaW5zL1VtYnJhY29CYXNlL2JhY2tvZmZpY2UvanMvYmx1ZVByaW50Q29uZmlnLmpzOy9BcHBfUGx1Z2lucy9VbWJyYWNvQmFzZS9iYWNrb2ZmaWNlL2pzL3VwZGF0ZUhlYWRlclRpdGxlcy5qczsvQXBwX1BsdWdpbnMvVW1icmFjb0Zvcm1zL2pzL3VtYnJhY28uZm9ybXMuanM7" file="D:\Websites\Sun Siyam - Live\App_Data\TEMP\ClientDependency\1349571293_2d6cc5387b824bae9a7c02f548f9a4c1.cdJ" compression="gzip" version="1349571293">
+    <files>
+      <file name="/App_Plugins/TranslationManager/app/translateWordCountComponent.js" />
+      <file name="/App_Plugins/TranslationManager/components/languagePicker.js" />
+      <file name="/App_Plugins/TranslationManager/components/jobOptionsController.js" />
+      <file name="/App_Plugins/TranslationManager/components/providerViewController.js" />
+      <file name="/App_Plugins/TranslationManager/components/valueView.js" />
+      <file name="/App_Plugins/TranslationManager/components/licenceBannerController.js" />
+      <file name="/App_Plugins/TranslationManager/components/errorDialog.js" />
+      <file name="/App_Plugins/TranslationManager/components/errorComponent.js" />
+      <file name="/App_Plugins/TranslationManager/dashboardController.js" />
+      <file name="/App_Plugins/TranslationManager/picker/pickerDashboardController.js" />
+      <file name="/App_Plugins/TranslationManager/translateHub.js" />
+      <file name="/App_Plugins/UmbracoBase/backoffice/js/nestedContentElements.js" />
+      <file name="/App_Plugins/UmbracoBase/backoffice/js/bluePrintConfig.js" />
+      <file name="/App_Plugins/UmbracoBase/backoffice/js/updateHeaderTitles.js" />
+      <file name="/App_Plugins/UmbracoForms/js/umbraco.forms.js" />
+    </files>
+  </item>
+  <item key="L0FwcF9QbHVnaW5zL0NvbmRpdGlvbmFsRGlzcGxheWVycy9jZC5jc3M7L0FwcF9QbHVnaW5zL0xpbmtlZFBhZ2VzL2xpbmtlZHBhZ2VzLmNzczsvQXBwX1BsdWdpbnMvT3VyLlVtYnJhY28uTWF0cnlvc2hrYS9ncm91cC1zZXBhcmF0b3IuY3NzOy9BcHBfUGx1Z2lucy9PdXIuVW1icmFjby5NYXRyeW9zaGthL3RhYmJlZC1jb250ZW50LmNzczsvQXBwX1BsdWdpbnMvU2t5YnJ1ZC5VbWJyYWNvLlJlZGlyZWN0cy9TdHlsZXMvU3R5bGVzLmNzczsvQXBwX1BsdWdpbnMvdG9vb3JhbmdleS5FZGl0b3JOb3Rlcy52OC9FZGl0b3JOb3Rlcy5jc3M7L0FwcF9QbHVnaW5zL1RyYW5zbGF0aW9uTWFuYWdlci90cmFuc2xhdGlvbk1hbmFnZXIuY3NzOy9BcHBfUGx1Z2lucy9VbWJyYWNvQmFzZS9iYWNrb2ZmaWNlL2Nzcy9zdHlsZXMuY3NzOy9BcHBfUGx1Z2lucy9VbWJyYWNvRm9ybXMvY3NzL3VtYnJhY28uZm9ybXMuY3NzOy9BcHBfUGx1Z2lucy91U3luYzgvdXN5bmMuY3NzOw" file="D:\Websites\Sun Siyam - Live\App_Data\TEMP\ClientDependency\1349571293_5595db6792894862a2b3737265426ff8.cdC" compression="gzip" version="1349571293">
+    <files>
+      <file name="/App_Plugins/ConditionalDisplayers/cd.css" />
+      <file name="/App_Plugins/LinkedPages/linkedpages.css" />
+      <file name="/App_Plugins/Our.Umbraco.Matryoshka/group-separator.css" />
+      <file name="/App_Plugins/Our.Umbraco.Matryoshka/tabbed-content.css" />
+      <file name="/App_Plugins/Skybrud.Umbraco.Redirects/Styles/Styles.css" />
+      <file name="/App_Plugins/tooorangey.EditorNotes.v8/EditorNotes.css" />
+      <file name="/App_Plugins/TranslationManager/translationManager.css" />
+      <file name="/App_Plugins/UmbracoBase/backoffice/css/styles.css" />
+      <file name="/App_Plugins/UmbracoForms/css/umbraco.forms.css" />
+      <file name="/App_Plugins/uSync8/usync.css" />
+    </files>
+  </item>
+  <item key="L0FwcF9QbHVnaW5zL3VTeW5jOC9zZXR0aW5ncy9zZXR0aW5nc0NvbnRyb2xsZXIuanM7L0FwcF9QbHVnaW5zL3VTeW5jOC9zZXR0aW5ncy9leHBhbnNpb25Db250cm9sbGVyLmpzOy9BcHBfUGx1Z2lucy91U3luYzgvc2V0dGluZ3MvdVN5bmNDb250cm9sbGVyLmpzOy9BcHBfUGx1Z2lucy91U3luYzgvdVN5bmNTZXJ2aWNlLmpzOy9BcHBfUGx1Z2lucy91U3luYzgvdVN5bmNIdWIuanM7L0FwcF9QbHVnaW5zL3VTeW5jOC9jaGFuZ2VEaWFsb2dDb250cm9sbGVyLmpzOy9BcHBfUGx1Z2lucy91U3luYzgvY29tcG9uZW50cy91U3luY1JlcG9ydFZpZXdDb21wb25lbnQuanM7L0FwcF9QbHVnaW5zL3VTeW5jOC9jb21wb25lbnRzL3VTeW5jUHJvZ3Jlc3NWaWV3Q29tcG9uZW50LmpzOw" file="D:\Websites\Sun Siyam - Live\App_Data\TEMP\ClientDependency\1349571293_ff6fd5fcc2c64c968207d3adbe0ea99a.cdJ" compression="gzip" version="1349571293">
+    <files>
+      <file name="/App_Plugins/uSync8/settings/settingsController.js" />
+      <file name="/App_Plugins/uSync8/settings/expansionController.js" />
+      <file name="/App_Plugins/uSync8/settings/uSyncController.js" />
+      <file name="/App_Plugins/uSync8/uSyncService.js" />
+      <file name="/App_Plugins/uSync8/uSyncHub.js" />
+      <file name="/App_Plugins/uSync8/changeDialogController.js" />
+      <file name="/App_Plugins/uSync8/components/uSyncReportViewComponent.js" />
+      <file name="/App_Plugins/uSync8/components/uSyncProgressViewComponent.js" />
+    </files>
+  </item>
+  <item key="L3VtYnJhY28vbGliL3RpbnltY2UvdGlueW1jZS5taW4uanM7L3VtYnJhY28vbGliL3RpbnltY2UvcGx1Z2lucy9wYXN0ZS9wbHVnaW4ubWluLmpzOy91bWJyYWNvL2xpYi90aW55bWNlL3BsdWdpbnMvYW5jaG9yL3BsdWdpbi5taW4uanM7L3VtYnJhY28vbGliL3RpbnltY2UvcGx1Z2lucy9jaGFybWFwL3BsdWdpbi5taW4uanM7L3VtYnJhY28vbGliL3RpbnltY2UvcGx1Z2lucy90YWJsZS9wbHVnaW4ubWluLmpzOy91bWJyYWNvL2xpYi90aW55bWNlL3BsdWdpbnMvbGlzdHMvcGx1Z2luLm1pbi5qczsvdW1icmFjby9saWIvdGlueW1jZS9wbHVnaW5zL2Fkdmxpc3QvcGx1Z2luLm1pbi5qczsvdW1icmFjby9saWIvdGlueW1jZS9wbHVnaW5zL2hyL3BsdWdpbi5taW4uanM7L3VtYnJhY28vbGliL3RpbnltY2UvcGx1Z2lucy9hdXRvbGluay9wbHVnaW4ubWluLmpzOy91bWJyYWNvL2xpYi90aW55bWNlL3BsdWdpbnMvZGlyZWN0aW9uYWxpdHkvcGx1Z2luLm1pbi5qczsvdW1icmFjby9saWIvdGlueW1jZS9wbHVnaW5zL3RhYmZvY3VzL3BsdWdpbi5taW4uanM7L3VtYnJhY28vbGliL3RpbnltY2UvcGx1Z2lucy9zZWFyY2hyZXBsYWNlL3BsdWdpbi5taW4uanM7L3VtYnJhY28vbGliL3RpbnltY2UvcGx1Z2lucy9mdWxsc2NyZWVuL3BsdWdpbi5taW4uanM7L3VtYnJhY28vbGliL3RpbnltY2UvcGx1Z2lucy9ub25lZGl0YWJsZS9wbHVnaW4ubWluLmpzOw" file="D:\Websites\Sun Siyam - Live\App_Data\TEMP\ClientDependency\1349571293_d7f3c051d4d644d8a7dd93d23162bf73.cdJ" compression="gzip" version="1349571293">
+    <files>
+      <file name="/umbraco/lib/tinymce/tinymce.min.js" />
+      <file name="/umbraco/lib/tinymce/plugins/paste/plugin.min.js" />
+      <file name="/umbraco/lib/tinymce/plugins/anchor/plugin.min.js" />
+      <file name="/umbraco/lib/tinymce/plugins/charmap/plugin.min.js" />
+      <file name="/umbraco/lib/tinymce/plugins/table/plugin.min.js" />
+      <file name="/umbraco/lib/tinymce/plugins/lists/plugin.min.js" />
+      <file name="/umbraco/lib/tinymce/plugins/advlist/plugin.min.js" />
+      <file name="/umbraco/lib/tinymce/plugins/hr/plugin.min.js" />
+      <file name="/umbraco/lib/tinymce/plugins/autolink/plugin.min.js" />
+      <file name="/umbraco/lib/tinymce/plugins/directionality/plugin.min.js" />
+      <file name="/umbraco/lib/tinymce/plugins/tabfocus/plugin.min.js" />
+      <file name="/umbraco/lib/tinymce/plugins/searchreplace/plugin.min.js" />
+      <file name="/umbraco/lib/tinymce/plugins/fullscreen/plugin.min.js" />
+      <file name="/umbraco/lib/tinymce/plugins/noneditable/plugin.min.js" />
+    </files>
+  </item>
+  <item key="L3VtYnJhY28vYXNzZXRzL2Nzcy9jYW52YXNkZXNpZ25lci5jc3M7" file="D:\Websites\Sun Siyam - Live\App_Data\TEMP\ClientDependency\1349571293_3ee2a3adacc7413e965ea7845eacc1f3.cdC" compression="gzip" version="1349571293">
+    <files>
+      <file name="/umbraco/assets/css/canvasdesigner.css" />
+    </files>
+  </item>
+  <item key="L3VtYnJhY28vbGliL2pxdWVyeS9qcXVlcnkubWluLmpzOy91bWJyYWNvL2xpYi9hbmd1bGFyL2FuZ3VsYXIuanM7L3VtYnJhY28vbGliL3VuZGVyc2NvcmUvdW5kZXJzY29yZS1taW4uanM7L3VtYnJhY28vbGliL3VtYnJhY28vRXh0ZW5zaW9ucy5qczsvdW1icmFjby9qcy91dGlsaXRpZXMuanM7L3VtYnJhY28vanMvYXBwLmpzOy91bWJyYWNvL2pzL3VtYnJhY28ucmVzb3VyY2VzLmpzOy91bWJyYWNvL2pzL3VtYnJhY28uc2VydmljZXMuanM7L3VtYnJhY28vanMvdW1icmFjby5pbnRlcmNlcHRvcnMuanM7" file="D:\Websites\Sun Siyam - Live\App_Data\TEMP\ClientDependency\1349571293_8df0af37c35d43e8aac4dc524928700c.cdJ" compression="gzip" version="1349571293">
+    <files>
+      <file name="/umbraco/lib/jquery/jquery.min.js" />
+      <file name="/umbraco/lib/angular/angular.js" />
+      <file name="/umbraco/lib/underscore/underscore-min.js" />
+      <file name="/umbraco/lib/umbraco/Extensions.js" />
+      <file name="/umbraco/js/utilities.js" />
+      <file name="/umbraco/js/app.js" />
+      <file name="/umbraco/js/umbraco.resources.js" />
+      <file name="/umbraco/js/umbraco.services.js" />
+      <file name="/umbraco/js/umbraco.interceptors.js" />
+    </files>
+  </item>
+  <item key="L3VtYnJhY28vbGliL3NpZ25hbHIvanF1ZXJ5LnNpZ25hbFIuanM7" file="D:\Websites\Sun Siyam - Live\App_Data\TEMP\ClientDependency\1349571293_5b4f50f396214adfa43c9c39b1f56c3d.cdJ" compression="gzip" version="1349571293">
+    <files>
+      <file name="/umbraco/lib/signalr/jquery.signalR.js" />
+    </files>
+  </item>
+  <item key="L3VtYnJhY28vanMvdW1icmFjby5wcmV2aWV3LmpzOw" file="D:\Websites\Sun Siyam - Live\App_Data\TEMP\ClientDependency\1349571293_aa2516451ebc470691f9c6614a680197.cdJ" compression="gzip" version="1349571293">
+    <files>
+      <file name="/umbraco/js/umbraco.preview.js" />
+    </files>
+  </item>
+  <item key="L3VtYnJhY28vYXNzZXRzL2Nzcy91bWJyYWNvLmNzczsvdW1icmFjby9saWIvYm9vdHN0cmFwLXNvY2lhbC9ib290c3RyYXAtc29jaWFsLmNzczsvdW1icmFjby9saWIvZm9udC1hd2Vzb21lL2Nzcy9mb250LWF3ZXNvbWUubWluLmNzczs" file="D:\Websites\Sun Siyam - Live\App_Data\TEMP\ClientDependency\1673842274_f742f190e96342b0bf0d0d158928f6a4.cdC" compression="gzip" version="1673842274">
+    <files>
+      <file name="/umbraco/assets/css/umbraco.css" />
+      <file name="/umbraco/lib/bootstrap-social/bootstrap-social.css" />
+      <file name="/umbraco/lib/font-awesome/css/font-awesome.min.css" />
+    </files>
+  </item>
+  <item key="L0FwcF9QbHVnaW5zL1RyYW5zbGF0aW9uTWFuYWdlci9hcHAvdHJhbnNsYXRlV29yZENvdW50Q29tcG9uZW50LmpzOy9BcHBfUGx1Z2lucy9UcmFuc2xhdGlvbk1hbmFnZXIvY29tcG9uZW50cy9sYW5ndWFnZVBpY2tlci5qczsvQXBwX1BsdWdpbnMvVHJhbnNsYXRpb25NYW5hZ2VyL2NvbXBvbmVudHMvam9iT3B0aW9uc0NvbnRyb2xsZXIuanM7L0FwcF9QbHVnaW5zL1RyYW5zbGF0aW9uTWFuYWdlci9jb21wb25lbnRzL3Byb3ZpZGVyVmlld0NvbnRyb2xsZXIuanM7L0FwcF9QbHVnaW5zL1RyYW5zbGF0aW9uTWFuYWdlci9jb21wb25lbnRzL3ZhbHVlVmlldy5qczsvQXBwX1BsdWdpbnMvVHJhbnNsYXRpb25NYW5hZ2VyL2NvbXBvbmVudHMvbGljZW5jZUJhbm5lckNvbnRyb2xsZXIuanM7L0FwcF9QbHVnaW5zL1RyYW5zbGF0aW9uTWFuYWdlci9jb21wb25lbnRzL2Vycm9yRGlhbG9nLmpzOy9BcHBfUGx1Z2lucy9UcmFuc2xhdGlvbk1hbmFnZXIvY29tcG9uZW50cy9lcnJvckNvbXBvbmVudC5qczsvQXBwX1BsdWdpbnMvVHJhbnNsYXRpb25NYW5hZ2VyL2Rhc2hib2FyZENvbnRyb2xsZXIuanM7L0FwcF9QbHVnaW5zL1RyYW5zbGF0aW9uTWFuYWdlci9waWNrZXIvcGlja2VyRGFzaGJvYXJkQ29udHJvbGxlci5qczsvQXBwX1BsdWdpbnMvVHJhbnNsYXRpb25NYW5hZ2VyL3RyYW5zbGF0ZUh1Yi5qczsvQXBwX1BsdWdpbnMvVW1icmFjb0Jhc2UvYmFja29mZmljZS9qcy9uZXN0ZWRDb250ZW50RWxlbWVudHMuanM7L0FwcF9QbHVnaW5zL1VtYnJhY29CYXNlL2JhY2tvZmZpY2UvanMvYmx1ZVByaW50Q29uZmlnLmpzOy9BcHBfUGx1Z2lucy9VbWJyYWNvQmFzZS9iYWNrb2ZmaWNlL2pzL3VwZGF0ZUhlYWRlclRpdGxlcy5qczsvQXBwX1BsdWdpbnMvVW1icmFjb0Zvcm1zL2pzL3VtYnJhY28uZm9ybXMuanM7" file="D:\Websites\Sun Siyam - Live\App_Data\TEMP\ClientDependency\1673842274_9c39e826d2e14302b8c8e379fb9a5896.cdJ" compression="gzip" version="1673842274">
+    <files>
+      <file name="/App_Plugins/TranslationManager/app/translateWordCountComponent.js" />
+      <file name="/App_Plugins/TranslationManager/components/languagePicker.js" />
+      <file name="/App_Plugins/TranslationManager/components/jobOptionsController.js" />
+      <file name="/App_Plugins/TranslationManager/components/providerViewController.js" />
+      <file name="/App_Plugins/TranslationManager/components/valueView.js" />
+      <file name="/App_Plugins/TranslationManager/components/licenceBannerController.js" />
+      <file name="/App_Plugins/TranslationManager/components/errorDialog.js" />
+      <file name="/App_Plugins/TranslationManager/components/errorComponent.js" />
+      <file name="/App_Plugins/TranslationManager/dashboardController.js" />
+      <file name="/App_Plugins/TranslationManager/picker/pickerDashboardController.js" />
+      <file name="/App_Plugins/TranslationManager/translateHub.js" />
+      <file name="/App_Plugins/UmbracoBase/backoffice/js/nestedContentElements.js" />
+      <file name="/App_Plugins/UmbracoBase/backoffice/js/bluePrintConfig.js" />
+      <file name="/App_Plugins/UmbracoBase/backoffice/js/updateHeaderTitles.js" />
+      <file name="/App_Plugins/UmbracoForms/js/umbraco.forms.js" />
+    </files>
+  </item>
+  <item key="L0FwcF9QbHVnaW5zL1RyYW5zbGF0aW9uTWFuYWdlci9zZXRzL3NldFNldHRpbmdzQ29udHJvbGxlci5qczsvQXBwX1BsdWdpbnMvVHJhbnNsYXRpb25NYW5hZ2VyL2JhY2tvZmZpY2UvUGVuZGluZy9TdW1tYXJ5UGVuZGluZ0NvbnRyb2xsZXIuanM7L0FwcF9QbHVnaW5zL1RyYW5zbGF0aW9uTWFuYWdlci9iYWNrb2ZmaWNlL1BlbmRpbmcvbGlzdFBlbmRpbmdDb250cm9sbGVyLmpzOy9BcHBfUGx1Z2lucy9UcmFuc2xhdGlvbk1hbmFnZXIvYmFja29mZmljZS9TdWJtaXR0ZWQvU3VtbWFyeVN1Ym1pdHRlZENvbnRyb2xsZXIuanM7L0FwcF9QbHVnaW5zL1RyYW5zbGF0aW9uTWFuYWdlci9iYWNrb2ZmaWNlL1N1Ym1pdHRlZC9Kb2JzU3VibWl0dGVkQ29udHJvbGxlci5qczsvQXBwX1BsdWdpbnMvVHJhbnNsYXRpb25NYW5hZ2VyL2JhY2tvZmZpY2UvUmVjZWl2ZWQvU3VtbWFyeVJlY2VpdmVkQ29udHJvbGxlci5qczsvQXBwX1BsdWdpbnMvVHJhbnNsYXRpb25NYW5hZ2VyL2JhY2tvZmZpY2UvUmVjZWl2ZWQvSm9ic1JlY2VpdmVkQ29udHJvbGxlci5qczsvQXBwX1BsdWdpbnMvVHJhbnNsYXRpb25NYW5hZ2VyL2JhY2tvZmZpY2UvQXJjaGl2ZS9TdW1tYXJ5QXJjaGl2ZUNvbnRyb2xsZXIuanM7L0FwcF9QbHVnaW5zL1RyYW5zbGF0aW9uTWFuYWdlci9iYWNrb2ZmaWNlL0FyY2hpdmUvSm9ic0FyY2hpdmVDb250cm9sbGVyLmpzOy9BcHBfUGx1Z2lucy9UcmFuc2xhdGlvbk1hbmFnZXIvYmFja29mZmljZS9pdGVtcy9pdGVtVmlld0NvbnRyb2xsZXIuanM7L0FwcF9QbHVnaW5zL1RyYW5zbGF0aW9uTWFuYWdlci9iYWNrb2ZmaWNlL2pvYnMvam9iVmlld0NvbnRyb2xsZXIuanM7L0FwcF9QbHVnaW5zL1RyYW5zbGF0aW9uTWFuYWdlci9qb2JzL2pvYkxpc3RWaWV3Q29tcG9uZW50LmpzOy9BcHBfUGx1Z2lucy9UcmFuc2xhdGlvbk1hbmFnZXIvam9icy9jcmVhdGVEaWFsb2dDb250cm9sbGVyLmpzOy9BcHBfUGx1Z2lucy9UcmFuc2xhdGlvbk1hbmFnZXIvam9icy9qb2JIaXN0b3J5Q29udHJvbGxlci5qczsvQXBwX1BsdWdpbnMvVHJhbnNsYXRpb25NYW5hZ2VyL2l0ZW1zL2l0ZW1MaXN0Vmlld0NvbXBvbmVudC5qczsvQXBwX1BsdWdpbnMvVHJhbnNsYXRpb25NYW5hZ2VyL2l0ZW1zL2l0ZW1TdGF0dXNWaWV3Q29tcG9uZW50LmpzOy9BcHBfUGx1Z2lucy9UcmFuc2xhdGlvbk1hbmFnZXIvaXRlbXMvaXRlbVNldFZpZXdDb21wb25lbnQuanM7L0FwcF9QbHVnaW5zL1RyYW5zbGF0aW9uTWFuYWdlci9zZXR0aW5ncy9kaWFnbm9zdGljc0NvbnRyb2xsZXIuanM7L0FwcF9QbHVnaW5zL1RyYW5zbGF0aW9uTWFuYWdlci9hcHAvY29udGVudEFwcENvbnRyb2xsZXIuanM7L0FwcF9QbHVnaW5zL1RyYW5zbGF0aW9uTWFuYWdlci9hcHAvY3JlYXRlRGlhbG9nQ29udHJvbGxlci5qczsvQXBwX1BsdWdpbnMvVHJhbnNsYXRpb25NYW5hZ2VyL2FwcC9kaWN0aW9uYXJ5RGlhbG9nQ29udHJvbGxlci5qczs" file="D:\Websites\Sun Siyam - Live\App_Data\TEMP\ClientDependency\1673842274_d99eb1b20f1f421a86d3e2c0b91ed2af.cdJ" compression="gzip" version="1673842274">
+    <files>
+      <file name="/App_Plugins/TranslationManager/sets/setSettingsController.js" />
+      <file name="/App_Plugins/TranslationManager/backoffice/Pending/SummaryPendingController.js" />
+      <file name="/App_Plugins/TranslationManager/backoffice/Pending/listPendingController.js" />
+      <file name="/App_Plugins/TranslationManager/backoffice/Submitted/SummarySubmittedController.js" />
+      <file name="/App_Plugins/TranslationManager/backoffice/Submitted/JobsSubmittedController.js" />
+      <file name="/App_Plugins/TranslationManager/backoffice/Received/SummaryReceivedController.js" />
+      <file name="/App_Plugins/TranslationManager/backoffice/Received/JobsReceivedController.js" />
+      <file name="/App_Plugins/TranslationManager/backoffice/Archive/SummaryArchiveController.js" />
+      <file name="/App_Plugins/TranslationManager/backoffice/Archive/JobsArchiveController.js" />
+      <file name="/App_Plugins/TranslationManager/backoffice/items/itemViewController.js" />
+      <file name="/App_Plugins/TranslationManager/backoffice/jobs/jobViewController.js" />
+      <file name="/App_Plugins/TranslationManager/jobs/jobListViewComponent.js" />
+      <file name="/App_Plugins/TranslationManager/jobs/createDialogController.js" />
+      <file name="/App_Plugins/TranslationManager/jobs/jobHistoryController.js" />
+      <file name="/App_Plugins/TranslationManager/items/itemListViewComponent.js" />
+      <file name="/App_Plugins/TranslationManager/items/itemStatusViewComponent.js" />
+      <file name="/App_Plugins/TranslationManager/items/itemSetViewComponent.js" />
+      <file name="/App_Plugins/TranslationManager/settings/diagnosticsController.js" />
+      <file name="/App_Plugins/TranslationManager/app/contentAppController.js" />
+      <file name="/App_Plugins/TranslationManager/app/createDialogController.js" />
+      <file name="/App_Plugins/TranslationManager/app/dictionaryDialogController.js" />
+    </files>
+  </item>
+  <item key="L3VtYnJhY28vbGliL2pxdWVyeS9qcXVlcnkubWluLmpzOy91bWJyYWNvL2xpYi9qcXVlcnktdWkvanF1ZXJ5LXVpLm1pbi5qczsvdW1icmFjby9saWIvanF1ZXJ5LXVpLXRvdWNoLXB1bmNoL2pxdWVyeS51aS50b3VjaC1wdW5jaC5taW4uanM7L3VtYnJhY28vbGliL2FuZ3VsYXIvYW5ndWxhci5qczsvdW1icmFjby9saWIvdW5kZXJzY29yZS91bmRlcnNjb3JlLW1pbi5qczsvdW1icmFjby9saWIvbW9tZW50L21vbWVudC5taW4uanM7L3VtYnJhY28vbGliL2ZsYXRwaWNrci9mbGF0cGlja3IuanM7L3VtYnJhY28vbGliL2FuaW1lanMvYW5pbWUubWluLmpzOy91bWJyYWNvL2xpYi9hbmd1bGFyLXJvdXRlL2FuZ3VsYXItcm91dGUuanM7L3VtYnJhY28vbGliL2FuZ3VsYXItY29va2llcy9hbmd1bGFyLWNvb2tpZXMuanM7L3VtYnJhY28vbGliL2FuZ3VsYXItYXJpYS9hbmd1bGFyLWFyaWEubWluLmpzOy91bWJyYWNvL2xpYi9hbmd1bGFyLXRvdWNoL2FuZ3VsYXItdG91Y2guanM7L3VtYnJhY28vbGliL2FuZ3VsYXItc2FuaXRpemUvYW5ndWxhci1zYW5pdGl6ZS5qczsvdW1icmFjby9saWIvYW5ndWxhci1hbmltYXRlL2FuZ3VsYXItYW5pbWF0ZS5qczsvdW1icmFjby9saWIvYW5ndWxhci1tZXNzYWdlcy9hbmd1bGFyLW1lc3NhZ2VzLmpzOy91bWJyYWNvL2xpYi9hbmd1bGFyLXVpLXNvcnRhYmxlL3NvcnRhYmxlLmpzOy91bWJyYWNvL2xpYi9hbmd1bGFyLWR5bmFtaWMtbG9jYWxlL3RtaER5bmFtaWNMb2NhbGUubWluLmpzOy91bWJyYWNvL2xpYi9uZy1maWxlLXVwbG9hZC9uZy1maWxlLXVwbG9hZC5taW4uanM7L3VtYnJhY28vbGliL2FuZ3VsYXItbG9jYWwtc3RvcmFnZS9hbmd1bGFyLWxvY2FsLXN0b3JhZ2UubWluLmpzOy91bWJyYWNvL2xpYi9jaGFydC5qcy9jaGFydC5taW4uanM7L3VtYnJhY28vbGliL2FuZ3VsYXItY2hhcnQuanMvYW5ndWxhci1jaGFydC5taW4uanM7L3VtYnJhY28vbGliL3dpY2ctaW5lcnQvZGlzdC9pbmVydC5taW4uanM7L3VtYnJhY28vbGliL3VtYnJhY28vRXh0ZW5zaW9ucy5qczsvdW1icmFjby9saWIvdW1icmFjby9OYW1lc3BhY2VNYW5hZ2VyLmpzOy91bWJyYWNvL2xpYi91bWJyYWNvL0xlZ2FjeVNwZWVjaEJ1YmJsZS5qczsvdW1icmFjby9qcy91dGlsaXRpZXMuanM7L3VtYnJhY28vanMvYXBwLmpzOy91bWJyYWNvL2pzL3VtYnJhY28ucmVzb3VyY2VzLmpzOy91bWJyYWNvL2pzL3VtYnJhY28uZGlyZWN0aXZlcy5qczsvdW1icmFjby9qcy91bWJyYWNvLmZpbHRlcnMuanM7L3VtYnJhY28vanMvdW1icmFjby5zZXJ2aWNlcy5qczsvdW1icmFjby9qcy91bWJyYWNvLmludGVyY2VwdG9ycy5qczsvdW1icmFjby9qcy91bWJyYWNvLmNvbnRyb2xsZXJzLmpzOy91bWJyYWNvL2pzL3JvdXRlcy5qczsvdW1icmFjby9qcy9pbml0LmpzOy9BcHBfUGx1Z2lucy9Db25kaXRpb25hbERpc3BsYXllcnMvcHJvcGVydHllZGl0b3JzL2NkU2hhcmVkTG9naWMuanM7" file="D:\Websites\Sun Siyam - Live\App_Data\TEMP\ClientDependency\1673842274_82aab08919464138b2eb1038e151372c.cdJ" compression="gzip" version="1673842274">
+    <files>
+      <file name="/umbraco/lib/jquery/jquery.min.js" />
+      <file name="/umbraco/lib/jquery-ui/jquery-ui.min.js" />
+      <file name="/umbraco/lib/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js" />
+      <file name="/umbraco/lib/angular/angular.js" />
+      <file name="/umbraco/lib/underscore/underscore-min.js" />
+      <file name="/umbraco/lib/moment/moment.min.js" />
+      <file name="/umbraco/lib/flatpickr/flatpickr.js" />
+      <file name="/umbraco/lib/animejs/anime.min.js" />
+      <file name="/umbraco/lib/angular-route/angular-route.js" />
+      <file name="/umbraco/lib/angular-cookies/angular-cookies.js" />
+      <file name="/umbraco/lib/angular-aria/angular-aria.min.js" />
+      <file name="/umbraco/lib/angular-touch/angular-touch.js" />
+      <file name="/umbraco/lib/angular-sanitize/angular-sanitize.js" />
+      <file name="/umbraco/lib/angular-animate/angular-animate.js" />
+      <file name="/umbraco/lib/angular-messages/angular-messages.js" />
+      <file name="/umbraco/lib/angular-ui-sortable/sortable.js" />
+      <file name="/umbraco/lib/angular-dynamic-locale/tmhDynamicLocale.min.js" />
+      <file name="/umbraco/lib/ng-file-upload/ng-file-upload.min.js" />
+      <file name="/umbraco/lib/angular-local-storage/angular-local-storage.min.js" />
+      <file name="/umbraco/lib/chart.js/chart.min.js" />
+      <file name="/umbraco/lib/angular-chart.js/angular-chart.min.js" />
+      <file name="/umbraco/lib/wicg-inert/dist/inert.min.js" />
+      <file name="/umbraco/lib/umbraco/Extensions.js" />
+      <file name="/umbraco/lib/umbraco/NamespaceManager.js" />
+      <file name="/umbraco/lib/umbraco/LegacySpeechBubble.js" />
+      <file name="/umbraco/js/utilities.js" />
+      <file name="/umbraco/js/app.js" />
+      <file name="/umbraco/js/umbraco.resources.js" />
+      <file name="/umbraco/js/umbraco.directives.js" />
+      <file name="/umbraco/js/umbraco.filters.js" />
+      <file name="/umbraco/js/umbraco.services.js" />
+      <file name="/umbraco/js/umbraco.interceptors.js" />
+      <file name="/umbraco/js/umbraco.controllers.js" />
+      <file name="/umbraco/js/routes.js" />
+      <file name="/umbraco/js/init.js" />
+      <file name="/App_Plugins/ConditionalDisplayers/propertyeditors/cdSharedLogic.js" />
+    </files>
+  </item>
+  <item key="L0FwcF9QbHVnaW5zL0NvbmRpdGlvbmFsRGlzcGxheWVycy9wcm9wZXJ0eWVkaXRvcnMvZHJvcGRvd25GbGV4aWJsZS9kcm9wZG93bkZsZXhpYmxlLmNvbnRyb2xsZXIuanM7L0FwcF9QbHVnaW5zL0NvbmRpdGlvbmFsRGlzcGxheWVycy9wcm9wZXJ0eWVkaXRvcnMvY2hlY2tib3gvY2hlY2tib3guY29udHJvbGxlci5qczsvQXBwX1BsdWdpbnMvQ29uZGl0aW9uYWxEaXNwbGF5ZXJzL3ByZXZhbHVlZWRpdG9ycy9jZE11bHRpdmFsdWVzLmNvbnRyb2xsZXIuanM7L0FwcF9QbHVnaW5zL0xpbmtlZFBhZ2VzL2xpbmtlZERpYWxvZ0NvbnRyb2xsZXIuanM7L0FwcF9QbHVnaW5zL0xpbmtlZFBhZ2VzL2xpbmtlZFBhZ2VzU2VydmljZS5qczsvQXBwX1BsdWdpbnMvT3VyLlVtYnJhY28uTWF0cnlvc2hrYS9jb250ZW50LWludGVyY2VwdG9yLmpzOy9BcHBfUGx1Z2lucy9PdXIuVW1icmFjby5NYXRyeW9zaGthL2RpcmVjdGl2ZXMvbWF0cnlvc2hrYS10YWJiZWQtY29udGVudC5kaXJlY3RpdmUuanM7L0FwcF9QbHVnaW5zL091ci5VbWJyYWNvLk1hdHJ5b3Noa2EvZGlyZWN0aXZlcy9tYXRyeW9zaGthLXZhbC10YWIuZGlyZWN0aXZlLmpzOy9BcHBfUGx1Z2lucy9Ta3licnVkLlVtYnJhY28uUmVkaXJlY3RzL1NjcmlwdHMvU2VydmljZXMvUmVkaXJlY3RzU2VydmljZS5qczsvQXBwX1BsdWdpbnMvU2t5YnJ1ZC5VbWJyYWNvLlJlZGlyZWN0cy9TY3JpcHRzL0NvbnRyb2xsZXJzL0Rhc2hib2FyZHMvRGVmYXVsdC5qczsvQXBwX1BsdWdpbnMvU2t5YnJ1ZC5VbWJyYWNvLlJlZGlyZWN0cy9TY3JpcHRzL0NvbnRyb2xsZXJzL0RpYWxvZ3MvUmVkaXJlY3QuanM7L0FwcF9QbHVnaW5zL1NreWJydWQuVW1icmFjby5SZWRpcmVjdHMvU2NyaXB0cy9Db250cm9sbGVycy9FZGl0b3JzL0luYm91bmQuanM7L0FwcF9QbHVnaW5zL1NreWJydWQuVW1icmFjby5SZWRpcmVjdHMvU2NyaXB0cy9Db250cm9sbGVycy9FZGl0b3JzL0Rlc3RpbmF0aW9uLmpzOy9BcHBfUGx1Z2lucy9Ta3licnVkLlVtYnJhY28uUmVkaXJlY3RzL1NjcmlwdHMvQ29udHJvbGxlcnMvRWRpdG9ycy9PdXRib3VuZC5qczsvQXBwX1BsdWdpbnMvU2t5YnJ1ZC5VbWJyYWNvLlJlZGlyZWN0cy9TY3JpcHRzL0NvbnRyb2xsZXJzL0VkaXRvcnMvT3JpZ2luYWxVcmwuanM7L0FwcF9QbHVnaW5zL1NreWJydWQuVW1icmFjby5SZWRpcmVjdHMvU2NyaXB0cy9Db250cm9sbGVycy9FZGl0b3JzL1JhZGlvR3JvdXAuanM7L0FwcF9QbHVnaW5zL3Rvb29yYW5nZXkuRWRpdG9yTm90ZXMudjgvRWRpdG9yTm90ZXMuY29udHJvbGxlci5qczsvQXBwX1BsdWdpbnMvdG9vb3JhbmdleS5FZGl0b3JOb3Rlcy52OC9FZGl0b3JOb3Rlc0RpYWxvZy5jb250cm9sbGVyLmpzOy9BcHBfUGx1Z2lucy90b29vcmFuZ2V5LkVkaXRvck5vdGVzLnY4L1JpY2hUZXh0UHJlVmFsdWVFZGl0b3IuY29udHJvbGxlci5qczs" file="D:\Websites\Sun Siyam - Live\App_Data\TEMP\ClientDependency\1673842274_2fb1d94d32d444188daab9bd98585da6.cdJ" compression="gzip" version="1673842274">
+    <files>
+      <file name="/App_Plugins/ConditionalDisplayers/propertyeditors/dropdownFlexible/dropdownFlexible.controller.js" />
+      <file name="/App_Plugins/ConditionalDisplayers/propertyeditors/checkbox/checkbox.controller.js" />
+      <file name="/App_Plugins/ConditionalDisplayers/prevalueeditors/cdMultivalues.controller.js" />
+      <file name="/App_Plugins/LinkedPages/linkedDialogController.js" />
+      <file name="/App_Plugins/LinkedPages/linkedPagesService.js" />
+      <file name="/App_Plugins/Our.Umbraco.Matryoshka/content-interceptor.js" />
+      <file name="/App_Plugins/Our.Umbraco.Matryoshka/directives/matryoshka-tabbed-content.directive.js" />
+      <file name="/App_Plugins/Our.Umbraco.Matryoshka/directives/matryoshka-val-tab.directive.js" />
+      <file name="/App_Plugins/Skybrud.Umbraco.Redirects/Scripts/Services/RedirectsService.js" />
+      <file name="/App_Plugins/Skybrud.Umbraco.Redirects/Scripts/Controllers/Dashboards/Default.js" />
+      <file name="/App_Plugins/Skybrud.Umbraco.Redirects/Scripts/Controllers/Dialogs/Redirect.js" />
+      <file name="/App_Plugins/Skybrud.Umbraco.Redirects/Scripts/Controllers/Editors/Inbound.js" />
+      <file name="/App_Plugins/Skybrud.Umbraco.Redirects/Scripts/Controllers/Editors/Destination.js" />
+      <file name="/App_Plugins/Skybrud.Umbraco.Redirects/Scripts/Controllers/Editors/Outbound.js" />
+      <file name="/App_Plugins/Skybrud.Umbraco.Redirects/Scripts/Controllers/Editors/OriginalUrl.js" />
+      <file name="/App_Plugins/Skybrud.Umbraco.Redirects/Scripts/Controllers/Editors/RadioGroup.js" />
+      <file name="/App_Plugins/tooorangey.EditorNotes.v8/EditorNotes.controller.js" />
+      <file name="/App_Plugins/tooorangey.EditorNotes.v8/EditorNotesDialog.controller.js" />
+      <file name="/App_Plugins/tooorangey.EditorNotes.v8/RichTextPreValueEditor.controller.js" />
+    </files>
+  </item>
+  <item key="L0FwcF9QbHVnaW5zL3Rvb29yYW5nZXkuRWRpdG9yTm90ZXMudjgvTm90ZXNNb2RlUHJlVmFsdWVFZGl0b3IuY29udHJvbGxlci5qczsvQXBwX1BsdWdpbnMvVHJhbnNsYXRpb25Db25uZWN0b3IuWGxpZmYvc3VibWl0dGVkQ29udHJvbGxlci5qczsvQXBwX1BsdWdpbnMvVHJhbnNsYXRpb25Db25uZWN0b3IuWGxpZmYvcGVuZGluZ0NvbnRyb2xsZXIuanM7L0FwcF9QbHVnaW5zL1RyYW5zbGF0aW9uQ29ubmVjdG9yLlhsaWZmL3hsaWZmRmlsZVNlcnZpY2UuanM7L0FwcF9QbHVnaW5zL1RyYW5zbGF0aW9uTWFuYWdlci90cmFuc2xhdGUtODcwLmpzOy9BcHBfUGx1Z2lucy9UcmFuc2xhdGlvbk1hbmFnZXIvc2VydmljZXMvY3VsdHVyZVNlcnZpY2UuanM7L0FwcF9QbHVnaW5zL1RyYW5zbGF0aW9uTWFuYWdlci9zZXJ2aWNlcy9qb2JTZXJ2aWNlLmpzOy9BcHBfUGx1Z2lucy9UcmFuc2xhdGlvbk1hbmFnZXIvc2VydmljZXMvbm9kZVNlcnZpY2UuanM7L0FwcF9QbHVnaW5zL1RyYW5zbGF0aW9uTWFuYWdlci9zZXJ2aWNlcy9zZXRTZXJ2aWNlLmpzOy9BcHBfUGx1Z2lucy9UcmFuc2xhdGlvbk1hbmFnZXIvc2VydmljZXMvcHJvdmlkZXJTZXJ2aWNlLmpzOy9BcHBfUGx1Z2lucy9UcmFuc2xhdGlvbk1hbmFnZXIvc2VydmljZXMvc2V0dGluZ3NTZXJ2aWNlLmpzOy9BcHBfUGx1Z2lucy9UcmFuc2xhdGlvbk1hbmFnZXIvc2VydmljZXMvc3RhdHVzU2VydmljZS5qczsvQXBwX1BsdWdpbnMvVHJhbnNsYXRpb25NYW5hZ2VyL3Jlc291cmNlcy9ub2RlTWFuYWdlci5qczsvQXBwX1BsdWdpbnMvVHJhbnNsYXRpb25NYW5hZ2VyL3Jlc291cmNlcy9kaWFsb2dNYW5hZ2VyLmpzOy9BcHBfUGx1Z2lucy9UcmFuc2xhdGlvbk1hbmFnZXIvc2l0ZXBpY2tlci9waWNrZXJDb250cm9sbGVyLmpzOy9BcHBfUGx1Z2lucy9UcmFuc2xhdGlvbk1hbmFnZXIvc2l0ZXBpY2tlci9waWNrZXJEaWFsb2dDb250cm9sbGVyLmpzOy9BcHBfUGx1Z2lucy9UcmFuc2xhdGlvbk1hbmFnZXIvYmFja29mZmljZS90bVNldHRpbmdzL3NldEVkaXRDb250cm9sbGVyLmpzOy9BcHBfUGx1Z2lucy9UcmFuc2xhdGlvbk1hbmFnZXIvYmFja29mZmljZS90bVNldHRpbmdzL3NldERlbGV0ZUNvbnRyb2xsZXIuanM7L0FwcF9QbHVnaW5zL1RyYW5zbGF0aW9uTWFuYWdlci9iYWNrb2ZmaWNlL3RtU2V0dGluZ3Mvc2V0c0Rhc2hib2FyZENvbnRyb2xsZXIuanM7L0FwcF9QbHVnaW5zL1RyYW5zbGF0aW9uTWFuYWdlci9iYWNrb2ZmaWNlL3RtU2V0dGluZ3MvcHJvdmlkZXJDb25maWdDb250cm9sbGVyLmpzOy9BcHBfUGx1Z2lucy9UcmFuc2xhdGlvbk1hbmFnZXIvYmFja29mZmljZS90bVNldHRpbmdzL3NldHRpbmdzVmlld0NvbnRyb2xsZXIuanM7L0FwcF9QbHVnaW5zL1RyYW5zbGF0aW9uTWFuYWdlci9iYWNrb2ZmaWNlL3RtU2V0dGluZ3MvcHJvdmlkZXJzQ29udHJvbGxlci5qczs" file="D:\Websites\Sun Siyam - Live\App_Data\TEMP\ClientDependency\1673842274_9e6286d959d840c78c8141c3825d1967.cdJ" compression="gzip" version="1673842274">
+    <files>
+      <file name="/App_Plugins/tooorangey.EditorNotes.v8/NotesModePreValueEditor.controller.js" />
+      <file name="/App_Plugins/TranslationConnector.Xliff/submittedController.js" />
+      <file name="/App_Plugins/TranslationConnector.Xliff/pendingController.js" />
+      <file name="/App_Plugins/TranslationConnector.Xliff/xliffFileService.js" />
+      <file name="/App_Plugins/TranslationManager/translate-870.js" />
+      <file name="/App_Plugins/TranslationManager/services/cultureService.js" />
+      <file name="/App_Plugins/TranslationManager/services/jobService.js" />
+      <file name="/App_Plugins/TranslationManager/services/nodeService.js" />
+      <file name="/App_Plugins/TranslationManager/services/setService.js" />
+      <file name="/App_Plugins/TranslationManager/services/providerService.js" />
+      <file name="/App_Plugins/TranslationManager/services/settingsService.js" />
+      <file name="/App_Plugins/TranslationManager/services/statusService.js" />
+      <file name="/App_Plugins/TranslationManager/resources/nodeManager.js" />
+      <file name="/App_Plugins/TranslationManager/resources/dialogManager.js" />
+      <file name="/App_Plugins/TranslationManager/sitepicker/pickerController.js" />
+      <file name="/App_Plugins/TranslationManager/sitepicker/pickerDialogController.js" />
+      <file name="/App_Plugins/TranslationManager/backoffice/tmSettings/setEditController.js" />
+      <file name="/App_Plugins/TranslationManager/backoffice/tmSettings/setDeleteController.js" />
+      <file name="/App_Plugins/TranslationManager/backoffice/tmSettings/setsDashboardController.js" />
+      <file name="/App_Plugins/TranslationManager/backoffice/tmSettings/providerConfigController.js" />
+      <file name="/App_Plugins/TranslationManager/backoffice/tmSettings/settingsViewController.js" />
+      <file name="/App_Plugins/TranslationManager/backoffice/tmSettings/providersController.js" />
+    </files>
+  </item>
+  <item key="L0FwcF9QbHVnaW5zL3VTeW5jOC9zZXR0aW5ncy9zZXR0aW5nc0NvbnRyb2xsZXIuanM7L0FwcF9QbHVnaW5zL3VTeW5jOC9zZXR0aW5ncy9leHBhbnNpb25Db250cm9sbGVyLmpzOy9BcHBfUGx1Z2lucy91U3luYzgvc2V0dGluZ3MvdVN5bmNDb250cm9sbGVyLmpzOy9BcHBfUGx1Z2lucy91U3luYzgvdVN5bmNTZXJ2aWNlLmpzOy9BcHBfUGx1Z2lucy91U3luYzgvdVN5bmNIdWIuanM7L0FwcF9QbHVnaW5zL3VTeW5jOC9jaGFuZ2VEaWFsb2dDb250cm9sbGVyLmpzOy9BcHBfUGx1Z2lucy91U3luYzgvY29tcG9uZW50cy91U3luY1JlcG9ydFZpZXdDb21wb25lbnQuanM7L0FwcF9QbHVnaW5zL3VTeW5jOC9jb21wb25lbnRzL3VTeW5jUHJvZ3Jlc3NWaWV3Q29tcG9uZW50LmpzOw" file="D:\Websites\Sun Siyam - Live\App_Data\TEMP\ClientDependency\1673842274_41ff31d6c560436583af7be7214ead1b.cdJ" compression="gzip" version="1673842274">
+    <files>
+      <file name="/App_Plugins/uSync8/settings/settingsController.js" />
+      <file name="/App_Plugins/uSync8/settings/expansionController.js" />
+      <file name="/App_Plugins/uSync8/settings/uSyncController.js" />
+      <file name="/App_Plugins/uSync8/uSyncService.js" />
+      <file name="/App_Plugins/uSync8/uSyncHub.js" />
+      <file name="/App_Plugins/uSync8/changeDialogController.js" />
+      <file name="/App_Plugins/uSync8/components/uSyncReportViewComponent.js" />
+      <file name="/App_Plugins/uSync8/components/uSyncProgressViewComponent.js" />
+    </files>
+  </item>
+  <item key="L0FwcF9QbHVnaW5zL0NvbmRpdGlvbmFsRGlzcGxheWVycy9jZC5jc3M7L0FwcF9QbHVnaW5zL0xpbmtlZFBhZ2VzL2xpbmtlZHBhZ2VzLmNzczsvQXBwX1BsdWdpbnMvT3VyLlVtYnJhY28uTWF0cnlvc2hrYS9ncm91cC1zZXBhcmF0b3IuY3NzOy9BcHBfUGx1Z2lucy9PdXIuVW1icmFjby5NYXRyeW9zaGthL3RhYmJlZC1jb250ZW50LmNzczsvQXBwX1BsdWdpbnMvU2t5YnJ1ZC5VbWJyYWNvLlJlZGlyZWN0cy9TdHlsZXMvU3R5bGVzLmNzczsvQXBwX1BsdWdpbnMvdG9vb3JhbmdleS5FZGl0b3JOb3Rlcy52OC9FZGl0b3JOb3Rlcy5jc3M7L0FwcF9QbHVnaW5zL1RyYW5zbGF0aW9uTWFuYWdlci90cmFuc2xhdGlvbk1hbmFnZXIuY3NzOy9BcHBfUGx1Z2lucy9VbWJyYWNvQmFzZS9iYWNrb2ZmaWNlL2Nzcy9zdHlsZXMuY3NzOy9BcHBfUGx1Z2lucy9VbWJyYWNvRm9ybXMvY3NzL3VtYnJhY28uZm9ybXMuY3NzOy9BcHBfUGx1Z2lucy91U3luYzgvdXN5bmMuY3NzOw" file="D:\Websites\Sun Siyam - Live\App_Data\TEMP\ClientDependency\1673842274_d983b28808e049e0a2be7ab9838bc1e0.cdC" compression="gzip" version="1673842274">
+    <files>
+      <file name="/App_Plugins/ConditionalDisplayers/cd.css" />
+      <file name="/App_Plugins/LinkedPages/linkedpages.css" />
+      <file name="/App_Plugins/Our.Umbraco.Matryoshka/group-separator.css" />
+      <file name="/App_Plugins/Our.Umbraco.Matryoshka/tabbed-content.css" />
+      <file name="/App_Plugins/Skybrud.Umbraco.Redirects/Styles/Styles.css" />
+      <file name="/App_Plugins/tooorangey.EditorNotes.v8/EditorNotes.css" />
+      <file name="/App_Plugins/TranslationManager/translationManager.css" />
+      <file name="/App_Plugins/UmbracoBase/backoffice/css/styles.css" />
+      <file name="/App_Plugins/UmbracoForms/css/umbraco.forms.css" />
+      <file name="/App_Plugins/uSync8/usync.css" />
+    </files>
+  </item>
+  <item key="L3VtYnJhY28vbGliL3RpbnltY2UvdGlueW1jZS5taW4uanM7L3VtYnJhY28vbGliL3RpbnltY2UvcGx1Z2lucy9wYXN0ZS9wbHVnaW4ubWluLmpzOy91bWJyYWNvL2xpYi90aW55bWNlL3BsdWdpbnMvYW5jaG9yL3BsdWdpbi5taW4uanM7L3VtYnJhY28vbGliL3RpbnltY2UvcGx1Z2lucy9jaGFybWFwL3BsdWdpbi5taW4uanM7L3VtYnJhY28vbGliL3RpbnltY2UvcGx1Z2lucy90YWJsZS9wbHVnaW4ubWluLmpzOy91bWJyYWNvL2xpYi90aW55bWNlL3BsdWdpbnMvbGlzdHMvcGx1Z2luLm1pbi5qczsvdW1icmFjby9saWIvdGlueW1jZS9wbHVnaW5zL2Fkdmxpc3QvcGx1Z2luLm1pbi5qczsvdW1icmFjby9saWIvdGlueW1jZS9wbHVnaW5zL2hyL3BsdWdpbi5taW4uanM7L3VtYnJhY28vbGliL3RpbnltY2UvcGx1Z2lucy9hdXRvbGluay9wbHVnaW4ubWluLmpzOy91bWJyYWNvL2xpYi90aW55bWNlL3BsdWdpbnMvZGlyZWN0aW9uYWxpdHkvcGx1Z2luLm1pbi5qczsvdW1icmFjby9saWIvdGlueW1jZS9wbHVnaW5zL3RhYmZvY3VzL3BsdWdpbi5taW4uanM7L3VtYnJhY28vbGliL3RpbnltY2UvcGx1Z2lucy9zZWFyY2hyZXBsYWNlL3BsdWdpbi5taW4uanM7L3VtYnJhY28vbGliL3RpbnltY2UvcGx1Z2lucy9mdWxsc2NyZWVuL3BsdWdpbi5taW4uanM7L3VtYnJhY28vbGliL3RpbnltY2UvcGx1Z2lucy9ub25lZGl0YWJsZS9wbHVnaW4ubWluLmpzOw" file="D:\Websites\Sun Siyam - Live\App_Data\TEMP\ClientDependency\1673842274_6317959574224884bb54894e798e6c6f.cdJ" compression="gzip" version="1673842274">
+    <files>
+      <file name="/umbraco/lib/tinymce/tinymce.min.js" />
+      <file name="/umbraco/lib/tinymce/plugins/paste/plugin.min.js" />
+      <file name="/umbraco/lib/tinymce/plugins/anchor/plugin.min.js" />
+      <file name="/umbraco/lib/tinymce/plugins/charmap/plugin.min.js" />
+      <file name="/umbraco/lib/tinymce/plugins/table/plugin.min.js" />
+      <file name="/umbraco/lib/tinymce/plugins/lists/plugin.min.js" />
+      <file name="/umbraco/lib/tinymce/plugins/advlist/plugin.min.js" />
+      <file name="/umbraco/lib/tinymce/plugins/hr/plugin.min.js" />
+      <file name="/umbraco/lib/tinymce/plugins/autolink/plugin.min.js" />
+      <file name="/umbraco/lib/tinymce/plugins/directionality/plugin.min.js" />
+      <file name="/umbraco/lib/tinymce/plugins/tabfocus/plugin.min.js" />
+      <file name="/umbraco/lib/tinymce/plugins/searchreplace/plugin.min.js" />
+      <file name="/umbraco/lib/tinymce/plugins/fullscreen/plugin.min.js" />
+      <file name="/umbraco/lib/tinymce/plugins/noneditable/plugin.min.js" />
+    </files>
+  </item>
+  <item key="L3VtYnJhY28vYXNzZXRzL2Nzcy9jYW52YXNkZXNpZ25lci5jc3M7" file="D:\Websites\Sun Siyam - Live\App_Data\TEMP\ClientDependency\1673842274_373ef896955649f09f346d808ee62ae2.cdC" compression="gzip" version="1673842274">
+    <files>
+      <file name="/umbraco/assets/css/canvasdesigner.css" />
+    </files>
+  </item>
+  <item key="L3VtYnJhY28vbGliL2pxdWVyeS9qcXVlcnkubWluLmpzOy91bWJyYWNvL2xpYi9hbmd1bGFyL2FuZ3VsYXIuanM7L3VtYnJhY28vbGliL3VuZGVyc2NvcmUvdW5kZXJzY29yZS1taW4uanM7L3VtYnJhY28vbGliL3VtYnJhY28vRXh0ZW5zaW9ucy5qczsvdW1icmFjby9qcy91dGlsaXRpZXMuanM7L3VtYnJhY28vanMvYXBwLmpzOy91bWJyYWNvL2pzL3VtYnJhY28ucmVzb3VyY2VzLmpzOy91bWJyYWNvL2pzL3VtYnJhY28uc2VydmljZXMuanM7L3VtYnJhY28vanMvdW1icmFjby5pbnRlcmNlcHRvcnMuanM7" file="D:\Websites\Sun Siyam - Live\App_Data\TEMP\ClientDependency\1673842274_ead175e339bf44c3b65ed72a59156622.cdJ" compression="gzip" version="1673842274">
+    <files>
+      <file name="/umbraco/lib/jquery/jquery.min.js" />
+      <file name="/umbraco/lib/angular/angular.js" />
+      <file name="/umbraco/lib/underscore/underscore-min.js" />
+      <file name="/umbraco/lib/umbraco/Extensions.js" />
+      <file name="/umbraco/js/utilities.js" />
+      <file name="/umbraco/js/app.js" />
+      <file name="/umbraco/js/umbraco.resources.js" />
+      <file name="/umbraco/js/umbraco.services.js" />
+      <file name="/umbraco/js/umbraco.interceptors.js" />
+    </files>
+  </item>
+  <item key="L3VtYnJhY28vbGliL3NpZ25hbHIvanF1ZXJ5LnNpZ25hbFIuanM7" file="D:\Websites\Sun Siyam - Live\App_Data\TEMP\ClientDependency\1673842274_1ab48e7432bf4ce3b9707bdfa84f3ace.cdJ" compression="gzip" version="1673842274">
+    <files>
+      <file name="/umbraco/lib/signalr/jquery.signalR.js" />
+    </files>
+  </item>
+  <item key="L3VtYnJhY28vanMvdW1icmFjby5wcmV2aWV3LmpzOw" file="D:\Websites\Sun Siyam - Live\App_Data\TEMP\ClientDependency\1673842274_650771401102460a8925174a0a094016.cdJ" compression="gzip" version="1673842274">
+    <files>
+      <file name="/umbraco/js/umbraco.preview.js" />
+    </files>
+  </item>
+</map>

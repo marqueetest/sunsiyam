@@ -1,0 +1,26 @@
+@inherits UmbracoViewPage<OtherDetails>
+
+@{
+    var otherPages = Umbraco.AssignedContentItem.Siblings<ILandingPageListingComposition>();
+}
+
+<div class="other-chalets wrap">
+    <div class="other-chalets__header transform--will-fade-up transition--1000" data-animate-in-view="transform--completed-fade-up">
+        @Html.Wrap("h2", Model.Heading)
+    </div>
+
+    <div class="other-chalets__grid grid-x grid-margin-x small-up-1 medium-up-2 transform--will-fade-left transition--1000" data-animate-in-view="transform--completed-fade-left">
+
+        @foreach (var page in otherPages)
+        {
+            <div class="other-chalets__chalet cell">
+                <a href="@page.Url">
+                    @page.ListingImage.GetCroppedImage("500x360")
+                    @Html.Wrap("h3", page.ListingHeading)
+                    @page.ListingText
+                </a>
+            </div>
+        }
+
+    </div>
+</div>

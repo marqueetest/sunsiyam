@@ -1,0 +1,37 @@
+﻿@inherits UmbracoViewPage<ResortsSlider>
+@{
+    var resorts = Model.Slider;
+}
+@if (!resorts.Any())
+{
+    return;
+}
+<div class="resorts-slider__wrapper transform--will-fade-down transition--1750" data-animate-in-view="transform--completed-fade-down">
+    <div class="resorts-slider">
+        <div class="resorts-slider__slide-container">
+
+            @foreach (var item in resorts)
+            {
+                <div class="resorts-slider__slide" data-title="@item.Subheading">
+	                <div class="resorts-slider__slide-image" style="background-image:url('@item.Image.GetCroppedImageUrl("1260x680")')"></div>
+                    <div class="resorts-slider__slide-info text-center">
+                        <div class="transform--will-fade-down transition--1750">
+                            @Html.Wrap("h4", item.Heading)
+                        </div>
+                        <div class="transform--will-slide-in-right transition--1250">
+                            @Html.Wrap("h2", item.Subheading)
+                        </div>
+                        <div class="transform--will-fade-up transition--1750">
+                            @item.Text
+                            <div class="resorts-slider__slide-info-cta">
+                                @item.ViewResortLink.GetLink(cssClass: "cta white-outline")
+                                @item.BookNowLink.GetLink(cssClass: "cta white-outline")
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+
+        </div>
+    </div>
+</div>

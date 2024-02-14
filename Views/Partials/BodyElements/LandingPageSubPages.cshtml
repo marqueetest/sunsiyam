@@ -1,0 +1,82 @@
+@inherits UmbracoViewPage<LandingPageSubPages>
+@* This partial view is used on the Landing Page 
+   Displays a list with a mix of custom items and
+   items that link to a child page. *@
+
+@{
+    var isLarge = Model.Style == "Large Images";
+}
+
+<div class="landing wrap @(isLarge ? "landing--large" : "")">
+    @foreach (var item in Model.Items)
+    {
+        if (item is LandingPageListItem listItem)
+        {
+            <div class="landing__item @(isLarge ? "" : "grid-x")">
+                <div class="landing__slider @(isLarge ? "" : "cell small-12 medium-6 large-7")">
+                    <div class="landing__slider-inner">
+                        @foreach (var image in listItem.ImageSlider)
+                        {
+                            <div class="landing__slider-image" style="background-image: url('@image.GetCroppedImageUrl("640x480")')">@listItem.SecondaryLink.GetLink(innerText: "")</div>
+                        }
+                    </div>
+                </div>
+
+                <div class="landing__content @(isLarge ? "vertical-center" : "cell small-12 medium-6 large-5")">
+                    @if (isLarge)
+                    {
+                        @Html.Raw("<div class=\"landing__content-inner\">")
+                    }
+                    <h2>@listItem.Heading.SurroundWithLink(listItem.SecondaryLink)</h2>
+                    @if (!string.IsNullOrEmpty(listItem.Rate))
+                    {
+                        <h3>@listItem.Rate</h3>
+                    }
+                    @listItem.Text
+
+                    <div class="multiple-buttons">
+                        @listItem.SecondaryLink.GetLink(cssClass: "button")
+                        @listItem.PrimaryLink.GetLink(cssClass: "button button--primary")
+                    </div>
+                    @if (isLarge)
+                    {
+                        @Html.Raw("</div>")
+                    }
+                </div>
+            </div>
+        }
+        else if (item is LandingPageListLink listLink)
+        {
+            var page = listLink.Page as ILandingPageListingComposition;
+            var linkText = string.IsNullOrEmpty(page.ListingLinkText) ? Umbraco.GetDictionaryValue("read more") : page.ListingLinkText;
+            <div class="landing__item @(isLarge ? "" : "grid-x")">
+                <div class="landing__slider @(isLarge ? "" : "cell small-12 medium-6 large-7")">
+                    <div class="landing__slider-inner">
+                        @foreach (var image in page.ListingImageSlider)
+                        {
+                            <div class="landing__slider-image" style="background-image: url('@image.GetCroppedImageUrl("640x480")')"><a href="@page.Url"></a></div>
+                        }
+                    </div>
+                </div>
+
+                <div class="landing__content @(isLarge ? "vertical-center" : "cell small-12 medium-6 large-5")">
+                    @if (isLarge)
+                    {
+                        @Html.Raw("<div class=\"landing__content-inner\">")
+                    }
+                    <h2><a href="@page.Url">@page.ListingHeading</a></h2>
+                    @page.ListingText
+
+                    <div class="multiple-buttons">
+                        <a href="@page.Url" class="button">@linkText</a>
+                        @page.ListingPrimaryLink.GetLink(cssClass: "button button--primary")
+                    </div>
+                    @if (isLarge)
+                    {
+                        @Html.Raw("</div>")
+                    }
+                </div>
+            </div>
+        }
+    }
+</div>

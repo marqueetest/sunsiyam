@@ -1,0 +1,38 @@
+@inherits UmbracoViewPage<FeaturedCarousel>
+
+@{
+    var items = Model.Items.ToList();
+
+    // lets make sure the carousel has at least 3 items.
+    while (items.Count() < 3)
+    {
+        items.AddRange(items);
+    }
+}
+<div class="featured-carousel featured-carousel--single-image featured-carousel--has-scrollbar wrap">
+    <div class="featured-carousel__inner">
+        @foreach (var item in items)
+        {
+            <div class="featured-carousel__item">
+                <div class="featured-carousel__primary-image" style="background-image: url('@item.PrimaryImage.GetCroppedImageUrl("650x470")');">@item.PrimaryLink.GetLink(innerText: "")</div>
+
+                <div class="featured-carousel__content">
+                    <h3>@item.Heading.SurroundWithLink(item.PrimaryLink)</h3>
+                    @item.Text
+
+                    @if (!string.IsNullOrEmpty(item.Rate))
+                    {
+                        <div class="featured-carousel__price">
+                            <p>@item.Rate</p>
+                        </div>
+                    }
+
+                    <div class="multiple-buttons">
+                        @item.SecondaryLink.GetLink(cssClass: "button")
+                        @item.PrimaryLink.GetLink(cssClass: "button button--primary")
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

@@ -1,0 +1,46 @@
+﻿@inherits UmbracoViewPage<Detail>
+@* This partial view is used on the Detail Page *@
+
+@{
+    var keyFeaturesGroups = Model.KeyFeatures?.SplitInto(2);
+}
+
+<div class="detail">
+    <div class="detail__features">
+        @Html.Wrap("h2", Model.Heading)
+
+        <div class="grid-x grid-margin-x">
+            @if (keyFeaturesGroups.Any())
+            {
+                <div class="detail__features-list cell small-12 medium-6">
+                    <ul>
+                        @foreach (var feature in keyFeaturesGroups.First())
+                        {
+                            <li>@feature</li>
+                        }
+                    </ul>
+                </div>
+            }
+            @if (keyFeaturesGroups.Count() > 1)
+            {
+                <div class="detail__features-list detail__features-list--additional cell small-12 medium-6">
+                    <ul>
+                        @foreach (var feature in keyFeaturesGroups.Skip(1).First())
+                        {
+                            <li>@feature</li>
+                        }
+                    </ul>
+                </div>
+            }
+            <button class="detail__features-toggle show-for-small-only" data-more-text="@Umbraco.GetDictionaryValue("view more")" data-less-text="@Umbraco.GetDictionaryValue("view less")">@Umbraco.GetDictionaryValue("view more")</button>
+        </div>
+    </div>
+
+    <div class="detail__cta">
+        @if (!string.IsNullOrWhiteSpace(Model.Text))
+        {
+            <div class="detail__rate">@Model.Text</div>
+        }
+        @Model.PrimaryLink.GetLink(cssClass: "button button--primary")
+    </div>
+</div>

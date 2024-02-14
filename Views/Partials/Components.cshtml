@@ -1,0 +1,11 @@
+@inherits UmbracoViewPage
+
+@{
+    if (!(Model is IComponentsComposition model))
+    {
+        return;
+    }
+    this.RenderElement(model.PopUp, "Components");
+
+    // render any other component properties here
+}

@@ -1,0 +1,34 @@
+@inherits UmbracoViewPage<FeaturedCarousel>
+
+<div class="featured-carousel featured-carousel--double-image featured-carousel--has-scrollbar wrap">
+    <div class="featured-carousel__inner">
+        @foreach (var item in Model.Items)
+        {
+            <div class="featured-carousel__item">
+                <div class="grid-x">
+                    <div class="featured-carousel__images small-12 medium-6 large-7 cell">
+                        <div class="featured-carousel__primary-image" style="background-image: url('@item.PrimaryImage.GetCroppedImageUrl("650x470")');">@item.PrimaryLink.GetLink(innerText: "")</div>
+                        <div class="featured-carousel__secondary-image" style="background-image: url('@item.SecondaryImage.GetCroppedImageUrl("300x300")');">@item.PrimaryLink.GetLink(innerText: "")</div>
+                    </div>
+
+                    <div class="featured-carousel__content small-12 medium-6 large-5 cell">
+                        <h3>@item.Heading.SurroundWithLink(item.PrimaryLink)</h3>
+                        @item.Text
+
+                        @if (!string.IsNullOrEmpty(item.Rate))
+                        {
+                            <div class="featured-carousel__price">
+                                <p>@item.Rate</p>
+                            </div>
+                        }
+
+                        <div class="multiple-buttons">
+                            @item.SecondaryLink.GetLink(cssClass: "button")
+                            @item.PrimaryLink.GetLink(cssClass: "button button--primary")
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

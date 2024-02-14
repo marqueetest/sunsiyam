@@ -1,0 +1,16 @@
+{
+  "id": "044a4ab4-9e76-44fb-985f-596bd6c21ad9",
+  "name": "info.iruveli@sunsiyam.com",
+  "form": "f624ef77-8d40-4d58-a5a2-a6d49eeca067",
+  "active": true,
+  "workflowTypeId": "17c61629-d984-4e86-b43b-a8407b3efea9",
+  "executesOn": "Submitted",
+  "settings": {
+    "Email": "info.iruveli@sunsiyam.com",
+    "SenderEmail": "",
+    "Subject": "The Form '{form_name}' was submitted",
+    "RazorViewFilePath": "Forms/Emails/Default-Template.cshtml",
+    "Attachment": ""
+  },
+  "sortOrder": 0
+}

@@ -1,0 +1,162 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<AccommodationsGridWithFilterAndFacilities>
+
+@{
+    var items = Umbraco.AssignedContentItem.Children<AccommodationDetailsPage>();
+
+    var accommodationTypes = items.Select(i => i.ListingType).Distinct().OrderBy(t => t);
+
+    Umbraco.Web.Models.Link linkChefBox = Model.ChefBoxCta;
+}
+<div class="rd-index">
+    <div class="rd-index__wrap">
+
+        <div class="rd-index__tabs show-for-medium">
+            <ul class="tabs" data-tabs id="index-tabs">
+                <li class="tabs-title is-active">
+                    <a data-tabs-target="all" href="#all" aria-selected="true">all <span></span></a>
+                </li>
+                @foreach (var accommodationType in accommodationTypes)
+                {
+                    var accommodationTypeUrl = accommodationType.ToCleanString(CleanStringType.UrlSegment);
+
+                    <li class="tabs-title"><a data-tabs-target="@accommodationTypeUrl" href="#@accommodationTypeUrl">@accommodationType <span></span></a></li>
+                }
+            </ul>
+        </div>
+        <div class="rd-index__tabs-mobile-accordion hide-for-medium">
+            <div class="accordionButton">
+                <h4>Select Type</h4>
+            </div>
+            <div class="accordionContent">
+                <div class="rd-index__tabs">
+                    <ul class="tabs" data-tabs id="index-tabs">
+                        <li class="tabs-title is-active">
+                            <a data-tabs-target="all" href="#all" aria-selected="true">all <span></span></a>
+                        </li>
+                        @foreach (var accommodationType in accommodationTypes)
+                        {
+                            var accommodationTypeUrl = accommodationType.ToCleanString(CleanStringType.UrlSegment);
+
+                            <li class="tabs-title"><a data-tabs-target="@accommodationTypeUrl" href="#@accommodationTypeUrl">@accommodationType <span></span></a></li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="tabs-content dining-page-tabs" data-tabs-content="index-tabs">
+            <div class="tabs-panel is-active" id="all">
+                @foreach (var item in items)
+                {
+                    @RenderAccommodationItem(item)
+                }
+            </div>
+
+            @foreach (var accommodationType in accommodationTypes)
+            {
+                var accommodationTypeUrl = accommodationType.ToCleanString(CleanStringType.UrlSegment);
+
+                <div class="tabs-panel" id="@accommodationTypeUrl">
+                    @foreach (var item in items.Where(x => x.ListingType == accommodationType))
+                    {
+                        @RenderAccommodationItem(item)
+                    }
+                </div>
+            }
+
+
+            <!-- chef box -->
+
+
+            <div class="rd-index__chef-box grid-x transform--will-fade-up transition--1500" data-animate-in-view="transform--completed-fade-up">
+
+                <div class="rd-index__item-small cell small-12 medium-12 large-6">
+
+                    @*@Model.ChefImage.GetImage()*@
+                    <img src="/assets/img/chef.png" alt="">
+                </div>
+
+                <div class="rd-index__item-small content-box cell small-12 medium-12 large-6 vertical-center">
+
+                    <img class="divider" src="/assets/img/divider.png" alt="">
+
+                    <h2>@Model.ChefBoxHeading</h2>
+
+                    <img class="divider" src="/assets/img/divider.png" alt="">
+
+                    <p>
+                        @Model.ChefBoxText
+                    </p>
+
+                    @if (Model.ChefBoxCta != null)
+                    {
+                        <a href="@Model.ChefBoxCta.GetLinkUrl()" target="@Model.ChefBoxCta.Target" class="cta white-outline stuck">@Model.ChefBoxCta.Name</a>
+                    }
+                </div>
+
+            </div>
+
+
+            <!-- end chef box -->
+
+        </div>
+
+    </div>
+
+
+
+
+</div>
+
+@helper RenderAccommodationItem(AccommodationDetailsPage item)
+{
+    bool showPrice = !string.IsNullOrEmpty(item.Price);
+
+    <div class="rd-index__item-wrap">
+        <div class="rd-index__item grid-x transform--will-fade-up transition--1500" data-animate-in-view="transform--completed-fade-up">
+            <div class="rd-index__item-title cell small-12 vertical-center">
+                <a href="@item.Url">
+                    @Html.Wrap("h2", item.ListingHeading)
+                </a>
+            </div>
+            @*@if (showPrice)
+                {
+                    <div class="rd-index__item-price cell small-12 medium-2 text-center vertical-center">
+                        <h4>From:</h4>
+                        @Html.Wrap("h3", item.Price)
+                    </div>
+                }*@
+
+        <div class="grid-x grid-padding-x">
+            <div class="rd-index__item-big cell small-6 small-order-1">
+                @if (item.ListingImage != null)
+                {
+                    @item.ListingImage.GetCroppedImage("600x500")
+                }
+            </div>
+
+            <div class="rd-index__item-small cell small-6 small-order-2">
+                @if (item.ListingImageSmall != null)
+                {
+                    @item.ListingImageSmall.GetCroppedImage("570x230")
+                }
+
+                @item.ListingFeatures
+
+                <a href="@item.Url" class="cta white-outline stuck">@Umbraco.GetDictionaryValue("read more")</a>
+            </div>
+
+        </div>
+
+
+
+            @*<div class="rd-index__item-text cell small-12 vertical-center">
+                @item.ListingFeatures
+            </div>
+            <div class="rd-index__item-cta cell small-12 medium-2 vertical-center">
+                <a href="@item.Url" class="cta orange-outline">@Umbraco.GetDictionaryValue("read more")</a>
+                @item.BookingLink.GetLink(cssClass: "cta white-outline stuck")
+            </div>*@
+        </div>
+    </div>
+}

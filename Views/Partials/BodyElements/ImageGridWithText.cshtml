@@ -1,0 +1,21 @@
+@inherits UmbracoViewPage<ImageGridWithText>
+
+<div class="services transform--will-fade-up transition--1000" data-animate-in-view="transform--completed-fade-up">
+    <div class="services__header">
+        @Html.Wrap("h2", Model.Heading)
+    </div>
+
+    <div class="services__grid grid-x grid-margin-x small-up-1 medium-up-2 large-up-4">
+
+        @foreach (var item in Model.Items)
+        {
+            <div class="services__item cell">
+                @item.Image.GetCroppedImage("400x530")
+
+                @Html.Wrap("h3", item.Heading)
+                @item.Text
+            </div>
+        }
+
+    </div>
+</div>

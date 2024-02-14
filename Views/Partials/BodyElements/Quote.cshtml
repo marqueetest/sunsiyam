@@ -1,0 +1,9 @@
+@inherits UmbracoViewPage<Quote>
+
+<div class="quote wrap transform--will-fade-up transition--1000" data-animate-in-view="transform--completed-fade-up">
+    <blockquote>
+        @Model.QuoteText
+
+        @Html.Wrap("cite", Model.Citation)
+    </blockquote>
+</div>

@@ -1,0 +1,48 @@
+@inherits UmbracoViewPage<SliderWithFeaturesAndLinks>
+
+<div class="detail wrap grid-x" data-equalizer data-equalize-on="medium">
+
+    <div class="detail__slider cell small-12 medium-6 large-7 medium-order-2 transform--will-fade-left transition--1000" data-animate-in-view="transform--completed-fade-left">
+
+        @foreach (var item in Model.Slider)
+        {
+            if (item.Images.Count() < 2) { continue; }
+
+            <div class="detail__slider-item" data-equalizer-watch>
+                <div class="detail__slider-images">
+
+                    <div class="detail__slider-images-left">
+                        <div class="detail__slider-images-inner" style="background-image: url('@(item.Images.First().GetCroppedImageUrl("400x400"))')"></div>
+                    </div>
+                    <div class="detail__slider-images-right">
+                        <div class="detail__slider-images-inner" style="background-image: url('@(item.Images.Skip(1).First().GetCroppedImageUrl("400x400"))')"></div>
+                    </div>
+                </div>
+            </div>
+        }
+
+    </div>
+
+
+    <div class="detail__content cell small-12 medium-6 large-5 medium-order-1 transform--will-fade-right transition--1000" data-animate-in-view="transform--completed-fade-right">
+        <div class="detail__content-inner" data-equalizer-watch>
+            @Html.Wrap("h2", Model.Heading)
+
+            <ul>
+                @foreach (var feature in Model.Features)
+                {
+                    <li>@feature</li>
+                }
+            </ul>
+
+            @if (Model.PrimaryLink.IsValidLink() || Model.SecondaryLink.IsValidLink())
+            {
+                <div class="multiple-buttons">
+                    @Model.SecondaryLink.GetLink(cssClass: "button")
+                    @Model.PrimaryLink.GetLink(cssClass: "button button--primary")
+                </div>
+            }
+        </div>
+    </div>
+
+</div>

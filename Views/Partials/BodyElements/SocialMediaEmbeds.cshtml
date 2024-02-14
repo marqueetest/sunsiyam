@@ -1,0 +1,41 @@
+@inherits UmbracoViewPage<SocialMediaEmbeds>
+
+@{
+    if (Model.EmbedItems != null && Model.EmbedItems.Any())
+    {
+        foreach (var item in Model.EmbedItems)
+        {
+            var direction = "ltr";
+            var embedClasses = "social-post cell small-12 medium-7";
+            var textClasses = "social-text cell small-12 medium-5";
+
+            if (!String.IsNullOrEmpty(item.Direction))
+            {
+                switch (item.Direction)
+                {
+                    case "Right to left":
+                        direction = "rtl";
+                        break;
+                    case "Centre":
+                        direction = "centre";
+                        embedClasses = "social-post cell small-12";
+                        textClasses = "social-text cell small-12";
+                        break;
+                    default:
+                        direction = "ltr";
+                        break;
+                }
+            }
+
+            <div class="social-embedded-wrapper social-embedded-wrapper--@direction grid-x">
+                <div class="@embedClasses">
+                    @Html.Raw(item.EmbedCode)
+                </div>
+
+                <div class="@textClasses">
+                    @item.Text
+                </div>
+            </div>
+        }
+    }
+}

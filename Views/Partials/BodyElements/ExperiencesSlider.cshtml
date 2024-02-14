@@ -1,0 +1,98 @@
+﻿@inherits UmbracoViewPage<ExperiencesSlider>
+@{
+    var experiences = Model.Experiences;
+
+    if (experiences?.Any() != true)
+    {
+        return;
+    }
+}
+
+<div class="experiences-slider__wrapper grid-x ">
+    <div class="experiences-slider__title cell small-12 text-center">
+        @Html.Wrap("h2", Model.ExperiencesHeading)
+    </div>
+    <div class="experiences-slider__nav cell small-12 medium-4 large-3 small-order-2 medium-order-1 text-center experiences-slider__nav--has-scrollbar experiences-slider__nav--single-image">
+        <div class="experiences-slider__nav-overlay"></div>
+        <div class="experiences-slider__nav-slider show-for-medium">
+            @* Show last slide image first for the navigation *@
+            <div class="experiences-slider__nav-slider-slide">
+                <div class="experiences-slider__nav-slider-slide-image" style="background-image:url('@(experiences.OfType<ExperienceDetailsPage>().LastOrDefault().ListingImage.GetCroppedImageUrl("440x570"))')"></div>
+            </div>
+            @foreach (var experience in experiences.Take(experiences.Count() - 1))
+            {
+                if (experience is ExperienceDetailsPage expDetail)
+                {
+                    <div class="experiences-slider__nav-slider-slide">
+                        <div class="experiences-slider__nav-slider-slide-image" style="background-image:url('@expDetail.ListingImage.GetCroppedImageUrl("440x570")')"></div>
+                    </div>
+                }
+
+                if (experience is BlogDetailPage blgDetail)
+                {
+                    <div class="experiences-slider__nav-slider-slide">
+                        <div class="experiences-slider__nav-slider-slide-image" style="background-image:url('@blgDetail.ListingImage.GetCroppedImageUrl("440x570")')"></div>
+                    </div>
+                }
+            }
+        </div>
+        <div class="experiences-slider__nav-container cta secondary-outline">
+            <a class="" href="@Model.AllExperiencesLink.GetLinkUrl()">@Html.Raw(Model.AllExperiencesLink.Name.ReplaceSquareBracketsWithTag("span"))</a>
+        </div>
+    </div>
+    <div class="experiences-slider cell small-12 medium-8 large-9 small-order-1 medium-order-2" data-equalizer="label">
+        <div class="experiences-slider__container transform--will-fade-left transition--1750" data-animate-in-view="transform--completed-fade-left" data-equalizer="title">
+            <div class="experiences-slider__container-wrap">
+                @foreach (var experience in experiences)
+                {
+                    if (experience is ExperienceDetailsPage expDetail)
+                    {
+                        <div class="experiences-slider__slide">
+                            <div class="experiences-slider__slide-image" style="background-image:url('@expDetail.ListingImage.GetCroppedImageUrl("440x570")')"></div>
+                            <a href="@expDetail.Url">
+                                <div class="experiences-slider__slide-container">
+                                    <div class="experiences-slider__slide-container-text text-center">
+                                        <div data-equalizer-watch="label">
+                                            @Html.Wrap("p", expDetail.ListingType)
+                                        </div>
+                                        <div class="experiences-slider__slide-container-text-title vertical-center" data-equalizer-watch="title">
+                                            @Html.Wrap("h3", expDetail.ListingTitle)
+                                        </div>
+                                        <div>
+                                            @Html.Wrap("h4", expDetail.ListingLocation)
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    }
+
+                    if (experience is BlogDetailPage blgDetail)
+                    {
+                        <div class="experiences-slider__slide">
+                            <div class="experiences-slider__slide-image" style="background-image:url('@blgDetail.ListingImage.GetCroppedImageUrl("440x570")')"></div>
+                            <a href="@blgDetail.Url">
+                                <div class="experiences-slider__slide-container">
+                                    <div class="experiences-slider__slide-container-text text-center">
+                                        <div data-equalizer-watch="label">
+                                            @Html.Wrap("p", blgDetail.BlogCategory)
+                                        </div>
+                                        <div class="experiences-slider__slide-container-text-title vertical-center" data-equalizer-watch="title">
+                                            @Html.Wrap("h3", blgDetail.ListingHeading)
+                                        </div>
+                                        <div>
+                                            @Html.Wrap("h4", blgDetail.ListingLocation)
+                                        </div>
+                                        @*<div>
+                                            @Html.Wrap("h4", blgDetail.ListingDescription)
+                                        </div>*@
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    }
+                }
+            </div>
+        </div>
+    </div>
+</div>

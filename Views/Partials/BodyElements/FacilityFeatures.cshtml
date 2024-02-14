@@ -1,0 +1,27 @@
+﻿@inherits UmbracoViewPage<FacilityFeatures>
+
+<div class="whats-included__wrapper">
+    <div class="whats-included">
+        <div class="whats-included__box transform--will-fade-up transition--1500" data-animate-in-view="transform--completed-fade-up">
+            <div class="whats-included__box-title">
+                @Html.Wrap("h2", Model.Heading)
+            </div>
+            <div class="whats-included__box-info grid-x grid-margin-x">
+                <div class="whats-included__box-info-text cell small-12 medium-6">
+                    @Model.Text
+                </div>
+                <div class="whats-included__box-info-features cell small-12 medium-6">
+                    @if (Model.FeatureList.Any())
+                    {
+                        <ul>
+                            @foreach (var item in Model.FeatureList)
+                            {
+                                <li>@item</li>
+                            }
+                        </ul>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

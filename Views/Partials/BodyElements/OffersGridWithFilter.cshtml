@@ -1,0 +1,71 @@
+﻿@inherits UmbracoViewPage<OffersGridWithFilter>
+@{ 
+    var items = Enumerable.Empty<OfferDetailsPage>();
+    //if page is under group level to display all Descendants
+    if (Umbraco.AssignedContentItem.Parent is HomePage)
+    {
+        items = Umbraco.AssignedContentItem.AncestorOrSelf(1).Descendants<OfferDetailsPage>();
+    }
+    else if (Umbraco.AssignedContentItem.Parent is ResortsHomePage)
+    {
+        items = Umbraco.AssignedContentItem.Children<OfferDetailsPage>();
+    }
+
+    if (!items.Any())
+    {
+        return;
+    }
+    items = items.OrderByDescending(x => x.PriorityLevel);
+}
+<div class="offers">
+    <div class="offers__title text-center">
+        @Html.Wrap("h1", Model.Heading)
+    </div>
+
+    <div class="offers__content text-center">
+        @Html.Wrap("p", @Model.ContentBoxText)
+    </div>
+
+    <!-- Set the config options with data attributes here: -->
+    <div class="offers__filters" data-filter data-filter-class="filter-me" data-filter-controls="filter-controls">
+        <div class="text-center">
+            <!-- This div is where the filter buttons are appended to: -->
+            <div class="offers__filters-accordion grid-x">
+                <div class="accordionButton offer-type cell small-12 text-center">
+                    @Html.Wrap("h4", Model.FilterHeading)
+                </div>
+                <div class="filter-controls accordionContent offer-type-content cell small-12"></div>
+            </div>
+        </div>
+
+        <!-- Your elements that you want to filter. The categories are in the data-filter-categories attribute -->
+        <!-- Set mulitple categories by sepearating them with the pipe -->
+        @foreach (var item in items)
+        {
+            <div class="filter-me" data-filter-categories="@item.ListingType">
+                <div class="offers__item-wrap">
+                    <div class="offers__item grid-x transform--will-fade-up transition--1500" data-animate-in-view="transform--completed-fade-up">
+                        <div class="offers__item-title cell small-12 medium-3 vertical-center">
+                            @Html.Wrap("h2", item.ListingTitle)
+                            @Html.Wrap("h4", item.ListingSubtitle)
+                        </div>
+                        <div class="offers__item-price cell small-12 medium-2 text-center vertical-center">
+                            @if (!string.IsNullOrEmpty(item.Price))
+                            {
+                                <h4>@Umbraco.GetDictionaryValue("Price from")</h4>
+                                <h3>@item.Price</h3>
+                            }
+                        </div>
+                        <div class="offers__item-text cell small-12 medium-4 vertical-center">
+                            @item.ListingFeaturesList
+                        </div>
+                        <div class="offers__item-cta cell small-12 medium-3 vertical-center">
+                            <a href="@item.Url" class="cta orange-outline">@Umbraco.GetDictionaryValue("read more")</a>
+                            @item.BookingLink.GetLink(cssClass: "cta orange-solid")
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

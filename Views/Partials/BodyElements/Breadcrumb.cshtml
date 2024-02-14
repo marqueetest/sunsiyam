@@ -1,0 +1,20 @@
+@inherits UmbracoViewPage<IPublishedElement>
+
+@{
+    var pageModel = Umbraco.AssignedContentItem;
+    var ancestors = pageModel.Ancestors().Reverse();
+}
+
+<nav aria-label="@Umbraco.GetDictionaryValue("You are here")" role="navigation">
+    <ul class="breadcrumbs">
+        @foreach (var page in ancestors)
+        {
+            <li>
+                <a href="@page.Url">@page.Name</a>
+            </li>
+        }
+        <li>
+            <span class="show-for-sr">Current: </span> @pageModel.Name
+        </li>
+    </ul>
+</nav>

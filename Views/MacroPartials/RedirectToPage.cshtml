@@ -1,0 +1,13 @@
+@inherits Umbraco.Web.Macros.PartialViewMacroPage
+
+@{
+    var redirectLink = Model.Content.Value<Umbraco.Web.Models.Link>("redirectTo");
+    if (redirectLink != null)
+    {
+        Response.Clear();
+        Response.StatusCode = 301;
+        Response.StatusDescription = "Moved Permanently";
+        Response.RedirectLocation = redirectLink.Url;
+        Response.End();
+    }
+}

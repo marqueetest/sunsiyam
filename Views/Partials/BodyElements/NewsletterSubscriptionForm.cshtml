@@ -1,0 +1,23 @@
+﻿@inherits UmbracoViewPage<NewsletterSubscriptionForm>
+
+<div class="subscribe">
+    <form class="validate-form" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" autocomplete="off" action="@Model.FormActionLink.Url" method="post">
+        <div class="grid-x grid-margin-x">
+            <div class="cell small-12">
+                <input id="mce-EMAIL" type="email" name="EMAIL" placeholder="@Umbraco.GetDictionaryValue("EMAIL ADDRESS") *" class="required">
+            </div>
+            <div class="cell small-12 medium-6">
+                <input type="text" name="FNAME" placeholder="@Umbraco.GetDictionaryValue("FIRST NAME")">
+            </div>
+            <div class="cell small-12 medium-6">
+                <input type="text" name="LNAME" placeholder="@Umbraco.GetDictionaryValue("LAST NAME")">
+            </div>
+            <div class="cell small-12 text-center">
+                <button type="submit" class="cta secondary-solid">@Umbraco.GetDictionaryValue("Subscribe")</button>
+            </div>
+            <div class="cell small-12 text-center">
+                @Model.PrivacyLink.GetLink()
+            </div>
+        </div>
+    </form>
+</div>

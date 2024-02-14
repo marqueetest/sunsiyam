@@ -1,0 +1,70 @@
+﻿@inherits UmbracoViewPage<OfferDetail>
+@{ 
+    var offerPage = Umbraco.AssignedContentItem as OfferDetailsPage;
+}
+<div class="offer-details">
+
+    <div class="offer-details__container grid-x">
+
+        <div class="offer-details__features cell small-12 medium-5 large-4">
+            <div class="offer-details__features-top">
+                <div class="offer-details__features-titles">
+                    @Html.Wrap("h4", Model.Subheading)
+                    @Html.Wrap("h1", Model.Heading)
+                </div>
+
+                <div class="offer-details__features-price">
+                    @if (!string.IsNullOrEmpty(offerPage.Price))
+                    {
+                        <h4>@Umbraco.GetDictionaryValue("Price from")</h4>
+                        @Html.Wrap("h2", offerPage.Price)
+                    }
+                </div>
+            </div>
+            <div class="offer-details__features-bottom">
+                <div class="offer-details__features-includes">
+                    @if (Model.Features.Any())
+                    {
+                        @Html.Wrap("h3", Model.Features.FirstOrDefault().Heading)
+                        <ul>
+                            @foreach (var item in Model.Features.FirstOrDefault().List)
+                            {
+                                <li>@item</li>
+                            }
+                        </ul>
+                    }
+                </div>
+                <div class="offer-details__features-index">
+                    <a href="@offerPage.Parent.Url">@Umbraco.GetDictionaryValue("view all offers")</a>
+                </div>
+            </div>
+        </div>
+        <div class="offer-details__info cell small-12 medium-7 large-8">
+            <div class="offer-details__info-detail">
+                @Model.Description
+            </div>
+            <div class="offer-details__info-list">
+                @if (Model.AdditionalInfo.Any())
+                {
+                    @Html.Wrap("h3", Model.AdditionalInfo.FirstOrDefault().Heading)
+                    <ul>
+                        @foreach (var item in Model.AdditionalInfo.FirstOrDefault().List)
+                        {
+                            <li>@item</li>
+                        }
+                    </ul>
+                }
+            </div>
+            <div class="offer-details__info-terms">
+                @if (Model.TermsAndConditions.Any())
+                {
+                    @Html.Wrap("h3", Model.TermsAndConditions.FirstOrDefault().Heading)
+                    @Model.TermsAndConditions.FirstOrDefault().Text
+                }
+            </div>
+            <div class="offer-details__info-cta">
+                @offerPage.BookingLink.GetLink(cssClass: "cta orange-solid wide")
+            </div>
+        </div>
+    </div>
+</div>

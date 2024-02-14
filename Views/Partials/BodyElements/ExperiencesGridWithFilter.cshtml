@@ -1,0 +1,190 @@
+﻿@inherits UmbracoViewPage<ExperiencesGridWithFilter>
+@{
+    var items = Enumerable.Empty<ExperienceDetailsPage>();
+    if (Umbraco.AssignedContentItem.Parent is HomePage)
+    {
+        items = Umbraco.AssignedContentItem.AncestorOrSelf(1).Descendants<ExperienceDetailsPage>();
+    }
+    else
+    {
+        items = Umbraco.AssignedContentItem.Children<ExperienceDetailsPage>();
+    }
+
+    if (!items.Any())
+    {
+        return;
+    }
+    items = items.OrderByDescending(x => x.PriorityLevel);
+    int i = 0;
+}
+<div class="experiences grid-x">
+
+    <div class="cell" @Html.If(!Model.HideFilter, "data-experiences-filter data-experiences-filter-class=\"filter-me\" data-experiences-filter-controls=\"filter-controls\" data-experiences-resort-filter data-experiences-resort-filter-class=\"filter-resort\" data-experiences-resort-filter-controls=\"resort-filter-controls\"")>
+
+        @if (!Model.HideFilter)
+        {
+            <div class="experiences__filters cell small-12">
+                <div class="experiences-filter-accordion grid-x">
+                    <div class="accordionButton experiences-type cell small-12 medium-6 small-order-1 text-center">
+                       <h4>Filter</h4>
+                    </div>
+                    <div class="accordionContent cell small-12 small-order-3">
+                        <div class="filter-controls experiences-type-content">
+                            @Html.Wrap("h4", Model.FilterTypeHeading)
+                        </div>
+                        @if (Umbraco.AssignedContentItem.Parent is HomePage)
+                        {
+                        <div class="resort-filter-controls experiences-hotels-content">
+                            @Html.Wrap("h4", Model.FilterHotelHeading)
+                        </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        }
+
+        <div class="experiences__grid grid-x cell small-12">
+            @foreach (var item in items)
+            {
+                var experienceCategories = item.ListingType;
+                var resortCategories = item.ListingLocation;
+                if (!string.IsNullOrEmpty(experienceCategories))
+                {
+                    experienceCategories = experienceCategories.Replace(" | ", "|").ToLower();
+                }
+                if (!string.IsNullOrEmpty(resortCategories))
+                {
+                    resortCategories = resortCategories.Replace(" | ", "|").ToLower();
+                }
+
+                i++;
+                if (i % 2 == 0)
+                {
+                    <div class="experiences__grid-item cell small-12 filter-me filter-resort" data-experiences-filter-categories="@experienceCategories" data-experiences-resort-filter-categories="@resortCategories">
+                        <div class="experiences__grid-item-container grid-x">
+                            <div class="experiences__grid-item-container-info cell small-12 large-4 small-order-2 transform--will-fade-down transition--1500" data-animate-in-view="transform--completed-fade-down">
+                                <div class="experiences__grid-item-container-info-title transform--will-fade-down transition--2500" data-animate-in-view="transform--completed-fade-down">
+                                    @Html.Wrap("h2", item.ListingTitle)
+                                    @Html.Wrap("h3", item.ListingSubtitle)
+                                </div>
+                                <div class="experiences__grid-item-container-info-text transform--will-fade-down transition--2500" data-animate-in-view="transform--completed-fade-down">
+                                    @item.ListingDescription
+                                    @if (!string.IsNullOrEmpty(item.ListingLocation) && Umbraco.AssignedContentItem.Parent is HomePage)
+                                    {
+                                        <p>@Umbraco.GetDictionaryValue("AVAILABLE AT:") @item.ListingLocation</p>
+                                    }
+                                    @if (!item.HideLink)
+                                    {
+                                        if (item.ListingLinkOverride.IsValidLink())
+                                        {
+                                            @item.ListingLinkOverride.GetLink(cssClass: "cta secondary-outline show-for-medium")
+                                            @item.ListingLinkOverride.GetLink(cssClass: "cta orange-outline hide-for-medium")
+                                        }
+                                        else
+                                        {
+                                            <a class="cta secondary-outline show-for-medium" href="@item.Url">read more</a>
+                                            <a class="cta orange-outline hide-for-medium" href="@item.Url">read more</a>
+                                        }
+                                    }
+                                </div>
+                            </div>
+                            @if (item.ListingMedia.Any())
+                            {
+                                var media = item.ListingMedia.FirstOrDefault();
+                                if (media.ShowVideo && media.Video != null)
+                                {
+                                    <div class="experiences__grid-item-container-video cell small-12 large-8 ">
+                                        <div class="experiences__grid-item-container-video-wrap">
+                                            <div class="iframe-wrap">
+                                                <iframe src="@media.Video.GetLinkUrl()" loading="lazy" id="vimeo-player" width="640" height="281" frameborder="0" allow="fullscreen; autoplay" allowfullscreen></iframe>
+                                            </div>
+                                            <img class="play-button" src="/assets/img/video-play.svg">
+                                            <div class="video-bar">
+                                                <span class="volume">@Umbraco.GetDictionaryValue("VOLUME")</span>
+                                                <span class="volume-off" id="volumeOff">@Umbraco.GetDictionaryValue("off")</span>
+                                                <span class="volume-on" id="volumeOn">@Umbraco.GetDictionaryValue("on")</span>
+                                                <input type="checkbox" id="volumeSwitch"><label for="volumeSwitch">@Umbraco.GetDictionaryValue("Toggle")</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                                else if (media.Image != null)
+                                {
+                                    <div class="experiences__grid-item-container-video vertical-center cell small-12 large-8 small-order-1">
+                                        <div class="experiences__grid-item-container-video-wrap">
+                                            @media.Image.GetCroppedImage("900x500", cssClass: "hide-for-medium")
+                                            @media.Image.GetCroppedImage("1000x720", cssClass: "show-for-medium")
+                                        </div>
+                                    </div>
+                                }
+                            }
+                        </div>
+                    </div>
+                }
+                else
+                {
+                    <div class="experiences__grid-item cell small-12 filter-me filter-resort" data-experiences-filter-categories="@experienceCategories" data-experiences-resort-filter-categories="@resortCategories">
+                        <div class="experiences__grid-item-container grid-x">
+                            <div class="experiences__grid-item-container-info cell small-12 large-4 small-order-2 transform--will-fade-down transition--1500" data-animate-in-view="transform--completed-fade-down">
+                                <div class="experiences__grid-item-container-info-title transform--will-fade-down transition--2500" data-animate-in-view="transform--completed-fade-down">
+                                    @Html.Wrap("h2", item.ListingTitle)
+                                    @Html.Wrap("h3", item.ListingSubtitle)
+                                </div>
+                                <div class="experiences__grid-item-container-info-text transform--will-fade-down transition--2500" data-animate-in-view="transform--completed-fade-down">
+                                    @item.ListingDescription
+                                    @if (!string.IsNullOrEmpty(item.ListingLocation) && Umbraco.AssignedContentItem.Parent is HomePage)
+                                    {
+                                        <p>@Umbraco.GetDictionaryValue("AVAILABLE AT:") @item.ListingLocation</p>
+                                    }
+                                    @if (!item.HideLink)
+                                    {
+                                        if (item.ListingLinkOverride.IsValidLink())
+                                        {
+                                            @item.ListingLinkOverride.GetLink(cssClass: "cta secondary-outline show-for-medium")
+                                            @item.ListingLinkOverride.GetLink(cssClass: "cta orange-outline hide-for-medium")
+                                        }
+                                        else
+                                        {
+                                            <a class="cta secondary-outline show-for-medium" href="@item.Url">read more</a>
+                                            <a class="cta orange-outline hide-for-medium" href="@item.Url">read more</a>
+                                        }
+                                    }
+                                </div>
+                            </div>
+                            @if (item.ListingMedia.Any())
+                            {
+                                var media = item.ListingMedia.FirstOrDefault();
+                                if (media.ShowVideo && media.Video != null)
+                                {
+                                    <div class="experiences__grid-item-container-video cell small-12 large-8 ">
+                                        <div class="experiences__grid-item-container-video-wrap">
+                                            <div class="iframe-wrap">
+                                                <iframe src="@media.Video.GetLinkUrl()" loading="lazy" id="vimeo-player" width="640" height="281" frameborder="0" allow="fullscreen; autoplay" allowfullscreen></iframe>
+                                            </div>
+                                            <img class="play-button" src="/assets/img/video-play.svg">
+                                            <div class="video-bar">
+                                                <span class="volume">@Umbraco.GetDictionaryValue("VOLUME")</span>
+                                                <span class="volume-off" id="volumeOff">@Umbraco.GetDictionaryValue("off")</span>
+                                                <span class="volume-on" id="volumeOn">@Umbraco.GetDictionaryValue("on")</span>
+                                                <input type="checkbox" id="volumeSwitch"><label for="volumeSwitch">@Umbraco.GetDictionaryValue("Toggle")</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                                else if (media.Image != null)
+                                {
+                                    <div class="experiences__grid-item-container-video vertical-center cell small-12 large-8 small-order-1">
+                                        <div class="experiences__grid-item-container-video-wrap">
+                                            @media.Image.GetCroppedImage("900x500", cssClass: "hide-for-medium")
+                                            @media.Image.GetCroppedImage("1000x720", cssClass: "show-for-medium")
+                                        </div>
+                                    </div>
+                                }
+                            }
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+    </div>
+</div>

@@ -1,0 +1,42 @@
+@inherits UmbracoViewPage<IntroCarousel>
+
+@{
+    var carousel = Model.Carousel.ToList();
+}
+
+<div class="home-intro">
+
+    <div class="home-intro__heading wrap transform--will-fade-up transition--1000" data-animate-in-view="transform--completed-fade-up">
+        @Html.Wrap("h1", Model.Heading.ReplaceSquareBracketsWithTag("em"))
+    </div>
+
+    @if (carousel.Any())
+    {
+        <div class="home-intro__carousel wrap transform--will-fade-up transition--1000" data-animate-in-view="transform--completed-fade-up">
+
+            @foreach (var item in carousel)
+            {
+                <div class="home-intro__carousel-item">
+                    <div class="grid-x">
+                        <div class="home-intro__carousel-middle-image cell small-12 medium-6 medium-order-2">
+                            @item.CenterImage.GetCroppedImage("600x500")
+                        </div>
+
+                        <div class="home-intro__carousel-left-image cell small-6 medium-3 medium-order-1">
+                            @item.LeftImage.GetCroppedImage("300x260")
+                        </div>
+
+                        <div class="home-intro__carousel-right-image cell small-6 medium-3 medium-order-3">
+                            @item.RightImage.GetCroppedImage("300x260")
+                        </div>
+                    </div>
+                </div>
+            }
+
+        </div>
+    }
+
+    <div class="home-intro__content transform--will-fade-up transition--1000" data-animate-in-view="transform--completed-fade-up">
+        @Model.Text
+    </div>
+</div>

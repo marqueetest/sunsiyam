@@ -1,0 +1,33 @@
+﻿@inherits UmbracoViewPage<ResortsHighlights>
+
+<div class="resort-highlights__wrapper">
+    <div class="resort-highlights">
+
+        <div class="resort-highlights__box">
+
+            <div class="resort-highlights__box-title text-center">
+                @Html.Wrap("h2", Model.Heading)
+            </div>
+
+            <div class="resort-highlights__box-info grid-x grid-margin-x">
+                <div class="resort-highlights__box-info-text cell small-12 medium-6 transform--will-fade-down transition--750" data-animate-in-view="transform--completed-fade-down">
+                    @Model.Decscription
+                </div>
+
+                <div class="resort-highlights__box-info-features cell small-12 medium-6 transform--will-slide-in-right transition--1000" data-animate-in-view="transform--completed-slide-in-right">
+                    @if (Model.Highlights.Any())
+                    {
+                        <ul>
+                            @foreach (var item in Model.Highlights.OfType<ResortHighlightsItem>())
+                            {
+                                <li>
+                                    <div class="resort-highlights__box-info-features-img">@item.Icon.GetImage()</div>@item.HighlightName
+                                </li>
+                            }
+                        </ul>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

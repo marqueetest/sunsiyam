@@ -1,0 +1,50 @@
+@inherits UmbracoViewPage<OverlappingImagesWithTextAndLink>
+
+@{
+    var paragraph = string.IsNullOrWhiteSpace(Model.Text.ToString()) ? "" : "images-big-text__content--has-paragraph";
+    var otherElements = ViewData["Elements"] as IEnumerable<IPublishedElement>;
+
+    // The layout alternates so let's get previous elements of the same type. 
+    otherElements = otherElements
+        .Where(e => e.ContentType == Model.ContentType)
+        .SkipWhile(e => e.Key != Model.Key);
+    var even = otherElements.Count() % 2 == 0;
+}
+
+@if (even)
+{
+    <div class="images-big-text grid-x">
+        <div class="images-big-text__front-image cell small-5 large-4 large-order-2">
+            <div class="images-big-text__front-image-inner" style="background-image: url('@Model.LeftImage.GetCroppedImageUrl("570x410")');"></div>
+        </div>
+
+        <div class="images-big-text__back-image cell small-7 large-5 large-order-3 transform--will-fade-left transition--1000" data-animate-in-view="transform--completed-fade-left" style="background-image: url('@Model.RightImage.GetCroppedImageUrl("530x500")');"></div>
+
+        <div class="images-big-text__content @paragraph cell small-12 large-3 large-order-1">
+            <div class="images-big-text__content--inner transform--will-fade-right transition--2000" data-animate-in-view="transform--completed-fade-right">
+                @Html.Wrap("h2", Model.Heading.ReplaceSquareBracketsWithTag("em"))
+                @Model.Text
+                @Model.Link.GetLink(cssClass: "button")
+            </div>
+        </div>
+    </div>
+}
+else
+{
+    <div class="images-big-text  images-big-text--content-on-right  grid-x">
+        <div class="images-big-text__front-image cell small-5 large-4 large-order-2">
+            <div class="images-big-text__front-image-inner" style="background-image: url('@Model.LeftImage.GetCroppedImageUrl("570x410")');"></div>
+        </div>
+
+        <div class="images-big-text__back-image cell small-7 large-5 large-order-1 transform--will-fade-right transition--1000" data-animate-in-view="transform--completed-fade-right" data-animate-in-view="transform--completed-fade-left" style="background-image: url('@Model.RightImage.GetCroppedImageUrl("530x500")');"></div>
+
+        <div class="images-big-text__content @paragraph cell small-12 large-3 large-order-2">
+            <div class="images-big-text__content--inner transform--will-fade-right transition--2000" data-animate-in-view="transform--completed-fade-right">
+                @Html.Wrap("h2", Model.Heading.ReplaceSquareBracketsWithTag("em"))
+                @Model.Text
+                @Model.Link.GetLink(cssClass: "button")
+            </div>
+        </div>
+    </div>
+}
+

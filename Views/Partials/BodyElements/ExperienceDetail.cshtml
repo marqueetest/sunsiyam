@@ -1,0 +1,28 @@
+﻿@inherits UmbracoViewPage<ExperienceDetail>
+
+<div class="experiences-detail grid-x">
+    <div class="experiences-detail__content cell small-12 medium-8 medium-order-2">
+        @Model.Description
+    </div>
+
+    @if (Model.ImageSidePanel.Any())
+    {
+        <div class="experiences-detail__sidebar cell small-12 medium-4 medium-order-1">
+            <ul>
+                @foreach (var item in Model.ImageSidePanel.OfType<ImageWithHeadingItem>())
+                {
+                    <li>
+                        <div class="experiences-detail__sidebar-image">
+                            @item.Image.GetCroppedImage("640x420")
+                        </div>
+                        @Html.Wrap("h3",item.Heading)
+                    </li>
+                }
+            </ul>
+        </div>
+    }
+
+    <div class="experiences-detail__cta cell small-12 text-center medium-order-3">
+        @Model.BookingLink.GetLink(cssClass: "cta secondary-outline")
+    </div>
+</div>

@@ -1,0 +1,50 @@
+﻿.nested-content-elements > nested-content-property-editor > .umb-nested-content > ng-form > .umb-nested-content__items > .umb-nested-content__item > .umb-nested-content__header-bar > .umb-nested-content__heading,
+.nested-content-elements > nested-content-property-editor > .umb-nested-content > ng-form > .umb-nested-content__items > .umb-nested-content__item > .umb-nested-content__header-bar > .umb-nested-content__icons {
+    background-color: transparent !important;
+}
+
+.nested-content-elements > nested-content-property-editor > .umb-nested-content > ng-form > .umb-nested-content__footer-bar > .umb-nested-content__add-content {
+    color: #9c27b0;
+    padding: 15px 15px;
+}
+
+.nested-content-elements > nested-content-property-editor > .umb-nested-content > .umb-overlay {
+    width: 50%;
+    top: 50px;
+    bottom: 150px;
+}
+
+.nested-content-elements > nested-content-property-editor > .umb-nested-content > .umb-overlay > ng-form > .umb-overlay-container > div > div.umb-itempicker > ul.umb-card-grid > li {
+    -webkit-box-flex: unset;
+    flex:none;
+}
+
+/* non-admin */
+.nested-content-elements--non-admin > nested-content-property-editor > .umb-nested-content > ng-form > .umb-nested-content__footer-bar,
+.nested-content-elements--non-admin > nested-content-property-editor > .umb-nested-content > ng-form > .umb-nested-content__items > .umb-nested-content__item > .umb-nested-content__header-bar > .umb-nested-content__icons {
+    display: none !important;
+}
+
+/* active */
+.umb-nested-content__item--active {
+    background-color: #ebdbea;
+    -webkit-box-shadow: 4px 4px 8px 0px #ccc;
+    -moz-box-shadow: 4px 4px 8px 0px #ccc;
+    box-shadow: 4px 4px 8px 0px #ccc;
+    margin-top: -1px;
+    margin-bottom: 8px;
+}
+
+.nested-content-elements > nested-content-property-editor > .umb-nested-content > ng-form > .umb-nested-content__items > .umb-nested-content__item--active > .umb-nested-content__header-bar {
+    background-color: #faf9f9 !important;
+    border: 1px solid #e9e9eb;
+    border-bottom: none;
+}
+
+.nested-content-elements nested-content-property-editor > .umb-nested-content > ng-form > .umb-nested-content__items > .umb-nested-content__item--active > .umb-nested-content__header-bar > .umb-nested-content__heading > .icon {
+    font-size:larger;
+}
+
+.nested-content-elements nested-content-property-editor > .umb-nested-content > ng-form > .umb-nested-content__items > .umb-nested-content__item--active > .umb-nested-content__header-bar > .umb-nested-content__heading > .umb-nested-content__item-name {
+    font-weight: bold;
+}

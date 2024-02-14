@@ -1,0 +1,68 @@
+@inherits UmbracoViewPage<SliderWithTextImageAndLinks>
+
+@{
+    // The layout alternates so let's get all elements of the same type.
+    var elements = (ViewData["Elements"] as IEnumerable<IPublishedElement>)
+        .Where(e => e.ContentType == Model.ContentType);
+
+    var odd = elements.IndexOf(Model) % 2 == 1;
+    var isFirstElement = elements.First() == Model;
+    var isLastElement = elements.Last() == Model;
+
+    var landingSliderClass = odd ? "landing__slider cell small-12 medium-7 transform--will-fade-right transition--2000"
+        : "landing__slider cell small-12 medium-7 medium-order-2 transform--will-fade-left transition--2000";
+
+    var landingContentClass = odd ? "landing__content cell small-12 medium-5 transform--will-fade-left transition--1000"
+        : "landing__content cell small-12 medium-5 medium-order-1 transform--will-fade-right transition--1000";
+}
+
+@if (isFirstElement)
+{
+    @Html.Raw("<div class=\"landing wrap\">");
+}
+
+
+<div class="landing__item grid-x">
+
+    <div class="@landingSliderClass" data-animate-in-view="transform--completed-fade-@(odd ? "right" : "left")">
+        <div class="landing__heading show-for-small-only">
+            @Html.Wrap("h2", Model.Heading.SurroundWithLink(Model.SecondaryLink))
+        </div>
+
+        <div class="landing__slider-inner">
+
+            @foreach (var image in Model.Slider)
+            {
+                @image.GetCroppedImage("740x620")
+            }
+
+        </div>
+    </div>
+
+    <div class="@landingContentClass" data-animate-in-view="transform--completed-fade-@(odd ? "left" : "right")">
+        <div class="landing__heading hide-for-small-only">
+            @Html.Wrap("h2", Model.Heading.SurroundWithLink(Model.SecondaryLink))
+        </div>
+
+        <div class="landing__content-inner">
+            @Model.Image.GetCroppedImage("540x300", cssClass: "landing__thumb hide-for-small-only").SurroundWithLink(Model.SecondaryLink)
+
+            @Model.Text
+
+            <div class="multiple-buttons">
+                @Model.SecondaryLink.GetLink(cssClass: "button")
+                @Model.PrimaryLink.GetLink(cssClass: "button button--primary")
+            </div>
+        </div>
+
+        <div class="landing__slider-dots"></div>
+    </div>
+
+</div>
+
+
+
+@if (isLastElement)
+{
+    @Html.Raw("</div>");
+}

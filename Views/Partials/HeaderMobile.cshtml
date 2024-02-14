@@ -1,0 +1,17 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage
+
+@{
+    var homePage = Model.AncestorOrSelf(1);
+    var websiteSettings = Umbraco.GetAuxiliaryContent<IAuxiliaryFoldersComposition, WebsiteSettings>(s => s.WebsiteSettings);
+}
+
+<div class="header__buttons-mobile show-for-small-only">
+    <div class="header__buttons-mobile-inner grid-x text-center">
+        <div class="cell small-6">
+            <a class="cta secondary-solid" href="#" data-toggle="booking">book</a>
+        </div>
+        <div class="cell small-6">
+            @websiteSettings.OffersLink.GetLink(cssClass: "cta secondary-solid", innerText: websiteSettings.MobileOffersLinkText)
+        </div>
+    </div>
+</div>

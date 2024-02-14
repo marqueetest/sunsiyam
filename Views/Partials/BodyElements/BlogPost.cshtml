@@ -1,0 +1,31 @@
+﻿@inherits UmbracoViewPage<BlogPost>
+
+@{ 
+    var pageModel = Umbraco.AssignedContentItem as BlogDetailPage;
+    var ancestors = pageModel.Ancestors().Reverse();
+}
+<div class="blog-post">
+
+    <div class="blog-post__title">
+        @if (pageModel.ListingDate != null)
+        {
+            @Html.Wrap("h4", pageModel.ListingDate.ToString("MMMM dd"))
+        }
+
+        @if (!String.IsNullOrEmpty(Model.Heading))
+        {
+            @Html.Wrap("h1", Model.Heading)
+        }
+        else
+        {
+            @Html.Wrap("h1", pageModel.Name)
+        }
+    </div>
+
+    @Html.Partial("BodyElements/Breadcrumb")
+
+    <div class="blog-post__container text-center">
+        @Model.Text
+    </div>
+
+</div>

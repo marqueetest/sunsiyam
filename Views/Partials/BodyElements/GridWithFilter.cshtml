@@ -1,0 +1,70 @@
+﻿@inherits UmbracoViewPage<GridWithFilter>
+@using HappyPorch.UmbracoExtensions.Extensions
+
+@{
+    var items = Umbraco.AssignedContentItem.AncestorOrSelf(1)
+        .Descendant<WebsiteComponents>()
+        .Descendant<ActivitiesFolder>()?
+        .Children<Activity>()?
+        .Visible();
+
+    if (items == null)
+    {
+        return;
+    }
+
+    var allCategories = items
+        .SelectMany(i => i.Categories)
+        .Distinct()
+        .OrderBy(i => i);
+
+    var category = Request.QueryString["category"];
+    var hasFilter = !string.IsNullOrEmpty(category);
+
+    if (hasFilter)
+    {
+        items = items.Where(i => i.Categories
+        .Select(c => c.ToSafeAlias())
+        .Contains(category, StringComparer.InvariantCultureIgnoreCase));
+    }
+
+}
+
+<div class="activities wrap transform--will-fade-up transition--1000" data-animate-in-view="transform--completed-fade-up">
+    <div class="activities__filters">
+        <h2>@Umbraco.GetDictionaryValue("Filter by:")</h2>
+
+        <ul>
+            <li class="@Html.If(!hasFilter,"current")"><a href="@Umbraco.AssignedContentItem.Url" target="_self">@Umbraco.GetDictionaryValue("All")</a></li>
+            @foreach (var cat in allCategories)
+            {
+                var filterByThis = string.Compare(cat.ToSafeAlias(), category, true) == 0;
+                var url = Umbraco.AssignedContentItem.Url.SetUrlParameter("category", cat.ToSafeAlias());
+                <li class="@Html.If(filterByThis,"current")"><a href="@url" target="_self">@cat</a></li>
+            }
+        </ul>
+    </div>
+
+
+    <div class="activities__grid cf">
+
+        @foreach (var item in items)
+        {
+            <div class="activities__item">
+                <div class="activities__item-inner">
+                    <div class="activities__thumb">
+                        @item.Image.GetCroppedImage("640x640")
+                        @Html.Wrap("h3", item.Heading)
+                    </div>
+
+                    <div class="activities__content">
+                        <div class="activities__content-inner">
+                            @item.Text
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+
+    </div>
+</div>

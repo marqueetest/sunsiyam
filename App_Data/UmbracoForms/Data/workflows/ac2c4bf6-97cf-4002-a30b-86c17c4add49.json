@@ -1,0 +1,16 @@
+{
+  "id": "ac2c4bf6-97cf-4002-a30b-86c17c4add49",
+  "name": "info.pasikudah@sunsiyam.com",
+  "form": "993c96be-d38a-4acb-aef0-ed1d6c5d7a7f",
+  "active": true,
+  "workflowTypeId": "17c61629-d984-4e86-b43b-a8407b3efea9",
+  "executesOn": "Submitted",
+  "settings": {
+    "Email": "info.pasikudah@sunsiyam.com",
+    "SenderEmail": "",
+    "Subject": "The Form '{form_name}' was submitted",
+    "RazorViewFilePath": "Forms/Emails/Default-Template.cshtml",
+    "Attachment": ""
+  },
+  "sortOrder": 0
+}

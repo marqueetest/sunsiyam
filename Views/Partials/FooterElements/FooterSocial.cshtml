@@ -1,0 +1,45 @@
+@inherits UmbracoViewPage<FooterSocial>
+
+@{
+    var websiteSettings = Umbraco.GetAuxiliaryContent<IAuxiliaryFoldersComposition, WebsiteSettings>(s => s.WebsiteSettings);
+    var resortsHomePageId = Umbraco.AssignedContentItem.Value<string>("hotelId");
+    var getUrl = resortsHomePageId == "107762" ? "https://www.tiktok.com/@iruveli" :
+               resortsHomePageId == "77171" ? "https://www.tiktok.com/@sunsiyamvilureef" :
+               resortsHomePageId == "77173" ? "https://www.tiktok.com/@olhuveli" :
+               resortsHomePageId == "110487" ? "https://www.tiktok.com/@siyamworld" :
+               resortsHomePageId == "85302" ? "https://www.tiktok.com/@sunsiyamirufushi" :
+               null;
+}
+
+<div class="footer__social cell small-12 large-3">
+    <ul>
+        @if (websiteSettings.Facebook.IsValidLink())
+        {
+            <li><a href="@websiteSettings.Facebook.GetLinkUrl()"><img src="/assets/img/facebook.svg"></a></li>
+        }
+        @if (websiteSettings.Instagram.IsValidLink())
+        {
+            <li><a href="@websiteSettings.Instagram.GetLinkUrl()"><img src="/assets/img/instagram.svg"></a></li>
+        }
+        @if (websiteSettings.Twitter.IsValidLink())
+        {
+            <li><a href="@websiteSettings.Twitter.GetLinkUrl()"><img src="/assets/img/twitter.svg"></a></li>
+        }
+        @if (websiteSettings.LinkedIn.IsValidLink())
+        {
+            <li><a href="@websiteSettings.LinkedIn.GetLinkUrl()"><img src="/assets/img/linked-in.svg"></a></li>
+        }
+        @if (websiteSettings.YouTube.IsValidLink())
+        {
+            <li><a href="@websiteSettings.YouTube.GetLinkUrl()"><img src="/assets/img/youtube.svg"></a></li>
+        }
+        @if (getUrl != null)
+        {
+            <li><a href=@getUrl><img src="/assets/img/tiktok.svg"></a></li>
+        }
+        else if (websiteSettings.TikTok.IsValidLink())
+        {
+            <li><a href="@websiteSettings.TikTok.GetLinkUrl()"><img src="/assets/img/tiktok.svg"></a></li>
+        }
+    </ul>
+</div>

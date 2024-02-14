@@ -1,0 +1,112 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<AccommodationsGridWithFilter>
+
+@{
+    var items = Umbraco.AssignedContentItem.Children<AccommodationDetailsPage>();
+
+    var accommodationTypes = items.Select(i => i.ListingType).Distinct().OrderBy(t => t);
+}
+<div class="rd-index">
+    <div class="rd-index__wrap">
+
+        <div class="rd-index__tabs show-for-medium">
+            <ul class="tabs" data-tabs id="index-tabs">
+                <li class="tabs-title is-active">
+                    <a data-tabs-target="all" href="#all" aria-selected="true">all <span></span></a>
+                </li>
+                @foreach (var accommodationType in accommodationTypes)
+                {
+                    var accommodationTypeUrl = accommodationType.ToCleanString(CleanStringType.UrlSegment);
+
+                    <li class="tabs-title"><a data-tabs-target="@accommodationTypeUrl" href="#@accommodationTypeUrl">@accommodationType <span></span></a></li>
+                }
+            </ul>
+        </div>
+        <div class="rd-index__tabs-mobile-accordion hide-for-medium">
+            <div class="accordionButton">
+                <h4>Select Type</h4>
+            </div>
+            <div class="accordionContent">
+                <div class="rd-index__tabs">
+                    <ul class="tabs" data-tabs id="index-tabs">
+                        <li class="tabs-title is-active">
+                            <a data-tabs-target="all" href="#all" aria-selected="true">all <span></span></a>
+                        </li>
+                        @foreach (var accommodationType in accommodationTypes)
+                        {
+                            var accommodationTypeUrl = accommodationType.ToCleanString(CleanStringType.UrlSegment);
+
+                            <li class="tabs-title"><a data-tabs-target="@accommodationTypeUrl" href="#@accommodationTypeUrl">@accommodationType <span></span></a></li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="tabs-content" data-tabs-content="index-tabs">
+            <div class="tabs-panel is-active" id="all">
+                @foreach (var item in items)
+                {
+                    @RenderAccommodationItem(item)
+                }
+            </div>
+
+            @foreach (var accommodationType in accommodationTypes)
+            {
+                var accommodationTypeUrl = accommodationType.ToCleanString(CleanStringType.UrlSegment);
+
+                <div class="tabs-panel" id="@accommodationTypeUrl">
+                    @foreach (var item in items.Where(x => x.ListingType == accommodationType))
+                    {
+                        @RenderAccommodationItem(item)
+                    }
+                </div>
+            }
+        </div>
+
+    </div>
+</div>
+
+@helper RenderAccommodationItem(AccommodationDetailsPage item)
+{
+    bool showPrice = !string.IsNullOrEmpty(item.Price);
+
+    <div class="rd-index__item-wrap">
+        <div class="rd-index__item grid-x transform--will-fade-up transition--1500" data-animate-in-view="transform--completed-fade-up">
+            <div class="rd-index__item-title cell small-12 large-4 vertical-center">
+                <a href="@item.Url">
+                    @Html.Wrap("h2", item.ListingHeading)
+                </a>
+            </div>
+            @if (showPrice)
+            {
+                <div class="rd-index__item-price cell small-12 medium-2 text-center vertical-center">
+                    <h4>From:</h4>
+                    @Html.Wrap("h3", item.Price)
+                </div>
+            }
+            <div class="rd-index__item-text cell small-12 large-4 vertical-center">
+                @item.ListingFeatures
+            </div>
+
+            @if (item.ThumbnailImage != null)
+            {
+                <div class="rd-index__item-thumbnail small-8 medium-4 large-2 vertical-center">
+                    <a href="@item.ThumbnailImage.GetCroppedImageUrl("1280x910")">
+                        <div class="thumbnail__wrapper">
+                            @item.ThumbnailImage.GetCroppedImage("640x339")
+                            <div class="thumbnail-overlay"></div>
+                            <button class="thumbnail__magnify">Magnify</button>
+                        </div>
+                    </a>
+                </div>
+            }
+
+            <div class="rd-index__item-cta cell small-4 medium-2 large-auto vertical-center">
+              <div class="cta-wrapper">
+                <a href="@item.Url" class="cta orange-outline">@Umbraco.GetDictionaryValue("read more")</a>
+                @item.BookingLink.GetLink(cssClass: "cta orange-solid")
+              </div>
+            </div>
+        </div>
+    </div>
+}

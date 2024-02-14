@@ -1,0 +1,31 @@
+﻿@inherits UmbracoViewPage<FeaturedExperienceSlider>
+@{
+    var experiences = Model.Experiences;
+}
+@if (!experiences.Any())
+{
+    return;
+}
+<div class="featured-experience-slider__wrapper transform--will-fade-left transition--1750" data-animate-in-view="transform--completed-fade-left">
+    <div class="featured-experience-slider">
+        <div class="featured-experience-slider__slide-container">
+            @foreach (var item in experiences)
+            {
+                <div class="featured-experience-slider__slide" style="background-image:url('@item.Image.GetCroppedImageUrl("1260x680")')">
+                <div class="featured-experience-slider__slide-info-overlay hide-for-medium"></div>
+                    <div class="featured-experience-slider__slide-info text-center">
+                        <div class="transform--will-fade-down transition--250" data-animate-in-view="transform--completed-fade-down">
+                            @Html.Wrap("h2",item.Heading)
+                        </div>
+                        <div class="transform--will-fade-up transition--250" data-animate-in-view="transform--completed-fade-up">
+                            @item.Description
+                            <div class="featured-experience-slider__slide-info-cta">
+                                @item.Link.GetLink(cssClass: "cta white-outline wide")
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>

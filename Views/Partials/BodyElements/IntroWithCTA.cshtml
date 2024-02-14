@@ -1,0 +1,25 @@
+﻿@inherits UmbracoViewPage<IntroWithCta>
+
+<div class="intro">
+    <div class="intro__container">
+	    <div class="transform--will-fade-up transition--1000" data-animate-in-view="transform--completed-fade-up">
+            <h1>
+                @Html.Raw(Model.Heading.ReplaceSquareBracketsWithTag("em"))
+            </h1>
+	    </div>
+
+		<div class="transform--will-fade-up transition--1250" data-animate-in-view="transform--completed-fade-up">
+			<h3>
+				@Html.Raw(Model.SubHeading)
+			</h3>
+		</div>
+
+		<div class="transform--will-fade-up transition--1500" data-animate-in-view="transform--completed-fade-up">
+	        @Html.Raw(Model.Text)
+		</div>
+
+		<div class="transform--will-fade-up transition--1750" data-animate-in-view="transform--completed-fade-up">
+	        @Model.CtaLink.GetLink(cssClass: "cta orange-solid wide")
+		</div>
+    </div>
+</div>

@@ -1,0 +1,13 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<BlogLandingPage>
+@{
+    if (Request.QueryString["facebook-rss"] == "true")
+    {
+        // render the Facebook Instant Articles RSS feed instead of the normal page
+        Html.RenderAction("Feed", "FacebookRss", new { page = this });
+        return;
+    }
+
+    Layout = "layout.cshtml";
+
+    this.RenderElements(Model.BodyElements, "BodyElements");
+}

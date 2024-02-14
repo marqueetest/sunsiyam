@@ -1,0 +1,29 @@
+@inherits UmbracoViewPage<ContactDetailsAndUmbracoForm>
+@* This partial view is used on the Contact Page *@
+
+<div class="contact__wrap">
+    <div class="contact">
+        <div class="contact__title text-center">
+            @Html.Wrap("h1", Umbraco.AssignedContentItem.Name)
+        </div>
+
+        <div class="contact__container grid-x">
+            <div class="contact__container-info cell small-12 medium-6">
+                @Model.Text
+            </div>
+
+            <div class="contact__container-form cell small-12 medium-6">
+                @Html.Wrap("h3", Model.FormHeading)
+
+                @if (Model.HasProperty("iframeForm") && !String.IsNullOrEmpty(Model.IframeForm))
+                {
+                    @Html.Raw(Model.IframeForm)
+                }
+                else
+                {
+                    @Html.Action("RenderForm", "UmbracoForms", new { formId = Model.Form, theme = "SunSiyam", includeScripts = false })
+                }
+            </div>
+        </div>
+    </div>
+</div>

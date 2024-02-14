@@ -1,0 +1,9 @@
+@inherits Umbraco.Web.Macros.PartialViewMacroPage
+@{
+    Layout = null;
+
+    if (Request["testerror"] == "1")
+    {
+        throw new Exception("This exception is thrown for the sole purpose of testing the 500 error page.");
+    }
+}

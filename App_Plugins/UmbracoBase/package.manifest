@@ -1,0 +1,10 @@
+﻿{
+  "javascript": [
+    "~/App_Plugins/UmbracoBase/backoffice/js/nestedContentElements.js",
+    "~/App_Plugins/UmbracoBase/backoffice/js/bluePrintConfig.js",
+    "~/App_Plugins/UmbracoBase/backoffice/js/updateHeaderTitles.js"
+  ],
+  "css": [
+    "~/App_Plugins/UmbracoBase/backoffice/css/styles.css"
+  ]
+}

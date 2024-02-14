@@ -1,0 +1,10 @@
+@inherits UmbracoViewPage<FooterLogos>
+
+<div class="footer__logo-carousel">
+    @foreach (var item in Model.Logos)
+    {
+        <div class="footer__logo">
+            @item.Image.GetImage().SurroundWithLink(item.Link)
+        </div>
+    }
+</div>

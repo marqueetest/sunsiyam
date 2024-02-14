@@ -1,0 +1,24 @@
+@inherits UmbracoViewPage<GenericCarousel>
+
+@{
+    var carousel = Model.Carousel.ToList();
+    if (!carousel.Any())
+    {
+        return;
+    }
+}
+
+<div class="seasons transform--will-fade-up transition--1000" data-animate-in-view="transform--completed-fade-up">
+    <div class="seasons__carousel">
+
+        @foreach (var item in carousel)
+        {
+            <div class="seasons__season" data-season-image="@item.Image.GetCroppedImageUrl("1260x500")">
+                @Html.Wrap("h2", item.Heading.ReplaceSquareBracketsWithTag("em"))
+                @item.Text
+                @item.Link.GetLink(cssClass: "button")
+            </div>
+        }
+
+    </div>
+</div>

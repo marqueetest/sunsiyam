@@ -1,0 +1,33 @@
+﻿@inherits UmbracoViewPage<GridPanel>
+
+@{
+    var panelItems = Model.GridPanels;
+    if (!panelItems.Any())
+    {
+        return;
+    }
+}
+<div class="grid-panels">
+
+    <div class="grid-panels__heading transform--will-fade-down transition--2000" data-animate-in-view="transform--completed-fade-down">
+        @Html.Wrap("h2", Model.Heading)
+    </div>
+
+    <div class="grid-panels__grid grid-x small-up-1 medium-up-2 large-up-4">
+
+        @foreach (var item in panelItems.OfType<GridPanelItem>())
+        {
+            <div class="grid-panels__item cell">
+                @item.Image.GetCroppedImage("640x640")
+
+                @Html.Wrap("h4", item.Title)
+                @Html.Wrap("h3", item.Subtitle)
+
+                @item.Description
+
+                @item.Link.GetLink(cssClass: "cta orange-solid")
+            </div>
+        }
+
+    </div>
+</div>

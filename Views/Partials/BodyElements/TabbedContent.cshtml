@@ -1,0 +1,44 @@
+﻿@inherits UmbracoViewPage<TabbedContent>
+@{
+    var tabItems = Model.Tabs;
+    if (!tabItems.Any())
+    {
+        return;
+    }
+}
+
+<div class="tabbed-content">
+    <div class="tabbed-content__slider">
+        @foreach (var item in tabItems)
+        {
+            <div class="tabbed-content__slide" data-title="@item.TabHeading">
+                <div class="tabbed-content__slide-inner grid-x">
+                    <div class="tabbed-content__image cell small-12 medium-6 medium-order-2">
+                        @if (item.TabImage != null)
+                        {
+                            <div class="tabbed-content__image-inner" style="background-image: url('@item.TabImage.GetCroppedImageUrl("640x460")')">
+                                @if (item.TabLink != null)
+                                {
+                                    <a href="@item.TabLink.GetLinkUrl()" target="@item.TabLink.Target"></a>
+                                }
+                            </div>
+                        }
+                    </div>
+
+                    <div class="tabbed-content__content cell small-12 medium-6 medium-order-1">
+                        @Html.Wrap("h2", item.TabHeading.SurroundWithLink(item.TabLink))
+
+                        @item.TabDescription
+
+                        @if (item.TabLink != null)
+                        {
+                            <div class="tabbed-content__cta">
+                                @item.TabLink.GetLink(cssClass: "cta secondary-outline")
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

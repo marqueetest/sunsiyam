@@ -1,0 +1,98 @@
+@inherits UmbracoViewPage
+
+@{
+    var websiteSettings = Umbraco.GetAuxiliaryContent<IAuxiliaryFoldersComposition, WebsiteSettings>(s => s.WebsiteSettings);
+    var resortsLinks = websiteSettings.ResortsNavigation;
+    var navigationLinks = websiteSettings.HeaderPrimaryNavigation;
+    var footerItems = websiteSettings.FooterElements.FirstOrDefault(x => x.ContentType.Alias == "footerNavigation") as FooterNavigation;
+    var homePage = Model.AncestorOrSelf(1);
+}
+
+<div class="off-canvas burger-menu position-left" id="burger-menu" data-off-canvas data-transition="overlap" data-content-scroll="false">
+    <div class="burger-menu__container">
+
+        <button class="burger-menu__close" type="button" data-close></button>
+
+        <div class="burger-menu__nav">
+            <div class="burger-menu__nav-container">
+                <ul>
+                    @if (Umbraco.AssignedContentItem.Id != homePage.Id)
+                    {
+                        <li><a href="@homePage.Url">@Umbraco.GetDictionaryValue("Group.Website", "Group Website")</a></li>
+                    }
+                    <li>
+                        <div class="burger-menu__nav-accordion">
+                            <div class="accordionButton">resorts and destinations</div>
+                            <div class="accordionContent">
+                                <div class="burger-menu__nav-accordion-inner">
+                                    @foreach (var item in resortsLinks)
+                                    {
+                                        if (!item.Link.IsValidLink())
+                                        {
+                                            continue;
+                                        }
+
+                                        <div class="accordionButton">@item.Link.Name</div>
+                                        if (item.ChildLinks.Any())
+                                        {
+                                            <div class="accordionContent">
+                                                <ul>
+                                                    @foreach (var childItem in item.ChildLinks)
+                                                    {
+                                                        <li>@childItem.GetLink()</li>
+                                                    }
+                                                </ul>
+                                            </div>
+                                        }
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    @foreach (var item in navigationLinks)
+                    {
+                        if (!item.Link.IsValidLink())
+                        {
+                            continue;
+                        }
+                        if (item.ChildLinks.Any())
+                        {
+                            <li>
+                                <div class="burger-menu__nav-accordion-about">
+                                    <div class="accordionButton">@item.Link.Name</div>
+                                    <div class="accordionContent">
+                                        <ul>
+                                            @foreach (var childItem in item.ChildLinks)
+                                            {
+                                                <li>@childItem.GetLink()</li>
+                                            }
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                        }
+                        else
+                        {
+                            <li>@item.Link.GetLink()</li>
+                        }
+                    }
+                </ul>
+            </div>
+        </div>
+
+        @if (footerItems != null)
+        {
+            <div class="burger-menu__footer">
+                <div class="burger-menu__footer-nav">
+                    <ul>
+                        @foreach (var item in footerItems.Navigation)
+                        {
+                            <li>@item.GetLink()</li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        }
+
+    </div>
+</div>

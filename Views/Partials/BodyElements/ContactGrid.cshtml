@@ -1,0 +1,45 @@
+﻿@inherits UmbracoViewPage<ContactGrid>
+
+@{
+    if (!Model.Contacts.Any())
+    {
+        return;
+    }
+}
+
+<div class="contact__wrap">
+    <div class="contact">
+        <div class="contact__grid grid-x">
+
+            @foreach (var section in Model.Contacts)
+            {
+
+                if (!string.IsNullOrEmpty(section.SectionHeading))
+                {
+                    <div class="contact__grid-heading cell small-12 text-center">
+                        @Html.Wrap("h2", section.SectionHeading)
+                    </div>
+                }
+
+                if (section.SectionContacts.Any())
+                {
+                    <div class="contact__grid-location grid-x cell small-12">
+                        @foreach (var item in section.SectionContacts)
+                        {
+                            <div class="contact__grid-location-item cell small-12 medium-4">
+                                <div class="contact__grid-location-item-title">
+                                    @Html.Wrap("h3", item.Title)
+                                </div>
+                                <div class="contact__grid-location-item-info">
+                                    @item.ContactDetails
+                                </div>
+                            </div>
+                        }
+                    </div>
+                }
+
+            }
+
+        </div>
+    </div>
+</div>

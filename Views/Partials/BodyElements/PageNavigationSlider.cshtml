@@ -1,0 +1,73 @@
+﻿@inherits UmbracoViewPage<PageNavigationSlider>
+@{
+    if (Model.HideSlider)
+    {
+        return;
+    }
+
+    var items = Umbraco.AssignedContentItem.Siblings();
+
+    if (Umbraco.AssignedContentItem is AccommodationDetailsPage)
+    {
+        var listingType = (Umbraco.AssignedContentItem as AccommodationDetailsPage).ListingType;
+
+        items = items.OfType<AccommodationDetailsPage>().Where(a => a.ListingType == listingType);
+    }
+    else
+    {
+        items = items.OfType<IPageListingComposition>();
+    }
+
+    if (!items.Any())
+    {
+        return;
+    }
+
+    // if there are 3 items in the slider by duplicate
+    while (items.Count() == 3)
+    {
+        items = items.Concat(items);
+    }
+}
+
+@if (!string.IsNullOrEmpty(Model.Heading))
+{
+    <div class="title">
+        <div class="title__wrap">
+            @Html.Wrap("h2", Model.Heading)
+        </div>
+    </div>
+}
+
+
+<div class="more-slider">
+
+    <div class="more-slider__inner">
+        @foreach (var item in items.OfType<IPageListingComposition>())
+        {
+            <div class="more-slider__slide">
+                <a href="@item.Url">
+                    <div class="more-slider__slide-wrap">
+                        <div class="more-slider__slide-img">
+                            @item.ListingImage.GetCroppedImage("450x425")
+                        </div>
+                        <div class="more-slider__slide-info">
+                            @if (item is BlogDetailPage)
+                            {
+                                var listingDate = (item as BlogDetailPage).ListingDate;
+
+                                if (listingDate > DateTime.MinValue)
+                                {
+                                    @Html.Wrap("h4", listingDate.ToString("MMMM dd"))
+                                }
+                            }
+
+                            @Html.Wrap("h3", item.ListingHeading)
+                        </div>
+                    </div>
+                    <div class="more-slider__slide-overlay"></div>
+                </a>
+            </div>
+        }
+    </div>
+</div>

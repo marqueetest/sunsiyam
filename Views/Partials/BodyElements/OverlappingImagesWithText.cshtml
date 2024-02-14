@@ -1,0 +1,21 @@
+@inherits UmbracoViewPage<OverlappingImagesWithText>
+
+<div class="images-small-text grid-x grid-margin-x">
+    <div class="images-small-text__image cell small-12 medium-7 transform--will-fade-right transition--1000" data-animate-in-view="transform--completed-fade-right">
+        @Model.LeftImage.GetCroppedImage("560x660")
+    </div>
+
+    <div class="images-small-text__content cell small-12 medium-5 transform--will-fade-left transition--2000" data-animate-in-view="transform--completed-fade-left">
+        <div class="images-small-text__content-top">
+            @Model.TopText
+        </div>
+
+        <div class="images-small-text__content-middle hide-for-small-only">
+            @Model.RightImage.GetCroppedImage("420x280")
+        </div>
+
+        <div class="images-small-text__content-bottom">
+            @Model.BottomText
+        </div>
+    </div>
+</div>

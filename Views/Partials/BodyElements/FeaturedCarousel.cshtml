@@ -1,0 +1,14 @@
+@inherits UmbracoViewPage<FeaturedCarousel>
+@using Umbraco.Core.Strings
+
+@{
+    if (Model.Items == null || !Model.Items.Any())
+    {
+        return;
+    }
+
+    // Architecture provides 2 built-in styles: 'Single Image' and 'Double Image'
+    var cleanFileName = Model.Style.ToCleanString(CleanStringType.PascalCase);
+    var partialView = $"Body Elements/FeaturedCarousel{cleanFileName}";
+    Html.RenderPartial(partialView);
+}

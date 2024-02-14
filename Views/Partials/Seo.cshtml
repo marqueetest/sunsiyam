@@ -1,0 +1,30 @@
+@inherits UmbracoViewPage<ISEocomposition>
+@using Umbraco.Web
+
+@{
+    if (Model == null)
+    {
+        return;
+    }
+
+    var websiteSettings = Umbraco.GetAuxiliaryContent<IAuxiliaryFoldersComposition, WebsiteSettings>(s => s.WebsiteSettings);
+    var pageTitle = Umbraco.Coalesce(Model.MetaTitle, string.Join(" - ", websiteSettings?.WebsiteName, Model.Name));
+    var ogpGraphImage = Model.OpenGraphImage ?? websiteSettings?.OpenGraphImage;
+    var ogpGraphTitle = Umbraco.Coalesce(Model.OpenGraphTitle, pageTitle);
+    var ogpGraphDescription = Umbraco.Coalesce(Model.OpenGraphDescription, Model.MetaDescription);
+    var canonicalUrl = Model.Url(mode: UrlMode.Absolute);
+}
+
+<title>@pageTitle</title>
+<meta name="description" content="@Model.MetaDescription" />
+<link rel="canonical" href="@canonicalUrl" />
+
+@if (Model.RobotsOptions.Any())
+{
+    <meta name="robots" content="@string.Join(",", Model.RobotsOptions)" />
+}
+
+<meta property="og:image" content="@(ogpGraphImage?.GetCroppedImageUrl("1200x1200").ToAbsoluteUrl())" />
+<meta property="og:title" content="@ogpGraphTitle" />
+<meta property="og:description" content="@ogpGraphDescription" />
+<meta property="og:url" content="@canonicalUrl" />

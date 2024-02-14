@@ -1,0 +1,29 @@
+@inherits UmbracoViewPage<AccordionWithImage>
+@{
+    if (Model.Items == null || !Model.Items.Any())
+    {
+        return;
+    }
+}
+
+<div class="accordion wrap wrap--narrow">
+    @foreach (var item in Model.Items)
+    {
+        <div class="accordionButton">
+            @Html.Wrap("h3", item.Heading)
+        </div>
+        <div class="accordionContent">
+            <div class="grid-x grid-margin-x">
+                <div class="accordion__image cell small-12 medium-6 large-5">@item.Image.GetCroppedImage("640x400")</div>
+                <div class="accordion__content cell small-12 medium-6 large-7">
+                    @item.Text
+
+                    <div class="multiple-buttons">
+                        @item.PrimaryLink.GetLink(cssClass: "button button--primary")
+                        @item.SecondaryLink.GetLink(cssClass: "button")
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>

@@ -1,0 +1,10 @@
+@inherits UmbracoViewPage<FooterAddress>
+
+@{
+    var websiteSettings = Umbraco.GetAuxiliaryContent<IAuxiliaryFoldersComposition, WebsiteSettings>(s => s.WebsiteSettings);
+}
+
+<div class="footer__address">
+    @Html.Wrap("h4", websiteSettings.WebsiteName)
+    @Html.Wrap("p", websiteSettings.PhysicalAddress)
+</div>
