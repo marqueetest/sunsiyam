@@ -1,0 +1,339 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xliff srcLang="en-GB" trgLang="zh-CN" version="2.0" xmlns="urn:oasis:names:tc:xliff:document:2.0">
+  <file id="f1" original="10129|Dictionary Item: view less">
+    <group id="g1" name="view-less">
+      <group id="g2" name="93747|view less">
+        <unit id="u1" name="824f2938-77b6-4d81-a1b5-07f195a1d88e">
+          <segment>
+            <source>view less</source>
+            <target>查看更少</target>
+          </segment>
+        </unit>
+      </group>
+    </group>
+  </file>
+  <file id="f2" original="10130|Dictionary Item: filter posts">
+    <group id="g3" name="filter-posts">
+      <group id="g4" name="93748|filter posts">
+        <unit id="u2" name="b917d3d1-0a59-44f7-a9c6-0a7fff28ba56">
+          <segment>
+            <source>filter posts</source>
+            <target>过滤贴子</target>
+          </segment>
+        </unit>
+      </group>
+    </group>
+  </file>
+  <file id="f3" original="10131|Dictionary Item: Booking Widget">
+    <group id="g5" name="booking-widget">
+      <group id="g6" name="93749|Booking Widget">
+        <unit id="u3" name="5b1aa2fa-1030-47ed-9ed9-1996c14709a1">
+          <segment>
+            <source/>
+            <target/>
+          </segment>
+        </unit>
+        <group id="g7" name="f69f03b3-4240-442c-8140-1d3e641c2bd2">
+          <unit id="u4" name="f69f03b3-4240-442c-8140-1d3e641c2bd2">
+            <segment>
+              <source>Check-out</source>
+              <target>退房</target>
+            </segment>
+          </unit>
+        </group>
+        <group id="g8" name="92dbc2fe-cac9-4595-ab4b-2195ee105ce7">
+          <unit id="u5" name="92dbc2fe-cac9-4595-ab4b-2195ee105ce7">
+            <segment>
+              <source>CHECK AVAILABILITY</source>
+              <target>查看空房信息</target>
+            </segment>
+          </unit>
+        </group>
+        <group id="g9" name="07b7d8d5-0fa6-4a61-bfac-55102266850a">
+          <unit id="u6" name="07b7d8d5-0fa6-4a61-bfac-55102266850a">
+            <segment>
+              <source>Choose your resort</source>
+              <target>选择度假村</target>
+            </segment>
+          </unit>
+        </group>
+        <group id="g10" name="29082bb0-814e-403d-a3a1-6cfca5ad6e21">
+          <unit id="u7" name="29082bb0-814e-403d-a3a1-6cfca5ad6e21">
+            <segment>
+              <source>book your stay</source>
+              <target>预订住宿</target>
+            </segment>
+          </unit>
+        </group>
+        <group id="g11" name="dd390738-c9a3-4bf5-8303-a9fb6bb8409e">
+          <unit id="u8" name="dd390738-c9a3-4bf5-8303-a9fb6bb8409e">
+            <segment>
+              <source>Check-in</source>
+              <target>办理入住</target>
+            </segment>
+          </unit>
+        </group>
+        <group id="g12" name="c0d2d7d3-7b6c-480a-9324-bb6e6aa487e4">
+          <unit id="u9" name="c0d2d7d3-7b6c-480a-9324-bb6e6aa487e4">
+            <segment>
+              <source>Children</source>
+              <target>儿童</target>
+            </segment>
+          </unit>
+        </group>
+        <group id="g13" name="646a41a2-60b4-44d8-9501-e45efece3ba6">
+          <unit id="u10" name="646a41a2-60b4-44d8-9501-e45efece3ba6">
+            <segment>
+              <source>resort</source>
+              <target>度假村</target>
+            </segment>
+          </unit>
+        </group>
+        <group id="g14" name="30edfb17-d134-404c-806c-f380f0c93bab">
+          <unit id="u11" name="30edfb17-d134-404c-806c-f380f0c93bab">
+            <segment>
+              <source>Adults</source>
+              <target>成人</target>
+            </segment>
+          </unit>
+        </group>
+      </group>
+    </group>
+  </file>
+  <file id="f4" original="10132|Dictionary Item: read more">
+    <group id="g15" name="read-more">
+      <group id="g16" name="93750|read more">
+        <unit id="u12" name="add928f4-1f5d-4f3c-9aa4-23639d31beb7">
+          <segment>
+            <source>read more</source>
+            <target>阅读更多</target>
+          </segment>
+        </unit>
+      </group>
+    </group>
+  </file>
+  <file id="f5" original="10133|Dictionary Item: Experiences">
+    <group id="g17" name="experiences">
+      <group id="g18" name="93751|Experiences">
+        <unit id="u13" name="7ee13a4b-ab20-4c49-b3b0-253e3e01db1c">
+          <segment>
+            <source/>
+            <target/>
+          </segment>
+        </unit>
+        <group id="g19" name="59ea8750-533a-452c-9c79-f9671c940320">
+          <unit id="u14" name="59ea8750-533a-452c-9c79-f9671c940320">
+            <segment>
+              <source>AVAILABLE AT:</source>
+              <target>可用：T:</target>
+            </segment>
+          </unit>
+        </group>
+      </group>
+    </group>
+  </file>
+  <file id="f6" original="10134|Dictionary Item: Gallery">
+    <group id="g20" name="gallery">
+      <group id="g21" name="93752|Gallery">
+        <unit id="u15" name="610007e3-010a-4c0a-989d-3d8d6fc9dcd7">
+          <segment>
+            <source/>
+            <target/>
+          </segment>
+        </unit>
+        <group id="g22" name="bf1ab134-09a7-4102-8012-86d1e9d0620e">
+          <unit id="u16" name="bf1ab134-09a7-4102-8012-86d1e9d0620e">
+            <segment>
+              <source>Magnify</source>
+              <target>放大</target>
+            </segment>
+          </unit>
+        </group>
+      </group>
+    </group>
+  </file>
+  <file id="f7" original="10135|Dictionary Item: video controls">
+    <group id="g23" name="video-controls">
+      <group id="g24" name="93753|video controls">
+        <unit id="u17" name="c36fc007-aaa7-4411-a7fa-4f4b1fabd14a">
+          <segment>
+            <source/>
+            <target/>
+          </segment>
+        </unit>
+        <group id="g25" name="e532fdc9-3ad0-4588-b154-60988980adc2">
+          <unit id="u18" name="e532fdc9-3ad0-4588-b154-60988980adc2">
+            <segment>
+              <source>on</source>
+              <target>开启</target>
+            </segment>
+          </unit>
+        </group>
+        <group id="g26" name="712f3463-b5cd-4021-aa0b-63ff16ca6c97">
+          <unit id="u19" name="712f3463-b5cd-4021-aa0b-63ff16ca6c97">
+            <segment>
+              <source>Toggle</source>
+              <target>切换</target>
+            </segment>
+          </unit>
+        </group>
+        <group id="g27" name="ee85bb32-cbde-4e90-92e4-a52c435c3d3e">
+          <unit id="u20" name="ee85bb32-cbde-4e90-92e4-a52c435c3d3e">
+            <segment>
+              <source>off</source>
+              <target>关闭</target>
+            </segment>
+          </unit>
+        </group>
+        <group id="g28" name="dd066d6d-45ff-4bc3-bbe6-d33fbd630f4e">
+          <unit id="u21" name="dd066d6d-45ff-4bc3-bbe6-d33fbd630f4e">
+            <segment>
+              <source>VOLUME</source>
+              <target>音量</target>
+            </segment>
+          </unit>
+        </group>
+      </group>
+    </group>
+  </file>
+  <file id="f8" original="10136|Dictionary Item: Newsletter">
+    <group id="g29" name="newsletter">
+      <group id="g30" name="93754|Newsletter">
+        <unit id="u22" name="ac9b41b0-b899-48f2-8558-5719bbedf4f3">
+          <segment>
+            <source/>
+            <target/>
+          </segment>
+        </unit>
+        <group id="g31" name="3f9cd65f-16a0-4ef1-b520-4d93a26643c2">
+          <unit id="u23" name="3f9cd65f-16a0-4ef1-b520-4d93a26643c2">
+            <segment>
+              <source>FIRST NAME</source>
+              <target>名</target>
+            </segment>
+          </unit>
+        </group>
+        <group id="g32" name="e780b4c0-7fd9-4a1d-9d4d-bd0c8619f6f7">
+          <unit id="u24" name="e780b4c0-7fd9-4a1d-9d4d-bd0c8619f6f7">
+            <segment>
+              <source>Subscribe</source>
+              <target>订阅</target>
+            </segment>
+          </unit>
+        </group>
+        <group id="g33" name="bd6519e8-5e90-4c39-92e6-eda6aada060b">
+          <unit id="u25" name="bd6519e8-5e90-4c39-92e6-eda6aada060b">
+            <segment>
+              <source>EMAIL ADDRESS</source>
+              <target>电子邮件地址</target>
+            </segment>
+          </unit>
+        </group>
+        <group id="g34" name="f6069ce4-caae-4ef9-be11-ef30f39cf805">
+          <unit id="u26" name="f6069ce4-caae-4ef9-be11-ef30f39cf805">
+            <segment>
+              <source>LAST NAME</source>
+              <target>姓</target>
+            </segment>
+          </unit>
+        </group>
+      </group>
+    </group>
+  </file>
+  <file id="f9" original="10137|Dictionary Item: view more">
+    <group id="g35" name="view-more">
+      <group id="g36" name="93755|view more">
+        <unit id="u27" name="418c2d8c-2f9a-41c9-9206-7aac9562a26b">
+          <segment>
+            <source>view more</source>
+            <target>查看更多</target>
+          </segment>
+        </unit>
+      </group>
+    </group>
+  </file>
+  <file id="f10" original="10138|Dictionary Item: Filter Grid">
+    <group id="g37" name="filter-grid">
+      <group id="g38" name="93756|Filter Grid">
+        <unit id="u28" name="0d2170fb-697b-45da-b099-9756e73db163">
+          <segment>
+            <source/>
+            <target/>
+          </segment>
+        </unit>
+        <group id="g39" name="889288fc-b8b3-4743-bb7d-3e9438929696">
+          <unit id="u29" name="889288fc-b8b3-4743-bb7d-3e9438929696">
+            <segment>
+              <source>All</source>
+              <target>全部</target>
+            </segment>
+          </unit>
+        </group>
+        <group id="g40" name="583dbebf-1b72-427e-9f2f-7e16806621cb">
+          <unit id="u30" name="583dbebf-1b72-427e-9f2f-7e16806621cb">
+            <segment>
+              <source>Filter by:</source>
+              <target>按:过滤</target>
+            </segment>
+          </unit>
+        </group>
+      </group>
+    </group>
+  </file>
+  <file id="f11" original="10139|Dictionary Item: You are here">
+    <group id="g41" name="you-are-here">
+      <group id="g42" name="93757|You are here">
+        <unit id="u31" name="5d9189db-2bfe-4843-83c5-b6f329d93aa9">
+          <segment>
+            <source>You are here</source>
+            <target>您在此处</target>
+          </segment>
+        </unit>
+      </group>
+    </group>
+  </file>
+  <file id="f12" original="10140|Dictionary Item: Offer">
+    <group id="g43" name="offer">
+      <group id="g44" name="93758|Offer">
+        <unit id="u32" name="5767dcee-09e0-434c-915f-c95bdf819609">
+          <segment>
+            <source/>
+            <target/>
+          </segment>
+        </unit>
+        <group id="g45" name="dfd1837d-f33b-4a96-b68f-154e4fb10376">
+          <unit id="u33" name="dfd1837d-f33b-4a96-b68f-154e4fb10376">
+            <segment>
+              <source>view offer</source>
+              <target>查看优惠</target>
+            </segment>
+          </unit>
+        </group>
+        <group id="g46" name="53ce1fea-2538-47fc-9f2f-3aa8a344d3e0">
+          <unit id="u34" name="53ce1fea-2538-47fc-9f2f-3aa8a344d3e0">
+            <segment>
+              <source>view</source>
+              <target>查看</target>
+            </segment>
+          </unit>
+        </group>
+        <group id="g47" name="067f84b9-33f1-4a68-8cd6-53b0016b0ba8">
+          <unit id="u35" name="067f84b9-33f1-4a68-8cd6-53b0016b0ba8">
+            <segment>
+              <source>view all offers</source>
+              <target>查看全部优惠</target>
+            </segment>
+          </unit>
+        </group>
+        <group id="g48" name="ff691f19-d88c-41c8-82b2-93cf0fc566d2">
+          <unit id="u36" name="ff691f19-d88c-41c8-82b2-93cf0fc566d2">
+            <segment>
+              <source>Price from</source>
+              <target>最低价</target>
+            </segment>
+          </unit>
+        </group>
+      </group>
+    </group>
+  </file>
+</xliff>

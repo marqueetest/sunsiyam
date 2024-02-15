@@ -1,0 +1,477 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff srcLang="en-GB" trgLang="ru" version="2.0" xmlns="urn:oasis:names:tc:xliff:document:2.0">
+  <file id="f1" original="12799|Sun Siyam Cares">
+    <group id="g1" name="nodeprops">
+      <group id="g2" name="120920|nodeName">
+        <unit id="u1" name="120920|Umbraco.Textbox">
+          <segment>
+            <source>Sun Siyam Cares</source>
+          </segment>
+        </unit>
+      </group>
+    </group>
+    <group id="g3" name="content">
+      <group id="g4" name="120926|bodyElements">
+        <group id="g5" name="sliderFullHeight_1">
+          <unit id="u2" name="sliderCaption">
+            <segment>
+              <source>Sun Siyam Cares</source>
+            </segment>
+          </unit>
+          <unit id="u3" name="sliderSubheading">
+            <segment>
+              <source></source>
+            </segment>
+          </unit>
+          <group id="g6" name="sliderText">
+            <group id="u4-g" name="html">
+              <unit id="u4-1" name="p">
+                <segment>
+                  <source>Sustainability at the Forefront of Our Guest Experience</source>
+                </segment>
+              </unit>
+            </group>
+          </group>
+          <group id="g7" name="slides">
+            <unit id="u5" name="sliderFullHeightImageItem_1">
+              <segment>
+                <source></source>
+              </segment>
+            </unit>
+          </group>
+        </group>
+        <group id="g8" name="introWithCTA_1">
+          <unit id="u6" name="heading">
+            <segment>
+              <source>Sun Siyam Cares</source>
+            </segment>
+          </unit>
+          <unit id="u7" name="subHeading">
+            <segment>
+              <source></source>
+            </segment>
+          </unit>
+          <group id="g9" name="text">
+            <group id="u8-g" name="html">
+              <unit id="u8-1" name="p">
+                <originalData>
+                  <data id="d1">&lt;strong&gt;</data>
+                  <data id="d2">&lt;/strong&gt;</data>
+                </originalData>
+                <segment>
+                  <source>
+                    <pc dataRefEnd="d2" dataRefStart="d1" id="1" subType="xlf:b" type="fmt">Sustainability at the Forefront of Our Guest Experience</pc>
+                  </source>
+                </segment>
+              </unit>
+              <unit id="u8-2" name="p">
+                <originalData>
+                  <data id="d1">&lt;a href="/{localLink:umb://document/5675d49409f546a2a599db314fec0cc5}" title="Home Page - EN"&gt;</data>
+                  <data id="d2">&lt;/a&gt;</data>
+                  <data id="d3">&lt;a href="/{localLink:umb://media/825640ed7144407081cc8dacc6fd8347}" title="SUSTAINABILITY POLICIES"&gt;</data>
+                </originalData>
+                <segment>
+                  <source>
+                    <pc dataRefEnd="d2" dataRefStart="d1" id="1" type="link">Sun Siyam Resorts</pc> is dedicated to operating sustainably and responsibly in the Maldives and Sri Lanka while offering authentic guest experiences. Our Sun Siyam Cares programme prioritizes sustainability through initiatives such as reducing energy and water use, managing waste to reduce plastic use, supporting community development, and investing in renewable energy. We also focus on conservation efforts and work to preserve local heritage and cultural practices. By following these sustainability practices and <pc dataRefEnd="d2" dataRefStart="d3" id="2" type="link">Sustainaibility Policies</pc>, we aim to minimize our environmental impact, carbon footprint and contribute to the socio-economic well-being of the communities in which we operate.</source>
+                </segment>
+              </unit>
+              <unit id="u8-3" name="p">
+                <originalData>
+                  <data id="d1">&lt;strong&gt;</data>
+                  <data id="d2">&lt;/strong&gt;</data>
+                </originalData>
+                <segment>
+                  <source>
+                    <pc dataRefEnd="d2" dataRefStart="d1" id="1" subType="xlf:b" type="fmt">Earns Travelife Gold Certification for Sustainable Tourism Practices</pc>
+                  </source>
+                </segment>
+              </unit>
+              <unit id="u8-4" name="p">
+                <originalData>
+                  <data id="d1">&lt;a rel="noopener" href="https://travelifestaybetter.com/" target="_blank" title="Travellife" data-anchor="#"&gt;</data>
+                  <data id="d2">&lt;/a&gt;</data>
+                  <data id="d3">&lt;a href="/{localLink:umb://document/172a72118f9b43a0a81a03af7d935c70}" title="Sun Siyam Iru Veli"&gt;</data>
+                  <data id="d4">&lt;a href="/{localLink:umb://document/3f17668156f94d2bba18bfd631a0986f}" title="Sun Siyam Vilu Reef"&gt;</data>
+                  <data id="d5">&lt;a href="/{localLink:umb://document/14dde36f4a6748bfa0a6b3f96e308a14}" title="Sun Siyam Olhuveli"&gt;</data>
+                  <data id="d6">&lt;a href="/{localLink:umb://document/5d37b88d3af94cdaa8b990b27d4fb85e}" title="Sun Siyam Iru Fushi"&gt;</data>
+                  <data id="d7">&lt;a href="/{localLink:umb://document/c80dc42385714112bc8966b6cf2d62d6}" title="Siyam World"&gt;</data>
+                </originalData>
+                <segment>
+                  <source>We are currently working towards obtaining <pc dataRefEnd="d2" dataRefStart="d1" id="1" type="link">Travelife</pc> certification for all our resorts and have already achieved it for three of our five properties in the Maldives. <pc dataRefEnd="d2" dataRefStart="d3" id="2" type="link">Sun Siyam Iru Veli,</pc> <pc dataRefEnd="d2" dataRefStart="d4" id="3" type="link">Sun Siyam Vilu Reef</pc>, <pc dataRefEnd="d2" dataRefStart="d5" id="4" type="link">Sun Siyam Olhuveli</pc>, and <pc dataRefEnd="d2" dataRefStart="d6" id="5" type="link">Sun Siyam Iru Fushi</pc> have received global recognition for their sustainable tourism efforts through the Travelife Gold Certification. <pc dataRefEnd="d2" dataRefStart="d7" id="6" type="link">Siyam World</pc> is expected to receive it soon.</source>
+                </segment>
+              </unit>
+              <unit id="u8-5" name="p">
+                <originalData>
+                  <data id="d1">&lt;img src="?width=199&amp;amp;height=198&amp;amp;mode=max" alt="" width="199" height="198" data-udi="umb://media/5ef1ff9ce32a40ddb9afd2d10c8c1a88"/&gt;</data>
+                </originalData>
+                <segment>
+                  <source>
+                    <ph dataRef="d1" disp="image placeholder" id="1" subType="xlf:var" type="ui" />
+                  </source>
+                </segment>
+              </unit>
+              <unit id="u8-6" name="p">
+                <segment>
+                  <source>Travelife is a non-profit flagship program that supports tourism destinations, businesses, and travelers in implementing innovative solutions for the continuous development of sustainable tourism. To achieve Travelife Gold Certification, a resort must meet 163 sustainability criteria, including minimizing waste and energy use, addressing social issues, supporting employee welfare and wildlife protection, and supporting the local community and local businesses.</source>
+                </segment>
+              </unit>
+              <unit id="u8-7" name="p">
+                <originalData>
+                  <data id="d1">&lt;img src="?width=133&amp;amp;height=128&amp;amp;mode=max" alt="Our people" width="133" height="128" data-udi="umb://media/8b5c9bd1a46a4e4c97d48540e60773e2"/&gt;</data>
+                </originalData>
+                <segment>
+                  <source>
+                    <ph dataRef="d1" disp="image placeholder" id="1" subType="xlf:var" type="ui" />
+                  </source>
+                </segment>
+              </unit>
+              <unit id="u8-8" name="p">
+                <originalData>
+                  <data id="d1">&lt;strong&gt;</data>
+                  <data id="d2">&lt;/strong&gt;</data>
+                  <data id="d3">&lt;br/&gt;</data>
+                  <data id="d4">&lt;em&gt;</data>
+                  <data id="d5">&lt;/em&gt;</data>
+                </originalData>
+                <segment>
+                  <source>
+                    <pc dataRefEnd="d2" dataRefStart="d1" id="1" subType="xlf:b" type="fmt">CORPORATE SOCIAL RESPONSIBILITY- OUR PEOPLE</pc>
+                    <ph dataRef="d3" id="2" subType="xlf:lb" type="fmt" />
+                    <pc dataRefEnd="d5" dataRefStart="d4" id="3" subType="xlf:i" type="fmt">Prioritizes People and Community through Sun Siyam Cares</pc>
+                  </source>
+                </segment>
+              </unit>
+              <unit id="u8-9" name="p">
+                <segment>
+                  <source>Sun Siyam Resorts is committed to corporate social responsibility, especially in regards to the communities we are active in. Our core values include aligning all sustainable practices with our commitment to people and our community. Through Sun Siyam Cares, we support and empower small local community businesses helping to reduce poverty and unemployment, providing job opportunities at our resorts, and supporting healthcare and educational initiatives,. We also endeavour to practice gender equality and provide development and training to our employees to help them progress and achieve their career goals. In addition, we outsource jobs such as local food preparation,daily cleaning and gardening works to women’s development committees that provides for a source of income for local women.</source>
+                </segment>
+              </unit>
+              <unit id="u8-10" name="p">
+                <originalData>
+                  <data id="d1">&lt;img src="?width=137&amp;amp;height=152&amp;amp;mode=max" alt="Bio Farming" width="137" height="152" data-udi="umb://media/d7caa27670a74f30a24691dcc42b33c4"/&gt;</data>
+                  <data id="d2">&lt;br/&gt;</data>
+                  <data id="d3">&lt;strong&gt;</data>
+                  <data id="d4">&lt;/strong&gt;</data>
+                  <data id="d5">&lt;em&gt;</data>
+                  <data id="d6">&lt;/em&gt;</data>
+                </originalData>
+                <segment>
+                  <source>
+                    <ph dataRef="d1" disp="image placeholder" id="1" subType="xlf:var" type="ui" />
+                    <ph dataRef="d2" id="2" subType="xlf:lb" type="fmt" />
+                    <ph dataRef="d2" id="3" subType="xlf:lb" type="fmt" />
+                    <pc dataRefEnd="d4" dataRefStart="d3" id="4" subType="xlf:b" type="fmt">BIO FARMING</pc>
+                    <ph dataRef="d2" id="5" subType="xlf:lb" type="fmt" />
+                    <pc dataRefEnd="d6" dataRefStart="d5" id="6" subType="xlf:i" type="fmt">Exploring Local Agriculture and Sustainable Practices at Sun Siyam Resorts' Bio Farms</pc>
+                  </source>
+                </segment>
+              </unit>
+              <unit id="u8-11" name="p">
+                <segment>
+                  <source>Sun Siyam Resorts offers guests the opportunity to visit one of our three farm islands to learn about local farming methods and see the produce that is grown and supplied to our resorts on a weekly basis. This is a great way to showcase to our guests how we supporte the local farming community and workforce, while also reducing the carbon food-print by buying local. Our farms cultivate over 38 varieties of fruits and vegetables, including bananas, coconut, cucumbers, papayas, tomatoes, and more. Bio farms promote sustainable development, are cost-effective, use organic inputs, generate income for the local community, and can even generate income through exports. Sun Siyam Cares is taking steps to boost bio farming in local islands and is considering investing in better farming equipment, such as composting machines and renewable energy machines, as well as in mari-culture and poultry farming.</source>
+                </segment>
+              </unit>
+              <unit id="u8-12" name="p">
+                <originalData>
+                  <data id="d1">&lt;img src="?width=166&amp;amp;height=142&amp;amp;mode=max" alt="Bio Diversity" width="166" height="142" data-udi="umb://media/a790b031613c481ea6d4de8962b6eb91"/&gt;</data>
+                </originalData>
+                <segment>
+                  <source>
+                    <ph dataRef="d1" disp="image placeholder" id="1" subType="xlf:var" type="ui" />
+                  </source>
+                </segment>
+              </unit>
+              <unit id="u8-13" name="p">
+                <originalData>
+                  <data id="d1">&lt;strong&gt;</data>
+                  <data id="d2">&lt;/strong&gt;</data>
+                  <data id="d3">&lt;br/&gt;</data>
+                  <data id="d4">&lt;em&gt;</data>
+                  <data id="d5">&lt;/em&gt;</data>
+                </originalData>
+                <segment>
+                  <source>
+                    <pc dataRefEnd="d2" dataRefStart="d1" id="1" subType="xlf:b" type="fmt">BIODIVERSITY CONSERVATION</pc>
+                    <ph dataRef="d3" id="2" subType="xlf:lb" type="fmt" />
+                    <pc dataRefEnd="d5" dataRefStart="d4" id="3" subType="xlf:i" type="fmt">Conserving the Maldives' Marine Biodiversity and Ecosystems</pc>
+                  </source>
+                </segment>
+              </unit>
+              <unit id="u8-14" name="p">
+                <originalData>
+                  <data id="d1">&lt;br/&gt;</data>
+                </originalData>
+                <segment>
+                  <source>The Maldives is known for its rich marine biodiversity and diverse ecosystems. At Sun Siyam Resorts, we support eco-initiatives and biodiversity projects through Sun Siyam Cares to protect and preserve our environment, coral reefs, and marine life, in collaboration with local councils to ensure we follow proper protocols. Our guests can also participate in conservation efforts, such as coral binding and tree planting, of which have seen an increase in interest over the past year. Each of our properties has or will have a marine biologist dedicated to preserving our delicate reefs and marine life systems, with a focus on coral reef restoration. <ph dataRef="d1" id="1" subType="xlf:lb" type="fmt" />Marine biologists invite guests to join them on the house reef to participate in the creation of a new coral reef in the lagoon. Together, they will collect damaged coral and re-plant it on metal frames. As they work, they will also have the opportunity to monitor the growth of the coral and see it thrive in its new home. This is a hands-on opportunity to make a positive impact on the marine ecosystem and learn about the importance of coral reefs.<ph dataRef="d1" id="2" subType="xlf:lb" type="fmt" /><ph dataRef="d1" id="3" subType="xlf:lb" type="fmt" /></source>
+                </segment>
+              </unit>
+              <unit id="u8-15" name="p">
+                <originalData>
+                  <data id="d1">&lt;strong&gt;</data>
+                  <data id="d2">&lt;/strong&gt;</data>
+                  <data id="d3">&lt;br/&gt;</data>
+                  <data id="d4">&lt;em&gt;</data>
+                  <data id="d5">&lt;/em&gt;</data>
+                </originalData>
+                <segment>
+                  <source>
+                    <pc dataRefEnd="d2" dataRefStart="d1" id="1" subType="xlf:b" type="fmt">PRESERVATION OF LOCAL HERITAGE</pc>
+                    <ph dataRef="d3" id="2" subType="xlf:lb" type="fmt" />
+                    <pc dataRefEnd="d5" dataRefStart="d4" id="3" subType="xlf:i" type="fmt">Embrace and Preserving the Culture of the Maldives</pc>
+                  </source>
+                </segment>
+              </unit>
+              <unit id="u8-16" name="p">
+                <segment>
+                  <source>As a 100% Maldivian owned company, Sun Siyam Resorts values the preservation of our rich cultural heritage. We place a strong emphasis on celebrating and communicating our cultural practices, and we offer guests the opportunity to learn about and participate in these traditions through story-telling, demonstrations of cultural dances and celebrations, and discovery visits to local islands. These cultural experiences allow guests to gain a deeper understanding and appreciation of our culture and people, and also contribute to the development of local communities. Sun Siyam Cares supports these efforts to preserve and showcase our local heritage.</source>
+                </segment>
+              </unit>
+              <unit id="u8-17" name="p">
+                <originalData>
+                  <data id="d1">&lt;strong&gt;</data>
+                  <data id="d2">&lt;/strong&gt;</data>
+                  <data id="d3">&lt;img src="?width=127&amp;amp;height=123&amp;amp;mode=max" alt="Recycle" width="127" height="123" data-udi="umb://media/e56391c4a4bf45fe98a66e1c59044c57"/&gt;</data>
+                </originalData>
+                <segment>
+                  <source>
+                    <sc dataRef="d1" id="1" subType="xlf:b" type="fmt" />
+                    <ph dataRef="d3" disp="image placeholder" id="2" subType="xlf:var" type="ui" />
+                    <ec dataRef="d2" startRef="1" subType="xlf:b" type="fmt" />
+                  </source>
+                </segment>
+              </unit>
+              <unit id="u8-18" name="p">
+                <originalData>
+                  <data id="d1">&lt;strong&gt;</data>
+                  <data id="d2">&lt;/strong&gt;</data>
+                  <data id="d3">&lt;br/&gt;</data>
+                  <data id="d4">&lt;em&gt;</data>
+                  <data id="d5">&lt;/em&gt;</data>
+                </originalData>
+                <segment>
+                  <source>
+                    <pc dataRefEnd="d2" dataRefStart="d1" id="1" subType="xlf:b" type="fmt">PAPER AND PLASTIC REDUCTION</pc>
+                    <ph dataRef="d3" id="2" subType="xlf:lb" type="fmt" />
+                    <pc dataRefEnd="d5" dataRefStart="d4" id="3" subType="xlf:i" type="fmt">Reducing Plastic Footprint and Advancing Sustainability</pc>
+                  </source>
+                </segment>
+              </unit>
+              <unit id="u8-19" name="p">
+                <segment>
+                  <source>The Maldives is transitioning to a more sustainable way of life, and Sun Siyam Resorts is committed to sustainability and reducing our plastic footprint. We have already eliminated or replaced single-use plastics and disposable plastic products, such as plastic bags, straws, and water bottles. Our resort islands have their own desalination and water bottling plants that use reverse osmosis to produce fresh water from seawater. Through Sun Siyam Cares, we are developing an app for guests that showcases our sustainability efforts and projects, including our focus on biodegradable or environmentally friendly packaging. We are also working on water optimization devices that measure sensor data to reduce water and diesel consumption in desalination, industrial, and municipal operations.</source>
+                </segment>
+              </unit>
+              <unit id="u8-20" name="p">
+                <originalData>
+                  <data id="d1">&lt;strong&gt;</data>
+                  <data id="d2">&lt;/strong&gt;</data>
+                  <data id="d3">&lt;br/&gt;</data>
+                  <data id="d4">&lt;em&gt;</data>
+                  <data id="d5">&lt;/em&gt;</data>
+                </originalData>
+                <segment>
+                  <source>
+                    <pc dataRefEnd="d2" dataRefStart="d1" id="1" subType="xlf:b" type="fmt">WASTE REDUCTION &amp;amp; RECYCLING </pc>
+                    <ph dataRef="d3" id="2" subType="xlf:lb" type="fmt" />
+                    <pc dataRefEnd="d5" dataRefStart="d4" id="3" subType="xlf:i" type="fmt">Sustainable Solid Waste Management and Recycling</pc>
+                  </source>
+                </segment>
+              </unit>
+              <unit id="u8-21" name="p">
+                <segment>
+                  <source>To preserve the natural beauty of the Maldives and prevent plastic contamination of our ecosystem, Sun Siyam Resorts is committed to sustainable solid waste management and adheres to strict recycling guidelines. We prioritize the reuse and recycling of plastic and paper on our islands. Sun Siyam Cares also supports composting projects and machinery to produce organic fertilizer, which helps to reduce waste, recycle organic waste, and fertilize our soil and plants. Composting has numerous environmental benefits, including improving soil health, reducing greenhouse gas emissions, recycling nutrients, and mitigating the impact of droughts.</source>
+                </segment>
+              </unit>
+              <unit id="u8-22" name="p">
+                <originalData>
+                  <data id="d1">&lt;img src="?width=115&amp;amp;height=113&amp;amp;mode=max" alt="Energy" width="115" height="113" data-udi="umb://media/8d376e8199404ed197dd2847e0c1ca51"/&gt;</data>
+                </originalData>
+                <segment>
+                  <source>
+                    <ph dataRef="d1" disp="image placeholder" id="1" subType="xlf:var" type="ui" />
+                  </source>
+                </segment>
+              </unit>
+              <unit id="u8-23" name="p">
+                <originalData>
+                  <data id="d1">&lt;strong&gt;</data>
+                  <data id="d2">&lt;/strong&gt;</data>
+                  <data id="d3">&lt;br/&gt;</data>
+                  <data id="d4">&lt;em&gt;</data>
+                  <data id="d5">&lt;/em&gt;</data>
+                </originalData>
+                <segment>
+                  <source>
+                    <pc dataRefEnd="d2" dataRefStart="d1" id="1" subType="xlf:b" type="fmt">RENEWABLE ENERGY – SOLAR ENERGY PROJECT</pc>
+                    <ph dataRef="d3" id="2" subType="xlf:lb" type="fmt" />
+                    <pc dataRefEnd="d5" dataRefStart="d4" id="3" subType="xlf:i" type="fmt">Commitment to Solar Energy and Net Zero Emissions</pc>
+                  </source>
+                </segment>
+              </unit>
+              <unit id="u8-24" name="p">
+                <segment>
+                  <source>The Maldives has abundant sunshine, making it well-suited for solar energy generation. The government has set a goal of achieving net zero emissions by 2030 and generating 70% of power from renewable energy sources by 2030. In line with these goals, Sun Siyam Cares is investing in solar energy projects, such as installing solar panels at guest and staff accommodation and solar water heaters in resort laundry areas. These solar water heaters use the sun's energy to heat water during the day and have an electric heating element as backup for cloudy days. Solar heaters are a low-cost, long-term solution for hot water with no maintenance requirements.</source>
+                </segment>
+              </unit>
+              <unit id="u8-25" name="p">
+                <originalData>
+                  <data id="d1">&lt;strong&gt;</data>
+                  <data id="d2">&lt;/strong&gt;</data>
+                </originalData>
+                <segment>
+                  <source>
+                    <pc dataRefEnd="d2" dataRefStart="d1" id="1" subType="xlf:b" type="fmt">Our guests are able to support our projects and sustainable activities led by Sun Siyam Cares with a 10$ per villa /per stay contribution.</pc>
+                  </source>
+                </segment>
+              </unit>
+              <unit id="u8-26" name="p">
+                <originalData>
+                  <data id="d1">&lt;strong&gt;</data>
+                  <data id="d2">&lt;/strong&gt;</data>
+                </originalData>
+                <segment>
+                  <source>
+                    <pc dataRefEnd="d2" dataRefStart="d1" id="1" subType="xlf:b" type="fmt">Click to find out more about the implementation of Environmental and Social Sustainability Policies at Sun Siyam Resorts:</pc>
+                  </source>
+                </segment>
+              </unit>
+              <unit id="u8-27" name="p">
+                <originalData>
+                  <data id="d1">&lt;a href="/{localLink:umb://media/825640ed7144407081cc8dacc6fd8347}" title="SUSTAINABILITY POLICIES"&gt;</data>
+                  <data id="d2">&lt;/a&gt;</data>
+                </originalData>
+                <segment>
+                  <source>
+                    <pc dataRefEnd="d2" dataRefStart="d1" id="1" type="link">GENERAL SUSTAINABILITY POLICIES</pc>
+                  </source>
+                </segment>
+              </unit>
+              <unit id="u8-28" name="p">
+                <originalData>
+                  <data id="d1">&lt;a href="/{localLink:umb://media/d980e499c9f74648998b79a98319db56}" title="Human Rights Policies"&gt;</data>
+                  <data id="d2">&lt;/a&gt;</data>
+                </originalData>
+                <segment>
+                  <source>
+                    <pc dataRefEnd="d2" dataRefStart="d1" id="1" type="link">HUMAN RESOURCES POLICIES</pc>
+                  </source>
+                </segment>
+              </unit>
+              <unit id="u8-29" name="p">
+                <originalData>
+                  <data id="d1">&lt;strong&gt;</data>
+                  <data id="d2">&lt;/strong&gt;</data>
+                  <data id="d3">&lt;br/&gt;</data>
+                </originalData>
+                <segment>
+                  <source>
+                    <sc dataRef="d1" id="1" subType="xlf:b" type="fmt" />
+                    <ph dataRef="d3" id="2" subType="xlf:lb" type="fmt" />Click to download reports about our Sustainability Journey:<ec dataRef="d2" startRef="1" subType="xlf:b" type="fmt" /></source>
+                </segment>
+              </unit>
+              <unit id="u8-30" name="p">
+                <originalData>
+                  <data id="d1">&lt;a href="/{localLink:umb://media/f085e99c4b40406491379ee1f9d9faa0}" title="Sun Siyam Care Iru Fushi 2023"&gt;</data>
+                  <data id="d2">&lt;/a&gt;</data>
+                  <data id="d3">&lt;br/&gt;</data>
+                  <data id="d4">&lt;a href="/{localLink:umb://media/9213a27cae5c45c0b1ea67b5a2271d62}" title="Sun Siyam Care Iru Veli 2023"&gt;</data>
+                </originalData>
+                <segment>
+                  <source>
+                    <pc dataRefEnd="d2" dataRefStart="d1" id="1" type="link">SUN SIYAM IRU FUSHI - 2023</pc>
+                    <ph dataRef="d3" id="2" subType="xlf:lb" type="fmt" />
+                    <ph dataRef="d3" id="3" subType="xlf:lb" type="fmt" />
+                    <pc dataRefEnd="d2" dataRefStart="d4" id="4" type="link">SUN SIYAM IRU VELI - 2023</pc>
+                  </source>
+                </segment>
+              </unit>
+              <unit id="u8-31" name="p">
+                <originalData>
+                  <data id="d1">&lt;a href="/{localLink:umb://media/95a53a25dc504cb5888372c8573de6e6}" title="Sustainability Report SSVR 2023"&gt;</data>
+                  <data id="d2">&lt;/a&gt;</data>
+                </originalData>
+                <segment>
+                  <source>
+                    <pc dataRefEnd="d2" dataRefStart="d1" id="1" type="link">SUN SIYAM VILU REEF - 2023</pc>
+                  </source>
+                </segment>
+              </unit>
+            </group>
+          </group>
+        </group>
+        <unit id="u9" name="tabbedContent_1">
+          <segment>
+            <source></source>
+          </segment>
+        </unit>
+        <unit id="u10" name="video_1">
+          <segment>
+            <source></source>
+          </segment>
+        </unit>
+        <group id="g10" name="gridPanel_1">
+          <unit id="u11" name="heading">
+            <segment>
+              <source></source>
+            </segment>
+          </unit>
+        </group>
+        <group id="g11" name="pageNavigationSlider_1">
+          <unit id="u12" name="heading">
+            <segment>
+              <source></source>
+            </segment>
+          </unit>
+        </group>
+      </group>
+    </group>
+    <group id="g12" name="listing">
+      <group id="g13" name="120927|listingHeading">
+        <unit id="u13" name="120927|Umbraco.TextBox">
+          <segment>
+            <source></source>
+          </segment>
+        </unit>
+      </group>
+    </group>
+    <group id="g14" name="seo">
+      <group id="g15" name="120921|metaTitle">
+        <unit id="u14" name="120921|Umbraco.TextBox">
+          <segment>
+            <source>Sun Siyam Care | Sustainability practices and policies</source>
+          </segment>
+        </unit>
+      </group>
+      <group id="g16" name="120922|metaDescription">
+        <unit id="u15" name="120922|Umbraco.TextArea">
+          <segment>
+            <source>With Sun Siyam Care, Sun Siyam Resorts is committed to operating sustainably and responsibly in Maldives and Sri Lanka while offering authentic experiences.</source>
+          </segment>
+        </unit>
+      </group>
+      <group id="g17" name="120923|openGraphTitle">
+        <unit id="u16" name="120923|Umbraco.TextBox">
+          <segment>
+            <source></source>
+          </segment>
+        </unit>
+      </group>
+      <group id="g18" name="120924|openGraphDescription">
+        <unit id="u17" name="120924|Umbraco.TextArea">
+          <segment>
+            <source></source>
+          </segment>
+        </unit>
+      </group>
+    </group>
+    <group id="g19" name="markup">
+      <group id="g20" name="120925|bodyClass">
+        <unit id="u18" name="120925|Umbraco.TextBox">
+          <segment>
+            <source></source>
+          </segment>
+        </unit>
+      </group>
+    </group>
+  </file>
+</xliff>

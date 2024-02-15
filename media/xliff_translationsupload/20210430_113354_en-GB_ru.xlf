@@ -1,0 +1,299 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff srcLang="en-GB" trgLang="ru_RU" version="2.0" xmlns="urn:oasis:names:tc:xliff:document:2.0">
+  <file id="f1" original="2932|Dictionary Item: view less">
+    <group id="g1" name="view-less">
+      <group id="g2" name="28279|view less">
+        <unit id="u1" name="824f2938-77b6-4d81-a1b5-07f195a1d88e">
+          <segment>
+            <source>view less</source>
+            <target>свернуть</target>
+          </segment>
+        </unit>
+      </group>
+    </group>
+  </file>
+  <file id="f2" original="2933|Dictionary Item: filter posts">
+    <group id="g3" name="filter-posts">
+      <group id="g4" name="28280|filter posts">
+        <unit id="u2" name="b917d3d1-0a59-44f7-a9c6-0a7fff28ba56">
+          <segment>
+            <source>filter posts</source>
+            <target>фильтр публикаций</target>
+          </segment>
+        </unit>
+      </group>
+    </group>
+  </file>
+  <file id="f3" original="2934|Dictionary Item: read more">
+    <group id="g5" name="read-more">
+      <group id="g6" name="28281|read more">
+        <unit id="u3" name="add928f4-1f5d-4f3c-9aa4-23639d31beb7">
+          <segment>
+            <source>read more</source>
+            <target>подробнее</target>
+          </segment>
+        </unit>
+      </group>
+    </group>
+  </file>
+  <file id="f4" original="2935|Dictionary Item: Experiences">
+    <group id="g7" name="experiences">
+      <group id="g8" name="28282|Experiences">
+        <unit id="u4" name="7ee13a4b-ab20-4c49-b3b0-253e3e01db1c">
+          <segment>
+            <source/>
+            <target/>
+          </segment>
+        </unit>
+      </group>
+    </group>
+  </file>
+  <file id="f5" original="2936|Dictionary Item: Gallery">
+    <group id="g9" name="gallery">
+      <group id="g10" name="28283|Gallery">
+        <unit id="u5" name="610007e3-010a-4c0a-989d-3d8d6fc9dcd7">
+          <segment>
+            <source/>
+            <target/>
+          </segment>
+        </unit>
+        <group id="g11" name="bf1ab134-09a7-4102-8012-86d1e9d0620e">
+          <unit id="u6" name="bf1ab134-09a7-4102-8012-86d1e9d0620e">
+            <segment>
+              <source>Magnify</source>
+              <target>Увеличить</target>
+            </segment>
+          </unit>
+        </group>
+      </group>
+    </group>
+  </file>
+  <file id="f6" original="2937|Dictionary Item: All">
+    <group id="g12" name="all">
+      <group id="g13" name="28284|All">
+        <unit id="u7" name="889288fc-b8b3-4743-bb7d-3e9438929696">
+          <segment>
+            <source>All</source>
+            <target>Все</target>
+          </segment>
+        </unit>
+      </group>
+    </group>
+  </file>
+  <file id="f7" original="2938|Dictionary Item: FIRST NAME">
+    <group id="g14" name="first-name">
+      <group id="g15" name="28285|FIRST NAME">
+        <unit id="u8" name="3f9cd65f-16a0-4ef1-b520-4d93a26643c2">
+          <segment>
+            <source>FIRST NAME</source>
+            <target>ИМЯ</target>
+          </segment>
+        </unit>
+      </group>
+    </group>
+  </file>
+  <file id="f8" original="2939|Dictionary Item: video controls">
+    <group id="g16" name="video-controls">
+      <group id="g17" name="28286|video controls">
+        <unit id="u9" name="c36fc007-aaa7-4411-a7fa-4f4b1fabd14a">
+          <segment>
+            <source/>
+            <target/>
+          </segment>
+        </unit>
+        <group id="g18" name="dd066d6d-45ff-4bc3-bbe6-d33fbd630f4e">
+          <unit id="u10" name="dd066d6d-45ff-4bc3-bbe6-d33fbd630f4e">
+            <segment>
+              <source>VOLUME</source>
+              <target>ОБЪЕМ</target>
+            </segment>
+          </unit>
+        </group>
+      </group>
+    </group>
+  </file>
+  <file id="f9" original="2940|Dictionary Item: Newsletter">
+    <group id="g19" name="newsletter">
+      <group id="g20" name="28287|Newsletter">
+        <unit id="u11" name="ac9b41b0-b899-48f2-8558-5719bbedf4f3">
+          <segment>
+            <source/>
+            <target/>
+          </segment>
+        </unit>
+        <group id="g21" name="e780b4c0-7fd9-4a1d-9d4d-bd0c8619f6f7">
+          <unit id="u12" name="e780b4c0-7fd9-4a1d-9d4d-bd0c8619f6f7">
+            <segment>
+              <source>Subscribe</source>
+              <target>Подписаться</target>
+            </segment>
+          </unit>
+        </group>
+      </group>
+    </group>
+  </file>
+  <file id="f10" original="2941|Dictionary Item: on">
+    <group id="g22" name="on">
+      <group id="g23" name="28288|on">
+        <unit id="u13" name="e532fdc9-3ad0-4588-b154-60988980adc2">
+          <segment>
+            <source>on</source>
+            <target>вкл.</target>
+          </segment>
+        </unit>
+      </group>
+    </group>
+  </file>
+  <file id="f11" original="2942|Dictionary Item: Toggle">
+    <group id="g24" name="toggle">
+      <group id="g25" name="28289|Toggle">
+        <unit id="u14" name="712f3463-b5cd-4021-aa0b-63ff16ca6c97">
+          <segment>
+            <source>Toggle</source>
+            <target>Переключить</target>
+          </segment>
+        </unit>
+      </group>
+    </group>
+  </file>
+  <file id="f12" original="2943|Dictionary Item: view more">
+    <group id="g26" name="view-more">
+      <group id="g27" name="28290|view more">
+        <unit id="u15" name="418c2d8c-2f9a-41c9-9206-7aac9562a26b">
+          <segment>
+            <source>view more</source>
+            <target>развернуть</target>
+          </segment>
+        </unit>
+      </group>
+    </group>
+  </file>
+  <file id="f13" original="2944|Dictionary Item: Filter by:">
+    <group id="g28" name="filter-by">
+      <group id="g29" name="28291|Filter by:">
+        <unit id="u16" name="583dbebf-1b72-427e-9f2f-7e16806621cb">
+          <segment>
+            <source>Filter by:</source>
+            <target>Фильтр по:</target>
+          </segment>
+        </unit>
+      </group>
+    </group>
+  </file>
+  <file id="f14" original="2945|Dictionary Item: Filter Grid">
+    <group id="g30" name="filter-grid">
+      <group id="g31" name="28292|Filter Grid">
+        <unit id="u17" name="0d2170fb-697b-45da-b099-9756e73db163">
+          <segment>
+            <source/>
+            <target/>
+          </segment>
+        </unit>
+      </group>
+    </group>
+  </file>
+  <file id="f15" original="2946|Dictionary Item: off">
+    <group id="g32" name="off">
+      <group id="g33" name="28293|off">
+        <unit id="u18" name="ee85bb32-cbde-4e90-92e4-a52c435c3d3e">
+          <segment>
+            <source>off</source>
+            <target>выкл</target>
+          </segment>
+        </unit>
+      </group>
+    </group>
+  </file>
+  <file id="f16" original="2947|Dictionary Item: You are here">
+    <group id="g34" name="you-are-here">
+      <group id="g35" name="28294|You are here">
+        <unit id="u19" name="5d9189db-2bfe-4843-83c5-b6f329d93aa9">
+          <segment>
+            <source>You are here</source>
+            <target>Вы здесь</target>
+          </segment>
+        </unit>
+      </group>
+    </group>
+  </file>
+  <file id="f17" original="2948|Dictionary Item: Offer">
+    <group id="g36" name="offer">
+      <group id="g37" name="28295|Offer">
+        <unit id="u20" name="5767dcee-09e0-434c-915f-c95bdf819609">
+          <segment>
+            <source/>
+            <target/>
+          </segment>
+        </unit>
+        <group id="g38" name="dfd1837d-f33b-4a96-b68f-154e4fb10376">
+          <unit id="u21" name="dfd1837d-f33b-4a96-b68f-154e4fb10376">
+            <segment>
+              <source>view offer</source>
+              <target>смотреть предложение</target>
+            </segment>
+          </unit>
+        </group>
+        <group id="g39" name="53ce1fea-2538-47fc-9f2f-3aa8a344d3e0">
+          <unit id="u22" name="53ce1fea-2538-47fc-9f2f-3aa8a344d3e0">
+            <segment>
+              <source>view</source>
+              <target>смотреть</target>
+            </segment>
+          </unit>
+        </group>
+        <group id="g40" name="067f84b9-33f1-4a68-8cd6-53b0016b0ba8">
+          <unit id="u23" name="067f84b9-33f1-4a68-8cd6-53b0016b0ba8">
+            <segment>
+              <source>view all offers</source>
+              <target>смотреть все предложения</target>
+            </segment>
+          </unit>
+        </group>
+        <group id="g41" name="ff691f19-d88c-41c8-82b2-93cf0fc566d2">
+          <unit id="u24" name="ff691f19-d88c-41c8-82b2-93cf0fc566d2">
+            <segment>
+              <source>Price from</source>
+              <target>Цена от</target>
+            </segment>
+          </unit>
+        </group>
+      </group>
+    </group>
+  </file>
+  <file id="f18" original="2949|Dictionary Item: EMAIL ADDRESS">
+    <group id="g42" name="email-address">
+      <group id="g43" name="28296|EMAIL ADDRESS">
+        <unit id="u25" name="bd6519e8-5e90-4c39-92e6-eda6aada060b">
+          <segment>
+            <source>EMAIL ADDRESS</source>
+            <target>АДРЕС ЭЛ. ПОЧТЫ</target>
+          </segment>
+        </unit>
+      </group>
+    </group>
+  </file>
+  <file id="f19" original="2950|Dictionary Item: LAST NAME">
+    <group id="g44" name="last-name">
+      <group id="g45" name="28297|LAST NAME">
+        <unit id="u26" name="f6069ce4-caae-4ef9-be11-ef30f39cf805">
+          <segment>
+            <source>LAST NAME</source>
+            <target>ФАМИЛИЯ</target>
+          </segment>
+        </unit>
+      </group>
+    </group>
+  </file>
+  <file id="f20" original="2951|Dictionary Item: AVAILABLE AT:">
+    <group id="g46" name="available-at">
+      <group id="g47" name="28298|AVAILABLE AT:">
+        <unit id="u27" name="59ea8750-533a-452c-9c79-f9671c940320">
+          <segment>
+            <source>AVAILABLE AT:</source>
+            <target>ДОСТУПНО T:</target>
+          </segment>
+        </unit>
+      </group>
+    </group>
+  </file>
+</xliff>
