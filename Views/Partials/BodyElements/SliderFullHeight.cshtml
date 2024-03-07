@@ -1,4 +1,4 @@
-@inherits UmbracoViewPage<SliderFullHeight>
+﻿@inherits UmbracoViewPage<SliderFullHeight>
 
 @{
     var page = Umbraco.AssignedContentItem;
@@ -15,9 +15,12 @@
                 <img class="play-button" src="/assets/img/video-play.svg">
                 <div class="video-bar">
                     <span class="volume">@Umbraco.GetDictionaryValue("VOLUME")</span>
-                    <span class="volume-off" id="volumeOff">@Umbraco.GetDictionaryValue("off")</span>
-                    <span class="volume-on" id="volumeOn">@Umbraco.GetDictionaryValue("on")</span>
-                    <input type="checkbox" id="volumeSwitch"><label for="volumeSwitch">@Umbraco.GetDictionaryValue("Toggle")</label>
+                    <input type="checkbox" id="volumeSwitch">
+                    <label for="volumeSwitch">
+                        <span class="volume-off" id="volumeOff">@Umbraco.GetDictionaryValue("off")</span>
+                        <span class="volume-on" id="volumeOn">@Umbraco.GetDictionaryValue("on")</span>
+                        <span class="is-hidden">@Umbraco.GetDictionaryValue("Toggle")</span>
+                    </label>
                 </div>
             </div>
         }
