@@ -60,8 +60,10 @@
                             @item.ListingFeaturesList
                         </div>
                         <div class="offers__item-cta cell small-12 medium-3 vertical-center">
-                            <a href="@item.Url" class="cta orange-outline">@Umbraco.GetDictionaryValue("read more")</a>
-                            @item.BookingLink.GetLink(cssClass: "cta orange-solid")
+                            <div class="offers__item-cta-inner">
+                                <a href="@item.Url" class="cta orange-outline">@Umbraco.GetDictionaryValue("read more")</a>
+                                @item.BookingLink.GetLink(cssClass: "cta orange-solid")
+                            </div>
                         </div>
                     </div>
                 </div>
