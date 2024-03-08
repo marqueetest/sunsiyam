@@ -90,7 +90,7 @@
 
             @if (item.ThumbnailImage != null)
             {
-                <div class="rd-index__item-thumbnail small-8 medium-4 large-2 vertical-center">
+                <div class="rd-index__item-thumbnail small-12 medium-4 large-2 vertical-center">
                     <a href="@item.ThumbnailImage.GetCroppedImageUrl("1280x910")">
                         <div class="thumbnail__wrapper">
                             @item.ThumbnailImage.GetCroppedImage("640x339")
@@ -101,7 +101,7 @@
                 </div>
             }
 
-            <div class="rd-index__item-cta cell small-4 medium-2 large-auto vertical-center">
+            <div class="rd-index__item-cta cell small-12 medium-8 large-auto vertical-center">
               <div class="cta-wrapper">
                 <a href="@item.Url" class="cta orange-outline">@Umbraco.GetDictionaryValue("read more")</a>
                 @item.BookingLink.GetLink(cssClass: "cta orange-solid")
