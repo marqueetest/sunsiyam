@@ -8,7 +8,7 @@
 <div class="header__buttons-mobile show-for-small-only">
     <div class="header__buttons-mobile-inner grid-x text-center">
         <div class="cell small-6">
-            <a class="cta secondary-solid" data-toggle="booking">book</a>
+            <a class="cta secondary-solid" data-toggle="booking">@Umbraco.GetDictionaryValue("Book")</a>
         </div>
         <div class="cell small-6">
             @websiteSettings.OffersLink.GetLink(cssClass: "cta secondary-solid", innerText: websiteSettings.MobileOffersLinkText)
