@@ -1,4 +1,4 @@
-﻿@inherits UmbracoViewPage<SliderFullHeight>
+@inherits UmbracoViewPage<SliderFullHeight>
 
 @{
     var page = Umbraco.AssignedContentItem;
@@ -46,4 +46,12 @@
             }
         }
     </div>
-</div>
+    @if (page.ContentType.Alias == "homePage")
+    {
+        <div class="slider__cta">
+            <button type="button" class="cta white-outline">@Umbraco.GetDictionaryValue("View Resorts")</button>
+            <br>
+            <span class="slider__arrow-down"></span>
+        </div>
+    }
+    </div>

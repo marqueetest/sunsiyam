@@ -71,9 +71,14 @@
             <div class="rd-index__chef-box grid-x transform--will-fade-up transition--1500" data-animate-in-view="transform--completed-fade-up">
 
                 <div class="rd-index__item-small cell small-12 medium-12 large-6">
-
-                    @*@Model.ChefImage.GetImage()*@
-                    <img src="/assets/img/chef.png" alt="">
+                    @if (!string.IsNullOrEmpty(Model.ChefImage.MediaUrl()))
+                    {
+                        @Model.ChefImage.GetImage()
+                    }
+                    else
+                    {
+                        <img src="/assets/img/chef.png" alt="">
+                    }
                 </div>
 
                 <div class="rd-index__item-small content-box cell small-12 medium-12 large-6 vertical-center">
